@@ -1,0 +1,10 @@
+Var_Order : <%= generate_var_order(circuit) %>
+
+<% circuit.clauses.values.each do |gate| %>
+    <% if gate.id != main_expr %>
+        <%= clause_to_pbl(variable_name(circuit.var_list, gate.id)) %> = <%= clause_to_pbl(pbl_to_nne(circuit, gate.ex_clause)) %>
+    <% else %>
+        Main_Exp : <%= clause_to_pbl(pbl_to_nne(circuit, clause_to_pbl(gate.ex_clause))) %>
+    <% end %>
+<% end %>
+

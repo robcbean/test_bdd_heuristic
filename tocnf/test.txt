@@ -1,0 +1,9 @@
+Var_Order : x1 x2 x3 x4 x5
+
+
+f5 = x1 | x2 
+f6 = ~x3
+f7 = f5 & x3
+f8 = f6 & x4 
+
+Main_Exp: f7 | f8 & x5

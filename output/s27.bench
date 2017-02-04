@@ -1,0 +1,31 @@
+# 4 inputs
+# 1 outputs
+# 3 D-type flipflops
+# 2 inverters
+# 8 gates (1 ANDs + 1 NANDs + 2 ORs + 4 NORs)
+
+INPUT(1)
+INPUT(2)
+INPUT(3)
+INPUT(4)
+
+OUTPUT(5)
+
+6 = DFF(14)
+7 = DFF(15)
+8 = DFF(17)
+
+9 = NOT(1)
+5 = NOT(15)
+
+10 = AND(9, 7)
+
+11 = OR(16, 10)
+12 = OR(4, 10)
+
+13 = NAND(12, 11)
+
+14 = NOR(9, 15)
+15 = NOR(6, 13)
+16 = NOR(2, 8)
+17 = NOR(3, 16)

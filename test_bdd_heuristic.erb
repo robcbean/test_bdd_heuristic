@@ -1,0 +1,207 @@
+
+typedef unsigned int uint32_t;
+
+
+
+#include "mtrInt.h"
+#include "cuddObj.hh"
+#include "output.h"
+#include "operations.h"
+
+#include <vector>
+#include <iostream>
+#include <stdio.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <unistd.h>
+<%if heur.reorder == ""%>
+   <%  reorder = "NONE" %>
+<%else%>
+   <%  reorder = heur.reorder %>
+<%end%>
+
+
+<%
+    def getVarNum(_var_list,_variable)
+      ret = -1
+      ret = _var_list.find_index(_variable)
+      return ret
+    end
+%>
+
+void timeOut(DdManager* _manager, void* _output){
+    std::vector<BDD> output;
+    Cudd mgr(0,0);
+    print_output(<%=circuit.var_list.size()%>,"<%=circuit.name%>","<%=heur.print_name%>\t<%=reorder%>\t-1.0\t-1.0\t<%=span[heur.name]%>\t<%=FunctionInfo.new(circuit).to_s%>",mgr,output,false,NULL,<%=calcTotal()%>);
+}
+
+
+int main( int argc, char **argv )
+{
+
+  Cudd mgr(<%=circuit.inputs.size%>,0);
+  mgr.AutodynDisable();
+
+  BDD x[<%=circuit.var_list.size()%>];
+  double t1,t2,t3,t4;
+  <%if calc_desc %>
+  double  desc_t1,desc_t2,desc_t3,desc_t4,desc_t5;
+  double  sum_nodes=0;
+  DdNode* poutput[<%=circuit.outputs.size()-1%>];
+  DdNode* ptotal[1];
+  <%end%>
+  std::string str_output;
+  char buffer[100];
+  std::string grown="";
+  <%if printMinters %>
+  double minTerms=0;
+  <%end%>
+  //Output nodes
+  std::vector<BDD> output(<%=circuit.outputs.size()-1%>);
+  std::vector<BDD> count_nodes_vector;
+  std::vector<unsigned long> count_nodes;
+  std::vector<unsigned long> count_id;
+
+  //Set CUDD TimeOut
+  Cudd_SetTimeLimit(mgr.getManager(),<%=_wait_time*1000%>);
+  Cudd_RegisterTimeoutHandler(mgr.getManager(),timeOut,&output);
+
+
+  //Variables
+  <%circuit.getDFSOrderInputs.each do |variable| %>
+      x[<%=getVarNum(circuit.var_list,variable)%>]  = mgr.bddVar(<%=getVarNum(heur.order,variable)%>); //<%=variable%>
+  <%end %>
+
+
+  <%if heur.group and circuit.minisat %>
+  //Group
+  <%circuit.extra_info.symmetric_groups.each do |group|%>
+  Cudd_MakeTreeNode(mgr.getManager(),<%=first_variable_group(heur.order,group)%>,<%=group.variables.length%>,MTR_FIXED);
+  <%end%>
+  <%else%>
+  Cudd_MakeTreeNode(mgr.getManager(),0,<%=circuit.var_list.length-1%>,MTR_DEFAULT);
+  <%end%>
+
+  //Gates
+  std::cerr<<"Generating bdd ..."<<std::endl;
+
+
+  t1 = get_user_time();
+  <%=circuit.generateClauses(preorderInSPLOT(),calc_desc, heur.name)%>
+  t2 = get_user_time();
+  <%i=0%>
+  t4 = get_diftime(t1,t2);
+
+  <%=circuit.generateOutputs(preorderInSPLOT(), heur.name)%>
+  <%if calc_desc %>
+  ptotal[0] = x[<%=getVarNum(circuit.var_list,circuit.getNullFunction)%>].getNode();
+  std::cerr<<"Calculating dead_core complete .."<<std::endl;
+  desc_t1 = get_user_time();
+  feature_model_info* info2 = calc_dead_core_and_impact_exclusion_only_one(mgr.getManager(), ptotal[0], <%=circuit.dfs_inputs.size%>);
+  desc_t2 = get_user_time();
+  desc_t5 = get_diftime(desc_t1,desc_t2);
+  unsigned int core=0,dead=0;
+  for(unsigned int i=0;i<<%=circuit.dfs_inputs.size%>;i++)
+  {
+      if(info1->var_low[i] == 1 && info1->var_high[i] == 0 )
+      {
+        dead = dead + 1;
+      }
+      if(info1->var_low[i] == 0 && info1->var_high[i] == 1 )
+      {
+        core = core + 1;
+      }
+      fprintf(stderr,"dead_core:%d\tinfo1:[%d,%d]\tinfo2:[%d,%d]",i,info1->var_low[i],info1->var_high[i],info2->var_low[i],info2->var_high[i]);
+      if( info1->var_low[i] != info2->var_low[i] || info1->var_high[i] != info2->var_high[i] ){
+        fprintf(stderr,"\t******");
+      }
+      fprintf(stderr,"\n");
+  }
+  fprintf(stderr,"Dead features: %u\n",dead);
+  fprintf(stderr,"Core features: %u\n",core);
+
+<%end%>
+
+  //<%=heur.name%>  sorting
+  std::cerr<<"Setting order <%=heur.name%> ..."<<std::endl;
+  <%if heur.reorder == ""%>
+  <%if printMinters %>
+  minTerms =  x[<%=getVarNum(circuit.var_list,circuit.getNullFunction)%>].CountMinterm(<%=circuit.dfs_inputs.size%>);
+    <% if not calc_desc %>
+  sprintf(buffer,"%g\t%g\t%g",t4,0.0,minTerms);
+    <% else %>
+  sprintf(buffer,"%g\t%g\t%g\t%g\t%g\t%g\t%g",t4,0.0,desc_t3,desc_t4,desc_t5,sum_nodes,minTerms);
+    <% end %>
+  <%else%>
+          <% if not calc_desc %>
+  sprintf(buffer,"%g\t%g",t4,0.0);
+          <%else%>
+   sprintf(buffer,"%g\t%g\t%g\t%g\t%g",t4,0.0,desc_t3,desc_t4,desc_t5,sum_nodes);
+          <%end%>
+  <%end%>
+  str_output = "<%="#{heur.print_name}\t#{reorder}\t#{cpu_time[heur.name]}"%>";
+  str_output = str_output + "\t" + buffer + "\t<%=span[heur.name]%>\t<%=FunctionInfo.new(circuit).to_s%>";
+  print_output(<%=circuit.var_list.size()%>,"<%=circuit.name%>",str_output,mgr,output,true,&(x[<%=getVarNum(circuit.var_list,circuit.getNullFunction)%>]),<%=calcTotal()%>);
+  writeSize("<%=grown_file%>", "<%=circuit.name%>", "<%=heur.name%>",count_nodes,count_id);
+  <%end%>
+  <%if heur.reorder != "" %>
+  t1 = get_user_time();
+  std::cerr<<"Reducing heap order <%=heur.name%> reorder <%=heur.reorder%> ..."<<std::endl;
+  mgr.ReduceHeap(<%=heur.reorder%>);
+  t2 = get_user_time();
+  t3 = get_diftime(t1,t2);
+  <%if printMinters %>
+  minTerms =  x[<%=getVarNum(circuit.var_list,circuit.getNullFunction)%>].CountMinterm(<%=circuit.dfs_inputs.size%>);
+          <% if not calc_desc %>
+  sprintf(buffer,"%g\t%g\t%g",t4,t3,minTerms);
+          <%else%>
+  sprintf(buffer,"%g\t%g\t%g\t%g\t%g\t%g\t%g",t4,t3,desc_t3,desc_t4,desc_t5,sum_nodes,minTerms);
+          <%end%>
+  <%else%>
+          <% if not calc_desc %>
+  sprintf(buffer,"%g\t%g",t4,t3);
+         <%else%>
+  sprintf(buffer,"%g\t%g\t%g\t%g\t%g\t%g",t4,t3,desc_t3,desc_t4,desc_t5,sum_nodes);
+         <%end%>
+  <%end%>
+
+  <%if printSymmetric? and circuit.type == "SPLOT" and circuit.minisat %>
+  std::string symmetric = totalSymmetric(mgr,<%=circuit.dfs_inputs.size%>);
+  std::cerr<<"Calculated groups:"<<<%=circuit.extra_info.symmetric_groups.length%><<std::endl;
+  <%i=0%>
+  <%circuit.extra_info.symmetric_groups.each do |group|%>
+  <%i=i+1%>
+  std::cerr<<"\t"<<"Group<%=i%>:<%=group.variables.to_s%>"<<std::endl;
+  <%end%>
+  <%end%>
+
+  str_output = "<%="#{heur.print_name}\t#{reorder}\t#{cpu_time[heur.name]}"%>";
+  str_output = str_output + "\t" + buffer + "\t<%=span[heur.name]%>\t<%=FunctionInfo.new(circuit).to_s%>";
+  <%if printSymmetric? and circuit.type == "SPLOT" and circuit.minisat %>
+  str_output = str_output + "\t" + symmetric;
+  <%end%>
+  print_output(<%=circuit.var_list.size()%>,"<%=circuit.name%>",str_output, mgr,output,true,&(x[<%=getVarNum(circuit.var_list,circuit.getNullFunction)%>]),<%=calcTotal()%>);
+  writeSize("<%=grown_file%>","<%=circuit.name%>","<%=heur.name%>",count_nodes,count_id);
+  <%end%>
+
+  <%if printMinters %>
+  std::cerr<<"minterms (CUDD):"<<x[<%=getVarNum(circuit.var_list,circuit.getNullFunction)%>].CountMinterm(<%=circuit.dfs_inputs.size%>)<<std::endl;
+  <%end%>
+
+  <%if write_dot %>
+  std::vector<BDD> dot_vector(<%=circuit.outputs.size()-1%>);
+  <%(1..(circuit.outputs.size-1)).each do |i|%>
+  dot_vector[<%=i-1%>] = output[<%=i-1%>];
+  <%end%>
+  FILE *fd = fopen("<%=circuit.name%>.dot","w");
+  mgr.DumpDot(dot_vector,NULL,NULL,fd);
+  fclose(fd);
+  std::vector<BDD> dot_vector_total(1);
+  dot_vector_total[0] =   x[<%=getVarNum(circuit.var_list,circuit.getNullFunction)%>];
+  fd = fopen("<%=circuit.name%>_complete.dot","w");
+  mgr.DumpDot(dot_vector_total,NULL,NULL,fd);
+  fclose(fd);
+  <%end%>
+
+}
+
