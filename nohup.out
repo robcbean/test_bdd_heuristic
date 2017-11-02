@@ -1,0 +1,3355 @@
+Process file ../test/thesis/SPLOT-3CNF-FM-500-50-1.00-SAT-5.xml
+/home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/utils.rb:21:in `variable_name': Interrupt
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:6:in `block in transformSplotClause'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:5:in `each'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:5:in `transformSplotClause'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:84:in `processFeatureFromFeatureModel'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:112:in `block in processFeatureFromFeatureModel'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:109:in `each'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:109:in `processFeatureFromFeatureModel'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:112:in `block in processFeatureFromFeatureModel'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:109:in `each'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:109:in `processFeatureFromFeatureModel'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:269:in `loadFromSPLOTFile'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function.rb:155:in `loadFromFile'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function.rb:133:in `initialize'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/test_bdd_lib.rb:88:in `new'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/test_bdd_lib.rb:88:in `process_file'
+	from ./test_bdd_heuristic.rb:60:in `block (2 levels) in <main>'
+	from ./test_bdd_heuristic.rb:57:in `each'
+	from ./test_bdd_heuristic.rb:57:in `block in <main>'
+	from ./test_bdd_heuristic.rb:53:in `each'
+	from ./test_bdd_heuristic.rb:53:in `<main>'
+file	order	reorder	algo_time	bdd_time	reorder_time	minterms	span	inputs	clauses	functions	mean (variables_in_clause)	standard deviation (variables_in_clause)	median (variables_in_clause)	mean (variables_in_functions)	standard deviation (variables_in_functions)	median (variables_in_functions)	mean (variable_in_clauses)	standard deviation (variable_in_clauses)	median (variable_in_clauses)	mean (variable_mean_level)	standard deviation (variable_mean_level)	median (variable_mean_level)	maxnode	total
+Process file ../test/thesis/SPLOT-3CNF-FM-500-50-1.00-SAT-5.xml
+file	order	reorder	algo_time	bdd_time	reorder_time	minterms	span	inputs	clauses	functions	mean (variables_in_clause)	standard deviation (variables_in_clause)	median (variables_in_clause)	mean (variables_in_functions)	standard deviation (variables_in_functions)	median (variables_in_functions)	mean (variable_in_clauses)	standard deviation (variable_in_clauses)	median (variable_in_clauses)	mean (variable_mean_level)	standard deviation (variable_mean_level)	median (variable_mean_level)	maxnode	total
+Processing dfsorderoutput clause 1704..
+Processing dfsorderoutput clause 568..
+Processing dfsorderoutput clause 570..
+Processing dfsorderoutput clause 572..
+Processing dfsorderoutput clause 574..
+Processing dfsorderoutput clause 576..
+Processing dfsorderoutput clause 578..
+Processing dfsorderoutput clause 580..
+Processing dfsorderoutput clause 582..
+Processing dfsorderoutput clause 575..
+Processing dfsorderoutput clause 584..
+Processing dfsorderoutput clause 586..
+Processing dfsorderoutput clause 588..
+Processing dfsorderoutput clause 590..
+Processing dfsorderoutput clause 592..
+Processing dfsorderoutput clause 594..
+Processing dfsorderoutput clause 587..
+Processing dfsorderoutput clause 596..
+Processing dfsorderoutput clause 598..
+Processing dfsorderoutput clause 600..
+Processing dfsorderoutput clause 602..
+Processing dfsorderoutput clause 585..
+Processing dfsorderoutput clause 604..
+Processing dfsorderoutput clause 606..
+Processing dfsorderoutput clause 608..
+Processing dfsorderoutput clause 610..
+Processing dfsorderoutput clause 607..
+Processing dfsorderoutput clause 612..
+Processing dfsorderoutput clause 614..
+Processing dfsorderoutput clause 616..
+Processing dfsorderoutput clause 613..
+Processing dfsorderoutput clause 605..
+Processing dfsorderoutput clause 618..
+Processing dfsorderoutput clause 620..
+Processing dfsorderoutput clause 622..
+Processing dfsorderoutput clause 624..
+Processing dfsorderoutput clause 626..
+Processing dfsorderoutput clause 619..
+Processing dfsorderoutput clause 628..
+Processing dfsorderoutput clause 630..
+Processing dfsorderoutput clause 632..
+Processing dfsorderoutput clause 634..
+Processing dfsorderoutput clause 636..
+Processing dfsorderoutput clause 638..
+Processing dfsorderoutput clause 631..
+Processing dfsorderoutput clause 640..
+Processing dfsorderoutput clause 642..
+Processing dfsorderoutput clause 644..
+Processing dfsorderoutput clause 646..
+Processing dfsorderoutput clause 643..
+Processing dfsorderoutput clause 648..
+Processing dfsorderoutput clause 629..
+Processing dfsorderoutput clause 573..
+Processing dfsorderoutput clause 650..
+Processing dfsorderoutput clause 652..
+Processing dfsorderoutput clause 654..
+Processing dfsorderoutput clause 656..
+Processing dfsorderoutput clause 658..
+Processing dfsorderoutput clause 660..
+Processing dfsorderoutput clause 653..
+Processing dfsorderoutput clause 651..
+Processing dfsorderoutput clause 662..
+Processing dfsorderoutput clause 664..
+Processing dfsorderoutput clause 666..
+Processing dfsorderoutput clause 668..
+Processing dfsorderoutput clause 670..
+Processing dfsorderoutput clause 672..
+Processing dfsorderoutput clause 674..
+Processing dfsorderoutput clause 676..
+Processing dfsorderoutput clause 678..
+Processing dfsorderoutput clause 673..
+Processing dfsorderoutput clause 680..
+Processing dfsorderoutput clause 682..
+Processing dfsorderoutput clause 684..
+Processing dfsorderoutput clause 686..
+Processing dfsorderoutput clause 688..
+Processing dfsorderoutput clause 690..
+Processing dfsorderoutput clause 692..
+Processing dfsorderoutput clause 681..
+Processing dfsorderoutput clause 667..
+Processing dfsorderoutput clause 694..
+Processing dfsorderoutput clause 696..
+Processing dfsorderoutput clause 698..
+Processing dfsorderoutput clause 700..
+Processing dfsorderoutput clause 702..
+Processing dfsorderoutput clause 695..
+Processing dfsorderoutput clause 665..
+Processing dfsorderoutput clause 663..
+Processing dfsorderoutput clause 571..
+Processing dfsorderoutput clause 704..
+Processing dfsorderoutput clause 706..
+Processing dfsorderoutput clause 708..
+Processing dfsorderoutput clause 710..
+Processing dfsorderoutput clause 712..
+Processing dfsorderoutput clause 714..
+Processing dfsorderoutput clause 709..
+Processing dfsorderoutput clause 716..
+Processing dfsorderoutput clause 718..
+Processing dfsorderoutput clause 720..
+Processing dfsorderoutput clause 722..
+Processing dfsorderoutput clause 724..
+Processing dfsorderoutput clause 726..
+Processing dfsorderoutput clause 728..
+Processing dfsorderoutput clause 730..
+Processing dfsorderoutput clause 721..
+Processing dfsorderoutput clause 717..
+Processing dfsorderoutput clause 732..
+Processing dfsorderoutput clause 734..
+Processing dfsorderoutput clause 736..
+Processing dfsorderoutput clause 733..
+Processing dfsorderoutput clause 738..
+Processing dfsorderoutput clause 740..
+Processing dfsorderoutput clause 742..
+Processing dfsorderoutput clause 741..
+Processing dfsorderoutput clause 744..
+Processing dfsorderoutput clause 746..
+Processing dfsorderoutput clause 745..
+Processing dfsorderoutput clause 739..
+Processing dfsorderoutput clause 748..
+Processing dfsorderoutput clause 750..
+Processing dfsorderoutput clause 752..
+Processing dfsorderoutput clause 749..
+Processing dfsorderoutput clause 707..
+Processing dfsorderoutput clause 754..
+Processing dfsorderoutput clause 756..
+Processing dfsorderoutput clause 758..
+Processing dfsorderoutput clause 760..
+Processing dfsorderoutput clause 759..
+Processing dfsorderoutput clause 762..
+Processing dfsorderoutput clause 764..
+Processing dfsorderoutput clause 763..
+Processing dfsorderoutput clause 766..
+Processing dfsorderoutput clause 768..
+Processing dfsorderoutput clause 770..
+Processing dfsorderoutput clause 772..
+Processing dfsorderoutput clause 769..
+Processing dfsorderoutput clause 767..
+Processing dfsorderoutput clause 774..
+Processing dfsorderoutput clause 776..
+Processing dfsorderoutput clause 775..
+Processing dfsorderoutput clause 778..
+Processing dfsorderoutput clause 780..
+Processing dfsorderoutput clause 782..
+Processing dfsorderoutput clause 784..
+Processing dfsorderoutput clause 786..
+Processing dfsorderoutput clause 788..
+Processing dfsorderoutput clause 790..
+Processing dfsorderoutput clause 792..
+Processing dfsorderoutput clause 781..
+Processing dfsorderoutput clause 779..
+Processing dfsorderoutput clause 757..
+Processing dfsorderoutput clause 794..
+Processing dfsorderoutput clause 796..
+Processing dfsorderoutput clause 798..
+Processing dfsorderoutput clause 797..
+Processing dfsorderoutput clause 800..
+Processing dfsorderoutput clause 802..
+Processing dfsorderoutput clause 804..
+Processing dfsorderoutput clause 806..
+Processing dfsorderoutput clause 808..
+Processing dfsorderoutput clause 810..
+Processing dfsorderoutput clause 812..
+Processing dfsorderoutput clause 814..
+Processing dfsorderoutput clause 803..
+Processing dfsorderoutput clause 801..
+Processing dfsorderoutput clause 816..
+Processing dfsorderoutput clause 818..
+Processing dfsorderoutput clause 817..
+Processing dfsorderoutput clause 795..
+Processing dfsorderoutput clause 820..
+Processing dfsorderoutput clause 822..
+Processing dfsorderoutput clause 821..
+Processing dfsorderoutput clause 755..
+Processing dfsorderoutput clause 824..
+Processing dfsorderoutput clause 826..
+Processing dfsorderoutput clause 828..
+Processing dfsorderoutput clause 830..
+Processing dfsorderoutput clause 832..
+Processing dfsorderoutput clause 834..
+Processing dfsorderoutput clause 836..
+Processing dfsorderoutput clause 838..
+Processing dfsorderoutput clause 840..
+Processing dfsorderoutput clause 829..
+Processing dfsorderoutput clause 842..
+Processing dfsorderoutput clause 844..
+Processing dfsorderoutput clause 846..
+Processing dfsorderoutput clause 848..
+Processing dfsorderoutput clause 850..
+Processing dfsorderoutput clause 843..
+Processing dfsorderoutput clause 852..
+Processing dfsorderoutput clause 827..
+Processing dfsorderoutput clause 854..
+Processing dfsorderoutput clause 856..
+Processing dfsorderoutput clause 855..
+Processing dfsorderoutput clause 858..
+Processing dfsorderoutput clause 860..
+Processing dfsorderoutput clause 862..
+Processing dfsorderoutput clause 861..
+Processing dfsorderoutput clause 864..
+Processing dfsorderoutput clause 866..
+Processing dfsorderoutput clause 865..
+Processing dfsorderoutput clause 868..
+Processing dfsorderoutput clause 870..
+Processing dfsorderoutput clause 869..
+Processing dfsorderoutput clause 859..
+Processing dfsorderoutput clause 825..
+Processing dfsorderoutput clause 872..
+Processing dfsorderoutput clause 874..
+Processing dfsorderoutput clause 876..
+Processing dfsorderoutput clause 878..
+Processing dfsorderoutput clause 880..
+Processing dfsorderoutput clause 882..
+Processing dfsorderoutput clause 877..
+Processing dfsorderoutput clause 884..
+Processing dfsorderoutput clause 886..
+Processing dfsorderoutput clause 888..
+Processing dfsorderoutput clause 890..
+Processing dfsorderoutput clause 892..
+Processing dfsorderoutput clause 887..
+Processing dfsorderoutput clause 894..
+Processing dfsorderoutput clause 875..
+Processing dfsorderoutput clause 896..
+Processing dfsorderoutput clause 898..
+Processing dfsorderoutput clause 900..
+Processing dfsorderoutput clause 902..
+Processing dfsorderoutput clause 904..
+Processing dfsorderoutput clause 906..
+Processing dfsorderoutput clause 908..
+Processing dfsorderoutput clause 910..
+Processing dfsorderoutput clause 912..
+Processing dfsorderoutput clause 903..
+Processing dfsorderoutput clause 914..
+Processing dfsorderoutput clause 916..
+Processing dfsorderoutput clause 918..
+Processing dfsorderoutput clause 915..
+Processing dfsorderoutput clause 897..
+Processing dfsorderoutput clause 920..
+Processing dfsorderoutput clause 922..
+Processing dfsorderoutput clause 924..
+Processing dfsorderoutput clause 926..
+Processing dfsorderoutput clause 923..
+Processing dfsorderoutput clause 928..
+Processing dfsorderoutput clause 930..
+Processing dfsorderoutput clause 921..
+Processing dfsorderoutput clause 873..
+Processing dfsorderoutput clause 932..
+Processing dfsorderoutput clause 934..
+Processing dfsorderoutput clause 936..
+Processing dfsorderoutput clause 938..
+Processing dfsorderoutput clause 935..
+Processing dfsorderoutput clause 940..
+Processing dfsorderoutput clause 942..
+Processing dfsorderoutput clause 944..
+Processing dfsorderoutput clause 941..
+Processing dfsorderoutput clause 946..
+Processing dfsorderoutput clause 948..
+Processing dfsorderoutput clause 950..
+Processing dfsorderoutput clause 947..
+Processing dfsorderoutput clause 952..
+Processing dfsorderoutput clause 954..
+Processing dfsorderoutput clause 956..
+Processing dfsorderoutput clause 958..
+Processing dfsorderoutput clause 955..
+Processing dfsorderoutput clause 953..
+Processing dfsorderoutput clause 960..
+Processing dfsorderoutput clause 962..
+Processing dfsorderoutput clause 961..
+Processing dfsorderoutput clause 964..
+Processing dfsorderoutput clause 966..
+Processing dfsorderoutput clause 965..
+Processing dfsorderoutput clause 933..
+Processing dfsorderoutput clause 705..
+Processing dfsorderoutput clause 968..
+Processing dfsorderoutput clause 970..
+Processing dfsorderoutput clause 972..
+Processing dfsorderoutput clause 974..
+Processing dfsorderoutput clause 976..
+Processing dfsorderoutput clause 978..
+Processing dfsorderoutput clause 980..
+Processing dfsorderoutput clause 982..
+Processing dfsorderoutput clause 975..
+Processing dfsorderoutput clause 984..
+Processing dfsorderoutput clause 986..
+Processing dfsorderoutput clause 988..
+Processing dfsorderoutput clause 987..
+Processing dfsorderoutput clause 990..
+Processing dfsorderoutput clause 992..
+Processing dfsorderoutput clause 991..
+Processing dfsorderoutput clause 994..
+Processing dfsorderoutput clause 985..
+Processing dfsorderoutput clause 996..
+Processing dfsorderoutput clause 998..
+Processing dfsorderoutput clause 1000..
+Processing dfsorderoutput clause 999..
+Processing dfsorderoutput clause 1002..
+Processing dfsorderoutput clause 1004..
+Processing dfsorderoutput clause 1003..
+Processing dfsorderoutput clause 1006..
+Processing dfsorderoutput clause 997..
+Processing dfsorderoutput clause 1008..
+Processing dfsorderoutput clause 1010..
+Processing dfsorderoutput clause 1012..
+Processing dfsorderoutput clause 1014..
+Processing dfsorderoutput clause 1011..
+Processing dfsorderoutput clause 1016..
+Processing dfsorderoutput clause 1018..
+Processing dfsorderoutput clause 1020..
+Processing dfsorderoutput clause 1022..
+Processing dfsorderoutput clause 1024..
+Processing dfsorderoutput clause 1026..
+Processing dfsorderoutput clause 1019..
+Processing dfsorderoutput clause 1028..
+Processing dfsorderoutput clause 1009..
+Processing dfsorderoutput clause 1030..
+Processing dfsorderoutput clause 1032..
+Processing dfsorderoutput clause 1034..
+Processing dfsorderoutput clause 1036..
+Processing dfsorderoutput clause 1038..
+Processing dfsorderoutput clause 1040..
+Processing dfsorderoutput clause 1033..
+Processing dfsorderoutput clause 1042..
+Processing dfsorderoutput clause 1044..
+Processing dfsorderoutput clause 1046..
+Processing dfsorderoutput clause 1031..
+Processing dfsorderoutput clause 1048..
+Processing dfsorderoutput clause 1050..
+Processing dfsorderoutput clause 1052..
+Processing dfsorderoutput clause 1054..
+Processing dfsorderoutput clause 1056..
+Processing dfsorderoutput clause 1058..
+Processing dfsorderoutput clause 1060..
+Processing dfsorderoutput clause 1057..
+Processing dfsorderoutput clause 1049..
+Processing dfsorderoutput clause 973..
+Processing dfsorderoutput clause 971..
+Processing dfsorderoutput clause 1062..
+Processing dfsorderoutput clause 1064..
+Processing dfsorderoutput clause 1066..
+Processing dfsorderoutput clause 1068..
+Processing dfsorderoutput clause 1070..
+Processing dfsorderoutput clause 1072..
+Processing dfsorderoutput clause 1067..
+Processing dfsorderoutput clause 1074..
+Processing dfsorderoutput clause 1076..
+Processing dfsorderoutput clause 1078..
+Processing dfsorderoutput clause 1080..
+Processing dfsorderoutput clause 1082..
+Processing dfsorderoutput clause 1084..
+Processing dfsorderoutput clause 1086..
+Processing dfsorderoutput clause 1077..
+Processing dfsorderoutput clause 1088..
+Processing dfsorderoutput clause 1090..
+Processing dfsorderoutput clause 1075..
+Processing dfsorderoutput clause 1092..
+Processing dfsorderoutput clause 1094..
+Processing dfsorderoutput clause 1096..
+Processing dfsorderoutput clause 1098..
+Processing dfsorderoutput clause 1100..
+Processing dfsorderoutput clause 1095..
+Processing dfsorderoutput clause 1102..
+Processing dfsorderoutput clause 1104..
+Processing dfsorderoutput clause 1093..
+Processing dfsorderoutput clause 1106..
+Processing dfsorderoutput clause 1108..
+Processing dfsorderoutput clause 1110..
+Processing dfsorderoutput clause 1112..
+Processing dfsorderoutput clause 1114..
+Processing dfsorderoutput clause 1116..
+Processing dfsorderoutput clause 1118..
+Processing dfsorderoutput clause 1120..
+Processing dfsorderoutput clause 1111..
+Processing dfsorderoutput clause 1122..
+Processing dfsorderoutput clause 1107..
+Processing dfsorderoutput clause 1124..
+Processing dfsorderoutput clause 1126..
+Processing dfsorderoutput clause 1128..
+Processing dfsorderoutput clause 1130..
+Processing dfsorderoutput clause 1125..
+Processing dfsorderoutput clause 1065..
+Processing dfsorderoutput clause 1063..
+Processing dfsorderoutput clause 1132..
+Processing dfsorderoutput clause 1134..
+Processing dfsorderoutput clause 1136..
+Processing dfsorderoutput clause 1138..
+Processing dfsorderoutput clause 1140..
+Processing dfsorderoutput clause 1137..
+Processing dfsorderoutput clause 1142..
+Processing dfsorderoutput clause 1144..
+Processing dfsorderoutput clause 1146..
+Processing dfsorderoutput clause 1148..
+Processing dfsorderoutput clause 1150..
+Processing dfsorderoutput clause 1143..
+Processing dfsorderoutput clause 1152..
+Processing dfsorderoutput clause 1154..
+Processing dfsorderoutput clause 1153..
+Processing dfsorderoutput clause 1135..
+Processing dfsorderoutput clause 1156..
+Processing dfsorderoutput clause 1158..
+Processing dfsorderoutput clause 1160..
+Processing dfsorderoutput clause 1162..
+Processing dfsorderoutput clause 1164..
+Processing dfsorderoutput clause 1159..
+Processing dfsorderoutput clause 1166..
+Processing dfsorderoutput clause 1168..
+Processing dfsorderoutput clause 1170..
+Processing dfsorderoutput clause 1172..
+Processing dfsorderoutput clause 1174..
+Processing dfsorderoutput clause 1176..
+Processing dfsorderoutput clause 1171..
+Processing dfsorderoutput clause 1169..
+Processing dfsorderoutput clause 1178..
+Processing dfsorderoutput clause 1180..
+Processing dfsorderoutput clause 1179..
+Processing dfsorderoutput clause 1182..
+Processing dfsorderoutput clause 1184..
+Processing dfsorderoutput clause 1183..
+Processing dfsorderoutput clause 1167..
+Processing dfsorderoutput clause 1157..
+Processing dfsorderoutput clause 1186..
+Processing dfsorderoutput clause 1188..
+Processing dfsorderoutput clause 1190..
+Processing dfsorderoutput clause 1192..
+Processing dfsorderoutput clause 1194..
+Processing dfsorderoutput clause 1196..
+Processing dfsorderoutput clause 1198..
+Processing dfsorderoutput clause 1191..
+Processing dfsorderoutput clause 1200..
+Processing dfsorderoutput clause 1189..
+Processing dfsorderoutput clause 1202..
+Processing dfsorderoutput clause 1204..
+Processing dfsorderoutput clause 1206..
+Processing dfsorderoutput clause 1208..
+Processing dfsorderoutput clause 1210..
+Processing dfsorderoutput clause 1212..
+Processing dfsorderoutput clause 1214..
+Processing dfsorderoutput clause 1216..
+Processing dfsorderoutput clause 1205..
+Processing dfsorderoutput clause 1218..
+Processing dfsorderoutput clause 1203..
+Processing dfsorderoutput clause 1220..
+Processing dfsorderoutput clause 1222..
+Processing dfsorderoutput clause 1224..
+Processing dfsorderoutput clause 1223..
+Processing dfsorderoutput clause 1221..
+Processing dfsorderoutput clause 1187..
+Processing dfsorderoutput clause 1133..
+Processing dfsorderoutput clause 969..
+Processing dfsorderoutput clause 1226..
+Processing dfsorderoutput clause 1228..
+Processing dfsorderoutput clause 1230..
+Processing dfsorderoutput clause 1232..
+Processing dfsorderoutput clause 1234..
+Processing dfsorderoutput clause 1236..
+Processing dfsorderoutput clause 1238..
+Processing dfsorderoutput clause 1240..
+Processing dfsorderoutput clause 1231..
+Processing dfsorderoutput clause 1242..
+Processing dfsorderoutput clause 1244..
+Processing dfsorderoutput clause 1246..
+Processing dfsorderoutput clause 1243..
+Processing dfsorderoutput clause 1248..
+Processing dfsorderoutput clause 1250..
+Processing dfsorderoutput clause 1252..
+Processing dfsorderoutput clause 1254..
+Processing dfsorderoutput clause 1256..
+Processing dfsorderoutput clause 1258..
+Processing dfsorderoutput clause 1260..
+Processing dfsorderoutput clause 1262..
+Processing dfsorderoutput clause 1264..
+Processing dfsorderoutput clause 1266..
+Processing dfsorderoutput clause 1257..
+Processing dfsorderoutput clause 1268..
+Processing dfsorderoutput clause 1249..
+Processing dfsorderoutput clause 1270..
+Processing dfsorderoutput clause 1272..
+Processing dfsorderoutput clause 1274..
+Processing dfsorderoutput clause 1276..
+Processing dfsorderoutput clause 1278..
+Processing dfsorderoutput clause 1275..
+Processing dfsorderoutput clause 1280..
+Processing dfsorderoutput clause 1282..
+Processing dfsorderoutput clause 1284..
+Processing dfsorderoutput clause 1286..
+Processing dfsorderoutput clause 1271..
+Processing dfsorderoutput clause 1229..
+Processing dfsorderoutput clause 1288..
+Processing dfsorderoutput clause 1290..
+Processing dfsorderoutput clause 1292..
+Processing dfsorderoutput clause 1294..
+Processing dfsorderoutput clause 1296..
+Processing dfsorderoutput clause 1298..
+Processing dfsorderoutput clause 1300..
+Processing dfsorderoutput clause 1302..
+Processing dfsorderoutput clause 1291..
+Processing dfsorderoutput clause 1304..
+Processing dfsorderoutput clause 1306..
+Processing dfsorderoutput clause 1308..
+Processing dfsorderoutput clause 1310..
+Processing dfsorderoutput clause 1312..
+Processing dfsorderoutput clause 1314..
+Processing dfsorderoutput clause 1316..
+Processing dfsorderoutput clause 1318..
+Processing dfsorderoutput clause 1320..
+Processing dfsorderoutput clause 1311..
+Processing dfsorderoutput clause 1307..
+Processing dfsorderoutput clause 1322..
+Processing dfsorderoutput clause 1324..
+Processing dfsorderoutput clause 1326..
+Processing dfsorderoutput clause 1323..
+Processing dfsorderoutput clause 1328..
+Processing dfsorderoutput clause 1330..
+Processing dfsorderoutput clause 1329..
+Processing dfsorderoutput clause 1305..
+Processing dfsorderoutput clause 1332..
+Processing dfsorderoutput clause 1334..
+Processing dfsorderoutput clause 1336..
+Processing dfsorderoutput clause 1338..
+Processing dfsorderoutput clause 1340..
+Processing dfsorderoutput clause 1335..
+Processing dfsorderoutput clause 1342..
+Processing dfsorderoutput clause 1333..
+Processing dfsorderoutput clause 1344..
+Processing dfsorderoutput clause 1346..
+Processing dfsorderoutput clause 1348..
+Processing dfsorderoutput clause 1350..
+Processing dfsorderoutput clause 1352..
+Processing dfsorderoutput clause 1345..
+Processing dfsorderoutput clause 1354..
+Processing dfsorderoutput clause 1356..
+Processing dfsorderoutput clause 1358..
+Processing dfsorderoutput clause 1360..
+Processing dfsorderoutput clause 1362..
+Processing dfsorderoutput clause 1364..
+Processing dfsorderoutput clause 1366..
+Processing dfsorderoutput clause 1359..
+Processing dfsorderoutput clause 1357..
+Processing dfsorderoutput clause 1368..
+Processing dfsorderoutput clause 1370..
+Processing dfsorderoutput clause 1369..
+Processing dfsorderoutput clause 1372..
+Processing dfsorderoutput clause 1374..
+Processing dfsorderoutput clause 1373..
+Processing dfsorderoutput clause 1355..
+Processing dfsorderoutput clause 1376..
+Processing dfsorderoutput clause 1378..
+Processing dfsorderoutput clause 1380..
+Processing dfsorderoutput clause 1382..
+Processing dfsorderoutput clause 1379..
+Processing dfsorderoutput clause 1384..
+Processing dfsorderoutput clause 1386..
+Processing dfsorderoutput clause 1388..
+Processing dfsorderoutput clause 1390..
+Processing dfsorderoutput clause 1392..
+Processing dfsorderoutput clause 1394..
+Processing dfsorderoutput clause 1385..
+Processing dfsorderoutput clause 1396..
+Processing dfsorderoutput clause 1377..
+Processing dfsorderoutput clause 1289..
+Processing dfsorderoutput clause 1227..
+Processing dfsorderoutput clause 1398..
+Processing dfsorderoutput clause 1400..
+Processing dfsorderoutput clause 1402..
+Processing dfsorderoutput clause 1404..
+Processing dfsorderoutput clause 1406..
+Processing dfsorderoutput clause 1405..
+Processing dfsorderoutput clause 1408..
+Processing dfsorderoutput clause 1410..
+Processing dfsorderoutput clause 1409..
+Processing dfsorderoutput clause 1412..
+Processing dfsorderoutput clause 1414..
+Processing dfsorderoutput clause 1416..
+Processing dfsorderoutput clause 1418..
+Processing dfsorderoutput clause 1420..
+Processing dfsorderoutput clause 1415..
+Processing dfsorderoutput clause 1413..
+Processing dfsorderoutput clause 1403..
+Processing dfsorderoutput clause 1422..
+Processing dfsorderoutput clause 1424..
+Processing dfsorderoutput clause 1426..
+Processing dfsorderoutput clause 1428..
+Processing dfsorderoutput clause 1430..
+Processing dfsorderoutput clause 1432..
+Processing dfsorderoutput clause 1434..
+Processing dfsorderoutput clause 1425..
+Processing dfsorderoutput clause 1436..
+Processing dfsorderoutput clause 1438..
+Processing dfsorderoutput clause 1440..
+Processing dfsorderoutput clause 1442..
+Processing dfsorderoutput clause 1444..
+Processing dfsorderoutput clause 1446..
+Processing dfsorderoutput clause 1448..
+Processing dfsorderoutput clause 1437..
+Processing dfsorderoutput clause 1423..
+Processing dfsorderoutput clause 1401..
+Processing dfsorderoutput clause 1450..
+Processing dfsorderoutput clause 1452..
+Processing dfsorderoutput clause 1454..
+Processing dfsorderoutput clause 1456..
+Processing dfsorderoutput clause 1458..
+Processing dfsorderoutput clause 1460..
+Processing dfsorderoutput clause 1457..
+Processing dfsorderoutput clause 1455..
+Processing dfsorderoutput clause 1462..
+Processing dfsorderoutput clause 1464..
+Processing dfsorderoutput clause 1463..
+Processing dfsorderoutput clause 1453..
+Processing dfsorderoutput clause 1466..
+Processing dfsorderoutput clause 1468..
+Processing dfsorderoutput clause 1470..
+Processing dfsorderoutput clause 1472..
+Processing dfsorderoutput clause 1474..
+Processing dfsorderoutput clause 1469..
+Processing dfsorderoutput clause 1476..
+Processing dfsorderoutput clause 1478..
+Processing dfsorderoutput clause 1467..
+Processing dfsorderoutput clause 1480..
+Processing dfsorderoutput clause 1482..
+Processing dfsorderoutput clause 1484..
+Processing dfsorderoutput clause 1486..
+Processing dfsorderoutput clause 1483..
+Processing dfsorderoutput clause 1488..
+Processing dfsorderoutput clause 1490..
+Processing dfsorderoutput clause 1492..
+Processing dfsorderoutput clause 1494..
+Processing dfsorderoutput clause 1491..
+Processing dfsorderoutput clause 1481..
+Processing dfsorderoutput clause 1496..
+Processing dfsorderoutput clause 1498..
+Processing dfsorderoutput clause 1500..
+Processing dfsorderoutput clause 1499..
+Processing dfsorderoutput clause 1502..
+Processing dfsorderoutput clause 1504..
+Processing dfsorderoutput clause 1503..
+Processing dfsorderoutput clause 1497..
+Processing dfsorderoutput clause 1451..
+Processing dfsorderoutput clause 1506..
+Processing dfsorderoutput clause 1508..
+Processing dfsorderoutput clause 1510..
+Processing dfsorderoutput clause 1512..
+Processing dfsorderoutput clause 1514..
+Processing dfsorderoutput clause 1509..
+Processing dfsorderoutput clause 1516..
+Processing dfsorderoutput clause 1518..
+Processing dfsorderoutput clause 1520..
+Processing dfsorderoutput clause 1522..
+Processing dfsorderoutput clause 1524..
+Processing dfsorderoutput clause 1526..
+Processing dfsorderoutput clause 1523..
+Processing dfsorderoutput clause 1528..
+Processing dfsorderoutput clause 1530..
+Processing dfsorderoutput clause 1517..
+Processing dfsorderoutput clause 1507..
+Processing dfsorderoutput clause 1532..
+Processing dfsorderoutput clause 1534..
+Processing dfsorderoutput clause 1536..
+Processing dfsorderoutput clause 1538..
+Processing dfsorderoutput clause 1535..
+Processing dfsorderoutput clause 1540..
+Processing dfsorderoutput clause 1542..
+Processing dfsorderoutput clause 1544..
+Processing dfsorderoutput clause 1546..
+Processing dfsorderoutput clause 1548..
+Processing dfsorderoutput clause 1550..
+Processing dfsorderoutput clause 1552..
+Processing dfsorderoutput clause 1543..
+Processing dfsorderoutput clause 1554..
+Processing dfsorderoutput clause 1541..
+Processing dfsorderoutput clause 1556..
+Processing dfsorderoutput clause 1558..
+Processing dfsorderoutput clause 1557..
+Processing dfsorderoutput clause 1560..
+Processing dfsorderoutput clause 1562..
+Processing dfsorderoutput clause 1564..
+Processing dfsorderoutput clause 1566..
+Processing dfsorderoutput clause 1561..
+Processing dfsorderoutput clause 1568..
+Processing dfsorderoutput clause 1533..
+Processing dfsorderoutput clause 1570..
+Processing dfsorderoutput clause 1572..
+Processing dfsorderoutput clause 1574..
+Processing dfsorderoutput clause 1571..
+Processing dfsorderoutput clause 1576..
+Processing dfsorderoutput clause 1578..
+Processing dfsorderoutput clause 1580..
+Processing dfsorderoutput clause 1582..
+Processing dfsorderoutput clause 1584..
+Processing dfsorderoutput clause 1586..
+Processing dfsorderoutput clause 1588..
+Processing dfsorderoutput clause 1583..
+Processing dfsorderoutput clause 1590..
+Processing dfsorderoutput clause 1592..
+Processing dfsorderoutput clause 1594..
+Processing dfsorderoutput clause 1591..
+Processing dfsorderoutput clause 1596..
+Processing dfsorderoutput clause 1577..
+Processing dfsorderoutput clause 1399..
+Processing dfsorderoutput clause 1598..
+Processing dfsorderoutput clause 1600..
+Processing dfsorderoutput clause 1602..
+Processing dfsorderoutput clause 1604..
+Processing dfsorderoutput clause 1606..
+Processing dfsorderoutput clause 1601..
+Processing dfsorderoutput clause 1608..
+Processing dfsorderoutput clause 1610..
+Processing dfsorderoutput clause 1612..
+Processing dfsorderoutput clause 1614..
+Processing dfsorderoutput clause 1616..
+Processing dfsorderoutput clause 1618..
+Processing dfsorderoutput clause 1620..
+Processing dfsorderoutput clause 1622..
+Processing dfsorderoutput clause 1613..
+Processing dfsorderoutput clause 1624..
+Processing dfsorderoutput clause 1626..
+Processing dfsorderoutput clause 1611..
+Processing dfsorderoutput clause 1628..
+Processing dfsorderoutput clause 1630..
+Processing dfsorderoutput clause 1632..
+Processing dfsorderoutput clause 1634..
+Processing dfsorderoutput clause 1636..
+Processing dfsorderoutput clause 1638..
+Processing dfsorderoutput clause 1640..
+Processing dfsorderoutput clause 1642..
+Processing dfsorderoutput clause 1633..
+Processing dfsorderoutput clause 1629..
+Processing dfsorderoutput clause 1644..
+Processing dfsorderoutput clause 1646..
+Processing dfsorderoutput clause 1648..
+Processing dfsorderoutput clause 1650..
+Processing dfsorderoutput clause 1647..
+Processing dfsorderoutput clause 1652..
+Processing dfsorderoutput clause 1654..
+Processing dfsorderoutput clause 1645..
+Processing dfsorderoutput clause 1656..
+Processing dfsorderoutput clause 1658..
+Processing dfsorderoutput clause 1660..
+Processing dfsorderoutput clause 1662..
+Processing dfsorderoutput clause 1664..
+Processing dfsorderoutput clause 1659..
+Processing dfsorderoutput clause 1657..
+Processing dfsorderoutput clause 1666..
+Processing dfsorderoutput clause 1668..
+Processing dfsorderoutput clause 1667..
+Processing dfsorderoutput clause 1670..
+Processing dfsorderoutput clause 1672..
+Processing dfsorderoutput clause 1674..
+Processing dfsorderoutput clause 1676..
+Processing dfsorderoutput clause 1678..
+Processing dfsorderoutput clause 1680..
+Processing dfsorderoutput clause 1675..
+Processing dfsorderoutput clause 1682..
+Processing dfsorderoutput clause 1684..
+Processing dfsorderoutput clause 1686..
+Processing dfsorderoutput clause 1688..
+Processing dfsorderoutput clause 1690..
+Processing dfsorderoutput clause 1683..
+Processing dfsorderoutput clause 1671..
+Processing dfsorderoutput clause 1609..
+Processing dfsorderoutput clause 1692..
+Processing dfsorderoutput clause 1694..
+Processing dfsorderoutput clause 1696..
+Processing dfsorderoutput clause 1698..
+Processing dfsorderoutput clause 1693..
+Processing dfsorderoutput clause 1700..
+Processing dfsorderoutput clause 1702..
+Processing dfsorderoutput clause 1701..
+Processing dfsorderoutput clause 1599..
+Processing dfsorderoutput clause 569..
+Processing dfsorderoutput clause 1705..
+Processing dfsorderoutput clause 1706..
+Processing dfsorderoutput clause 1707..
+Processing dfsorderoutput clause 1708..
+Processing dfsorderoutput clause 1709..
+Processing dfsorderoutput clause 1710..
+Processing dfsorderoutput clause 1711..
+Processing dfsorderoutput clause 1712..
+Processing dfsorderoutput clause 1713..
+Processing dfsorderoutput clause 1714..
+Processing dfsorderoutput clause 1715..
+Processing dfsorderoutput clause 1716..
+Processing dfsorderoutput clause 1717..
+Processing dfsorderoutput clause 1718..
+Processing dfsorderoutput clause 1719..
+Processing dfsorderoutput clause 1720..
+Processing dfsorderoutput clause 1721..
+Processing dfsorderoutput clause 1722..
+Processing dfsorderoutput clause 1723..
+Processing dfsorderoutput clause 1724..
+Processing dfsorderoutput clause 1725..
+Processing dfsorderoutput clause 1726..
+Processing dfsorderoutput clause 1727..
+Processing dfsorderoutput clause 1728..
+Processing dfsorderoutput clause 1729..
+Processing dfsorderoutput clause 1730..
+Processing dfsorderoutput clause 1731..
+Processing dfsorderoutput clause 1732..
+Processing dfsorderoutput clause 1733..
+Processing dfsorderoutput clause 1734..
+Processing dfsorderoutput clause 1735..
+Processing dfsorderoutput clause 1736..
+Processing dfsorderoutput clause 1737..
+Processing dfsorderoutput clause 1738..
+Processing dfsorderoutput clause 1739..
+Processing dfsorderoutput clause 1740..
+Processing dfsorderoutput clause 1741..
+Processing dfsorderoutput clause 1742..
+Processing dfsorderoutput clause 1743..
+Processing dfsorderoutput clause 1744..
+Processing dfsorderoutput clause 1745..
+Processing dfsorderoutput clause 1746..
+Processing dfsorderoutput clause 1747..
+Processing dfsorderoutput clause 1748..
+Processing dfsorderoutput clause 1749..
+Processing dfsorderoutput clause 1750..
+Processing dfsorderoutput clause 1751..
+Processing dfsorderoutput clause 1752..
+Processing dfsorderoutput clause 1753..
+Processing dfsorderoutput clause 1754..
+Processing dfsorderoutput clause 1755..
+expanding function  ../test/thesis/SPLOT-3CNF-FM-500-50-1.00-SAT-5.xml...
+Expanding clause 574 variable 4..
+Expanding clause 574 variable 3..
+Expanding clause 574 variable 6..
+Expanding clause 574 variable 2..
+Expanding clause 586 variable 10..
+Expanding clause 586 variable 8..
+Expanding clause 586 variable 12..
+Expanding clause 586 variable 11..
+Expanding clause 586 variable 13..
+Expanding clause 584 variable 590..
+Expanding clause 584 variable 594..
+Expanding clause 584 variable 10..
+Expanding clause 584 variable 8..
+Expanding clause 584 variable 12..
+Expanding clause 584 variable 11..
+Expanding clause 584 variable 13..
+Expanding clause 584 variable 15..
+Expanding clause 584 variable 17..
+Expanding clause 606 variable 20..
+Expanding clause 606 variable 19..
+Expanding clause 606 variable 2..
+Expanding clause 612 variable 23..
+Expanding clause 612 variable 22..
+Expanding clause 612 variable 2..
+Expanding clause 604 variable 610..
+Expanding clause 604 variable 20..
+Expanding clause 604 variable 19..
+Expanding clause 604 variable 2..
+Expanding clause 604 variable 22..
+Expanding clause 618 variable 26..
+Expanding clause 618 variable 25..
+Expanding clause 618 variable 28..
+Expanding clause 618 variable 2..
+Expanding clause 630 variable 32..
+Expanding clause 630 variable 30..
+Expanding clause 630 variable 34..
+Expanding clause 630 variable 33..
+Expanding clause 630 variable 35..
+Expanding clause 642 variable 38..
+Expanding clause 642 variable 30..
+Expanding clause 642 variable 39..
+Expanding clause 628 variable 634..
+Expanding clause 628 variable 638..
+Expanding clause 628 variable 32..
+Expanding clause 628 variable 30..
+Expanding clause 628 variable 34..
+Expanding clause 628 variable 33..
+Expanding clause 628 variable 35..
+Expanding clause 628 variable 646..
+Expanding clause 628 variable 38..
+Expanding clause 628 variable 39..
+Expanding clause 628 variable 2..
+Expanding clause 572 variable 578..
+Expanding clause 572 variable 582..
+Expanding clause 572 variable 4..
+Expanding clause 572 variable 3..
+Expanding clause 572 variable 6..
+Expanding clause 572 variable 2..
+Expanding clause 572 variable 612..
+Expanding clause 572 variable 610..
+Expanding clause 572 variable 20..
+Expanding clause 572 variable 19..
+Expanding clause 572 variable 22..
+Expanding clause 572 variable 640..
+Expanding clause 572 variable 648..
+Expanding clause 572 variable 634..
+Expanding clause 572 variable 32..
+Expanding clause 572 variable 30..
+Expanding clause 572 variable 34..
+Expanding clause 572 variable 33..
+Expanding clause 572 variable 35..
+Expanding clause 572 variable 38..
+Expanding clause 572 variable 39..
+Expanding clause 572 variable 5..
+Expanding clause 572 variable 616..
+Expanding clause 572 variable 23..
+Expanding clause 572 variable 36..
+Expanding clause 572 variable 24..
+Expanding clause 652 variable 43..
+Expanding clause 652 variable 42..
+Expanding clause 652 variable 45..
+Expanding clause 652 variable 41..
+Expanding clause 650 variable 656..
+Expanding clause 650 variable 660..
+Expanding clause 650 variable 43..
+Expanding clause 650 variable 42..
+Expanding clause 650 variable 45..
+Expanding clause 650 variable 41..
+Expanding clause 650 variable 44..
+Expanding clause 672 variable 53..
+Expanding clause 672 variable 49..
+Expanding clause 672 variable 55..
+Expanding clause 680 variable 57..
+Expanding clause 680 variable 49..
+Expanding clause 680 variable 59..
+Expanding clause 680 variable 61..
+Expanding clause 680 variable 58..
+Expanding clause 680 variable 60..
+Expanding clause 680 variable 62..
+Expanding clause 666 variable 50..
+Expanding clause 666 variable 49..
+Expanding clause 666 variable 676..
+Expanding clause 666 variable 673..
+Expanding clause 666 variable 53..
+Expanding clause 666 variable 55..
+Expanding clause 666 variable 47..
+Expanding clause 666 variable 54..
+/home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function.rb:281:in `write': Interrupt
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function.rb:281:in `print'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function.rb:281:in `block (2 levels) in expand_clause'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function.rb:278:in `each'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function.rb:278:in `block in expand_clause'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function.rb:275:in `each'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function.rb:275:in `expand_clause'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function.rb:296:in `block in expandFunction'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function.rb:294:in `each'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function.rb:294:in `expandFunction'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/test_bdd_lib.rb:167:in `process_file'
+	from ./test_bdd_heuristic.rb:60:in `block (2 levels) in <main>'
+	from ./test_bdd_heuristic.rb:57:in `each'
+	from ./test_bdd_heuristic.rb:57:in `block in <main>'
+	from ./test_bdd_heuristic.rb:53:in `each'
+	from ./test_bdd_heuristic.rb:53:in `<main>'
+Process file ../test/thesis/SPLOT-3CNF-FM-500-50-1.00-SAT-5.xml
+file	order	reorder	algo_time	bdd_time	reorder_time	minterms	span	inputs	clauses	functions	mean (variables_in_clause)	standard deviation (variables_in_clause)	median (variables_in_clause)	mean (variables_in_functions)	standard deviation (variables_in_functions)	median (variables_in_functions)	mean (variable_in_clauses)	standard deviation (variable_in_clauses)	median (variable_in_clauses)	mean (variable_mean_level)	standard deviation (variable_mean_level)	median (variable_mean_level)	maxnode	total
+Processing dfsorderoutput clause 1704..
+Processing dfsorderoutput clause 568..
+Processing dfsorderoutput clause 570..
+Processing dfsorderoutput clause 572..
+Processing dfsorderoutput clause 574..
+Processing dfsorderoutput clause 576..
+Processing dfsorderoutput clause 578..
+Processing dfsorderoutput clause 580..
+Processing dfsorderoutput clause 582..
+Processing dfsorderoutput clause 575..
+Processing dfsorderoutput clause 584..
+Processing dfsorderoutput clause 586..
+Processing dfsorderoutput clause 588..
+Processing dfsorderoutput clause 590..
+Processing dfsorderoutput clause 592..
+Processing dfsorderoutput clause 594..
+Processing dfsorderoutput clause 587..
+Processing dfsorderoutput clause 596..
+Processing dfsorderoutput clause 598..
+Processing dfsorderoutput clause 600..
+Processing dfsorderoutput clause 602..
+Processing dfsorderoutput clause 585..
+Processing dfsorderoutput clause 604..
+Processing dfsorderoutput clause 606..
+Processing dfsorderoutput clause 608..
+Processing dfsorderoutput clause 610..
+Processing dfsorderoutput clause 607..
+Processing dfsorderoutput clause 612..
+Processing dfsorderoutput clause 614..
+Processing dfsorderoutput clause 616..
+Processing dfsorderoutput clause 613..
+Processing dfsorderoutput clause 605..
+Processing dfsorderoutput clause 618..
+Processing dfsorderoutput clause 620..
+Processing dfsorderoutput clause 622..
+Processing dfsorderoutput clause 624..
+Processing dfsorderoutput clause 626..
+Processing dfsorderoutput clause 619..
+Processing dfsorderoutput clause 628..
+Processing dfsorderoutput clause 630..
+Processing dfsorderoutput clause 632..
+Processing dfsorderoutput clause 634..
+Processing dfsorderoutput clause 636..
+Processing dfsorderoutput clause 638..
+Processing dfsorderoutput clause 631..
+Processing dfsorderoutput clause 640..
+Processing dfsorderoutput clause 642..
+Processing dfsorderoutput clause 644..
+Processing dfsorderoutput clause 646..
+Processing dfsorderoutput clause 643..
+Processing dfsorderoutput clause 648..
+Processing dfsorderoutput clause 629..
+Processing dfsorderoutput clause 573..
+Processing dfsorderoutput clause 650..
+Processing dfsorderoutput clause 652..
+Processing dfsorderoutput clause 654..
+Processing dfsorderoutput clause 656..
+Processing dfsorderoutput clause 658..
+Processing dfsorderoutput clause 660..
+Processing dfsorderoutput clause 653..
+Processing dfsorderoutput clause 651..
+Processing dfsorderoutput clause 662..
+Processing dfsorderoutput clause 664..
+Processing dfsorderoutput clause 666..
+Processing dfsorderoutput clause 668..
+Processing dfsorderoutput clause 670..
+Processing dfsorderoutput clause 672..
+Processing dfsorderoutput clause 674..
+Processing dfsorderoutput clause 676..
+Processing dfsorderoutput clause 678..
+Processing dfsorderoutput clause 673..
+Processing dfsorderoutput clause 680..
+Processing dfsorderoutput clause 682..
+Processing dfsorderoutput clause 684..
+Processing dfsorderoutput clause 686..
+Processing dfsorderoutput clause 688..
+Processing dfsorderoutput clause 690..
+Processing dfsorderoutput clause 692..
+Processing dfsorderoutput clause 681..
+Processing dfsorderoutput clause 667..
+Processing dfsorderoutput clause 694..
+Processing dfsorderoutput clause 696..
+Processing dfsorderoutput clause 698..
+Processing dfsorderoutput clause 700..
+Processing dfsorderoutput clause 702..
+Processing dfsorderoutput clause 695..
+Processing dfsorderoutput clause 665..
+Processing dfsorderoutput clause 663..
+Processing dfsorderoutput clause 571..
+Processing dfsorderoutput clause 704..
+Processing dfsorderoutput clause 706..
+Processing dfsorderoutput clause 708..
+Processing dfsorderoutput clause 710..
+Processing dfsorderoutput clause 712..
+Processing dfsorderoutput clause 714..
+Processing dfsorderoutput clause 709..
+Processing dfsorderoutput clause 716..
+Processing dfsorderoutput clause 718..
+Processing dfsorderoutput clause 720..
+Processing dfsorderoutput clause 722..
+Processing dfsorderoutput clause 724..
+Processing dfsorderoutput clause 726..
+Processing dfsorderoutput clause 728..
+Processing dfsorderoutput clause 730..
+Processing dfsorderoutput clause 721..
+Processing dfsorderoutput clause 717..
+Processing dfsorderoutput clause 732..
+Processing dfsorderoutput clause 734..
+Processing dfsorderoutput clause 736..
+Processing dfsorderoutput clause 733..
+Processing dfsorderoutput clause 738..
+Processing dfsorderoutput clause 740..
+Processing dfsorderoutput clause 742..
+Processing dfsorderoutput clause 741..
+Processing dfsorderoutput clause 744..
+Processing dfsorderoutput clause 746..
+Processing dfsorderoutput clause 745..
+Processing dfsorderoutput clause 739..
+Processing dfsorderoutput clause 748..
+Processing dfsorderoutput clause 750..
+Processing dfsorderoutput clause 752..
+Processing dfsorderoutput clause 749..
+Processing dfsorderoutput clause 707..
+Processing dfsorderoutput clause 754..
+Processing dfsorderoutput clause 756..
+Processing dfsorderoutput clause 758..
+Processing dfsorderoutput clause 760..
+Processing dfsorderoutput clause 759..
+Processing dfsorderoutput clause 762..
+Processing dfsorderoutput clause 764..
+Processing dfsorderoutput clause 763..
+Processing dfsorderoutput clause 766..
+Processing dfsorderoutput clause 768..
+Processing dfsorderoutput clause 770..
+Processing dfsorderoutput clause 772..
+Processing dfsorderoutput clause 769..
+Processing dfsorderoutput clause 767..
+Processing dfsorderoutput clause 774..
+Processing dfsorderoutput clause 776..
+Processing dfsorderoutput clause 775..
+Processing dfsorderoutput clause 778..
+Processing dfsorderoutput clause 780..
+Processing dfsorderoutput clause 782..
+Processing dfsorderoutput clause 784..
+Processing dfsorderoutput clause 786..
+Processing dfsorderoutput clause 788..
+Processing dfsorderoutput clause 790..
+Processing dfsorderoutput clause 792..
+Processing dfsorderoutput clause 781..
+Processing dfsorderoutput clause 779..
+Processing dfsorderoutput clause 757..
+Processing dfsorderoutput clause 794..
+Processing dfsorderoutput clause 796..
+Processing dfsorderoutput clause 798..
+Processing dfsorderoutput clause 797..
+Processing dfsorderoutput clause 800..
+Processing dfsorderoutput clause 802..
+Processing dfsorderoutput clause 804..
+Processing dfsorderoutput clause 806..
+Processing dfsorderoutput clause 808..
+Processing dfsorderoutput clause 810..
+Processing dfsorderoutput clause 812..
+Processing dfsorderoutput clause 814..
+Processing dfsorderoutput clause 803..
+Processing dfsorderoutput clause 801..
+Processing dfsorderoutput clause 816..
+Processing dfsorderoutput clause 818..
+Processing dfsorderoutput clause 817..
+Processing dfsorderoutput clause 795..
+Processing dfsorderoutput clause 820..
+Processing dfsorderoutput clause 822..
+Processing dfsorderoutput clause 821..
+Processing dfsorderoutput clause 755..
+Processing dfsorderoutput clause 824..
+Processing dfsorderoutput clause 826..
+Processing dfsorderoutput clause 828..
+Processing dfsorderoutput clause 830..
+Processing dfsorderoutput clause 832..
+Processing dfsorderoutput clause 834..
+Processing dfsorderoutput clause 836..
+Processing dfsorderoutput clause 838..
+Processing dfsorderoutput clause 840..
+Processing dfsorderoutput clause 829..
+Processing dfsorderoutput clause 842..
+Processing dfsorderoutput clause 844..
+Processing dfsorderoutput clause 846..
+Processing dfsorderoutput clause 848..
+Processing dfsorderoutput clause 850..
+Processing dfsorderoutput clause 843..
+Processing dfsorderoutput clause 852..
+Processing dfsorderoutput clause 827..
+Processing dfsorderoutput clause 854..
+Processing dfsorderoutput clause 856..
+Processing dfsorderoutput clause 855..
+Processing dfsorderoutput clause 858..
+Processing dfsorderoutput clause 860..
+Processing dfsorderoutput clause 862..
+Processing dfsorderoutput clause 861..
+Processing dfsorderoutput clause 864..
+Processing dfsorderoutput clause 866..
+Processing dfsorderoutput clause 865..
+Processing dfsorderoutput clause 868..
+Processing dfsorderoutput clause 870..
+Processing dfsorderoutput clause 869..
+Processing dfsorderoutput clause 859..
+Processing dfsorderoutput clause 825..
+Processing dfsorderoutput clause 872..
+Processing dfsorderoutput clause 874..
+Processing dfsorderoutput clause 876..
+Processing dfsorderoutput clause 878..
+Processing dfsorderoutput clause 880..
+Processing dfsorderoutput clause 882..
+Processing dfsorderoutput clause 877..
+Processing dfsorderoutput clause 884..
+Processing dfsorderoutput clause 886..
+Processing dfsorderoutput clause 888..
+Processing dfsorderoutput clause 890..
+Processing dfsorderoutput clause 892..
+Processing dfsorderoutput clause 887..
+Processing dfsorderoutput clause 894..
+Processing dfsorderoutput clause 875..
+Processing dfsorderoutput clause 896..
+Processing dfsorderoutput clause 898..
+Processing dfsorderoutput clause 900..
+Processing dfsorderoutput clause 902..
+Processing dfsorderoutput clause 904..
+Processing dfsorderoutput clause 906..
+Processing dfsorderoutput clause 908..
+Processing dfsorderoutput clause 910..
+Processing dfsorderoutput clause 912..
+Processing dfsorderoutput clause 903..
+Processing dfsorderoutput clause 914..
+Processing dfsorderoutput clause 916..
+Processing dfsorderoutput clause 918..
+Processing dfsorderoutput clause 915..
+Processing dfsorderoutput clause 897..
+Processing dfsorderoutput clause 920..
+Processing dfsorderoutput clause 922..
+Processing dfsorderoutput clause 924..
+Processing dfsorderoutput clause 926..
+Processing dfsorderoutput clause 923..
+Processing dfsorderoutput clause 928..
+Processing dfsorderoutput clause 930..
+Processing dfsorderoutput clause 921..
+Processing dfsorderoutput clause 873..
+Processing dfsorderoutput clause 932..
+Processing dfsorderoutput clause 934..
+Processing dfsorderoutput clause 936..
+Processing dfsorderoutput clause 938..
+Processing dfsorderoutput clause 935..
+Processing dfsorderoutput clause 940..
+Processing dfsorderoutput clause 942..
+Processing dfsorderoutput clause 944..
+Processing dfsorderoutput clause 941..
+Processing dfsorderoutput clause 946..
+Processing dfsorderoutput clause 948..
+Processing dfsorderoutput clause 950..
+Processing dfsorderoutput clause 947..
+Processing dfsorderoutput clause 952..
+Processing dfsorderoutput clause 954..
+Processing dfsorderoutput clause 956..
+Processing dfsorderoutput clause 958..
+Processing dfsorderoutput clause 955..
+Processing dfsorderoutput clause 953..
+Processing dfsorderoutput clause 960..
+Processing dfsorderoutput clause 962..
+Processing dfsorderoutput clause 961..
+Processing dfsorderoutput clause 964..
+Processing dfsorderoutput clause 966..
+Processing dfsorderoutput clause 965..
+Processing dfsorderoutput clause 933..
+Processing dfsorderoutput clause 705..
+Processing dfsorderoutput clause 968..
+Processing dfsorderoutput clause 970..
+Processing dfsorderoutput clause 972..
+Processing dfsorderoutput clause 974..
+Processing dfsorderoutput clause 976..
+Processing dfsorderoutput clause 978..
+Processing dfsorderoutput clause 980..
+Processing dfsorderoutput clause 982..
+Processing dfsorderoutput clause 975..
+Processing dfsorderoutput clause 984..
+Processing dfsorderoutput clause 986..
+Processing dfsorderoutput clause 988..
+Processing dfsorderoutput clause 987..
+Processing dfsorderoutput clause 990..
+Processing dfsorderoutput clause 992..
+Processing dfsorderoutput clause 991..
+Processing dfsorderoutput clause 994..
+Processing dfsorderoutput clause 985..
+Processing dfsorderoutput clause 996..
+Processing dfsorderoutput clause 998..
+Processing dfsorderoutput clause 1000..
+Processing dfsorderoutput clause 999..
+Processing dfsorderoutput clause 1002..
+Processing dfsorderoutput clause 1004..
+Processing dfsorderoutput clause 1003..
+Processing dfsorderoutput clause 1006..
+Processing dfsorderoutput clause 997..
+Processing dfsorderoutput clause 1008..
+Processing dfsorderoutput clause 1010..
+Processing dfsorderoutput clause 1012..
+Processing dfsorderoutput clause 1014..
+Processing dfsorderoutput clause 1011..
+Processing dfsorderoutput clause 1016..
+Processing dfsorderoutput clause 1018..
+Processing dfsorderoutput clause 1020..
+Processing dfsorderoutput clause 1022..
+Processing dfsorderoutput clause 1024..
+Processing dfsorderoutput clause 1026..
+Processing dfsorderoutput clause 1019..
+Processing dfsorderoutput clause 1028..
+Processing dfsorderoutput clause 1009..
+Processing dfsorderoutput clause 1030..
+Processing dfsorderoutput clause 1032..
+Processing dfsorderoutput clause 1034..
+Processing dfsorderoutput clause 1036..
+Processing dfsorderoutput clause 1038..
+Processing dfsorderoutput clause 1040..
+Processing dfsorderoutput clause 1033..
+Processing dfsorderoutput clause 1042..
+Processing dfsorderoutput clause 1044..
+Processing dfsorderoutput clause 1046..
+Processing dfsorderoutput clause 1031..
+Processing dfsorderoutput clause 1048..
+Processing dfsorderoutput clause 1050..
+Processing dfsorderoutput clause 1052..
+Processing dfsorderoutput clause 1054..
+Processing dfsorderoutput clause 1056..
+Processing dfsorderoutput clause 1058..
+Processing dfsorderoutput clause 1060..
+Processing dfsorderoutput clause 1057..
+Processing dfsorderoutput clause 1049..
+Processing dfsorderoutput clause 973..
+Processing dfsorderoutput clause 971..
+Processing dfsorderoutput clause 1062..
+Processing dfsorderoutput clause 1064..
+Processing dfsorderoutput clause 1066..
+Processing dfsorderoutput clause 1068..
+Processing dfsorderoutput clause 1070..
+Processing dfsorderoutput clause 1072..
+Processing dfsorderoutput clause 1067..
+Processing dfsorderoutput clause 1074..
+Processing dfsorderoutput clause 1076..
+Processing dfsorderoutput clause 1078..
+Processing dfsorderoutput clause 1080..
+Processing dfsorderoutput clause 1082..
+Processing dfsorderoutput clause 1084..
+Processing dfsorderoutput clause 1086..
+Processing dfsorderoutput clause 1077..
+Processing dfsorderoutput clause 1088..
+Processing dfsorderoutput clause 1090..
+Processing dfsorderoutput clause 1075..
+Processing dfsorderoutput clause 1092..
+Processing dfsorderoutput clause 1094..
+Processing dfsorderoutput clause 1096..
+Processing dfsorderoutput clause 1098..
+Processing dfsorderoutput clause 1100..
+Processing dfsorderoutput clause 1095..
+Processing dfsorderoutput clause 1102..
+Processing dfsorderoutput clause 1104..
+Processing dfsorderoutput clause 1093..
+Processing dfsorderoutput clause 1106..
+Processing dfsorderoutput clause 1108..
+Processing dfsorderoutput clause 1110..
+Processing dfsorderoutput clause 1112..
+Processing dfsorderoutput clause 1114..
+Processing dfsorderoutput clause 1116..
+Processing dfsorderoutput clause 1118..
+Processing dfsorderoutput clause 1120..
+Processing dfsorderoutput clause 1111..
+Processing dfsorderoutput clause 1122..
+Processing dfsorderoutput clause 1107..
+Processing dfsorderoutput clause 1124..
+Processing dfsorderoutput clause 1126..
+Processing dfsorderoutput clause 1128..
+Processing dfsorderoutput clause 1130..
+Processing dfsorderoutput clause 1125..
+Processing dfsorderoutput clause 1065..
+Processing dfsorderoutput clause 1063..
+Processing dfsorderoutput clause 1132..
+Processing dfsorderoutput clause 1134..
+Processing dfsorderoutput clause 1136..
+Processing dfsorderoutput clause 1138..
+Processing dfsorderoutput clause 1140..
+Processing dfsorderoutput clause 1137..
+Processing dfsorderoutput clause 1142..
+Processing dfsorderoutput clause 1144..
+Processing dfsorderoutput clause 1146..
+Processing dfsorderoutput clause 1148..
+Processing dfsorderoutput clause 1150..
+Processing dfsorderoutput clause 1143..
+Processing dfsorderoutput clause 1152..
+Processing dfsorderoutput clause 1154..
+Processing dfsorderoutput clause 1153..
+Processing dfsorderoutput clause 1135..
+Processing dfsorderoutput clause 1156..
+Processing dfsorderoutput clause 1158..
+Processing dfsorderoutput clause 1160..
+Processing dfsorderoutput clause 1162..
+Processing dfsorderoutput clause 1164..
+Processing dfsorderoutput clause 1159..
+Processing dfsorderoutput clause 1166..
+Processing dfsorderoutput clause 1168..
+Processing dfsorderoutput clause 1170..
+Processing dfsorderoutput clause 1172..
+Processing dfsorderoutput clause 1174..
+Processing dfsorderoutput clause 1176..
+Processing dfsorderoutput clause 1171..
+Processing dfsorderoutput clause 1169..
+Processing dfsorderoutput clause 1178..
+Processing dfsorderoutput clause 1180..
+Processing dfsorderoutput clause 1179..
+Processing dfsorderoutput clause 1182..
+Processing dfsorderoutput clause 1184..
+Processing dfsorderoutput clause 1183..
+Processing dfsorderoutput clause 1167..
+Processing dfsorderoutput clause 1157..
+Processing dfsorderoutput clause 1186..
+Processing dfsorderoutput clause 1188..
+Processing dfsorderoutput clause 1190..
+Processing dfsorderoutput clause 1192..
+Processing dfsorderoutput clause 1194..
+Processing dfsorderoutput clause 1196..
+Processing dfsorderoutput clause 1198..
+Processing dfsorderoutput clause 1191..
+Processing dfsorderoutput clause 1200..
+Processing dfsorderoutput clause 1189..
+Processing dfsorderoutput clause 1202..
+Processing dfsorderoutput clause 1204..
+Processing dfsorderoutput clause 1206..
+Processing dfsorderoutput clause 1208..
+Processing dfsorderoutput clause 1210..
+Processing dfsorderoutput clause 1212..
+Processing dfsorderoutput clause 1214..
+Processing dfsorderoutput clause 1216..
+Processing dfsorderoutput clause 1205..
+Processing dfsorderoutput clause 1218..
+Processing dfsorderoutput clause 1203..
+Processing dfsorderoutput clause 1220..
+Processing dfsorderoutput clause 1222..
+Processing dfsorderoutput clause 1224..
+Processing dfsorderoutput clause 1223..
+Processing dfsorderoutput clause 1221..
+Processing dfsorderoutput clause 1187..
+Processing dfsorderoutput clause 1133..
+Processing dfsorderoutput clause 969..
+Processing dfsorderoutput clause 1226..
+Processing dfsorderoutput clause 1228..
+Processing dfsorderoutput clause 1230..
+Processing dfsorderoutput clause 1232..
+Processing dfsorderoutput clause 1234..
+Processing dfsorderoutput clause 1236..
+Processing dfsorderoutput clause 1238..
+Processing dfsorderoutput clause 1240..
+Processing dfsorderoutput clause 1231..
+Processing dfsorderoutput clause 1242..
+Processing dfsorderoutput clause 1244..
+Processing dfsorderoutput clause 1246..
+Processing dfsorderoutput clause 1243..
+Processing dfsorderoutput clause 1248..
+Processing dfsorderoutput clause 1250..
+Processing dfsorderoutput clause 1252..
+Processing dfsorderoutput clause 1254..
+Processing dfsorderoutput clause 1256..
+Processing dfsorderoutput clause 1258..
+Processing dfsorderoutput clause 1260..
+Processing dfsorderoutput clause 1262..
+Processing dfsorderoutput clause 1264..
+Processing dfsorderoutput clause 1266..
+Processing dfsorderoutput clause 1257..
+Processing dfsorderoutput clause 1268..
+Processing dfsorderoutput clause 1249..
+Processing dfsorderoutput clause 1270..
+Processing dfsorderoutput clause 1272..
+Processing dfsorderoutput clause 1274..
+Processing dfsorderoutput clause 1276..
+Processing dfsorderoutput clause 1278..
+Processing dfsorderoutput clause 1275..
+Processing dfsorderoutput clause 1280..
+Processing dfsorderoutput clause 1282..
+Processing dfsorderoutput clause 1284..
+Processing dfsorderoutput clause 1286..
+Processing dfsorderoutput clause 1271..
+Processing dfsorderoutput clause 1229..
+Processing dfsorderoutput clause 1288..
+Processing dfsorderoutput clause 1290..
+Processing dfsorderoutput clause 1292..
+Processing dfsorderoutput clause 1294..
+Processing dfsorderoutput clause 1296..
+Processing dfsorderoutput clause 1298..
+Processing dfsorderoutput clause 1300..
+Processing dfsorderoutput clause 1302..
+Processing dfsorderoutput clause 1291..
+Processing dfsorderoutput clause 1304..
+Processing dfsorderoutput clause 1306..
+Processing dfsorderoutput clause 1308..
+Processing dfsorderoutput clause 1310..
+Processing dfsorderoutput clause 1312..
+Processing dfsorderoutput clause 1314..
+Processing dfsorderoutput clause 1316..
+Processing dfsorderoutput clause 1318..
+Processing dfsorderoutput clause 1320..
+Processing dfsorderoutput clause 1311..
+Processing dfsorderoutput clause 1307..
+Processing dfsorderoutput clause 1322..
+Processing dfsorderoutput clause 1324..
+Processing dfsorderoutput clause 1326..
+Processing dfsorderoutput clause 1323..
+Processing dfsorderoutput clause 1328..
+Processing dfsorderoutput clause 1330..
+Processing dfsorderoutput clause 1329..
+Processing dfsorderoutput clause 1305..
+Processing dfsorderoutput clause 1332..
+Processing dfsorderoutput clause 1334..
+Processing dfsorderoutput clause 1336..
+Processing dfsorderoutput clause 1338..
+Processing dfsorderoutput clause 1340..
+Processing dfsorderoutput clause 1335..
+Processing dfsorderoutput clause 1342..
+Processing dfsorderoutput clause 1333..
+Processing dfsorderoutput clause 1344..
+Processing dfsorderoutput clause 1346..
+Processing dfsorderoutput clause 1348..
+Processing dfsorderoutput clause 1350..
+Processing dfsorderoutput clause 1352..
+Processing dfsorderoutput clause 1345..
+Processing dfsorderoutput clause 1354..
+Processing dfsorderoutput clause 1356..
+Processing dfsorderoutput clause 1358..
+Processing dfsorderoutput clause 1360..
+Processing dfsorderoutput clause 1362..
+Processing dfsorderoutput clause 1364..
+Processing dfsorderoutput clause 1366..
+Processing dfsorderoutput clause 1359..
+Processing dfsorderoutput clause 1357..
+Processing dfsorderoutput clause 1368..
+Processing dfsorderoutput clause 1370..
+Processing dfsorderoutput clause 1369..
+Processing dfsorderoutput clause 1372..
+Processing dfsorderoutput clause 1374..
+Processing dfsorderoutput clause 1373..
+Processing dfsorderoutput clause 1355..
+Processing dfsorderoutput clause 1376..
+Processing dfsorderoutput clause 1378..
+Processing dfsorderoutput clause 1380..
+Processing dfsorderoutput clause 1382..
+Processing dfsorderoutput clause 1379..
+Processing dfsorderoutput clause 1384..
+Processing dfsorderoutput clause 1386..
+Processing dfsorderoutput clause 1388..
+Processing dfsorderoutput clause 1390..
+Processing dfsorderoutput clause 1392..
+Processing dfsorderoutput clause 1394..
+Processing dfsorderoutput clause 1385..
+Processing dfsorderoutput clause 1396..
+Processing dfsorderoutput clause 1377..
+Processing dfsorderoutput clause 1289..
+Processing dfsorderoutput clause 1227..
+Processing dfsorderoutput clause 1398..
+Processing dfsorderoutput clause 1400..
+Processing dfsorderoutput clause 1402..
+Processing dfsorderoutput clause 1404..
+Processing dfsorderoutput clause 1406..
+Processing dfsorderoutput clause 1405..
+Processing dfsorderoutput clause 1408..
+Processing dfsorderoutput clause 1410..
+Processing dfsorderoutput clause 1409..
+Processing dfsorderoutput clause 1412..
+Processing dfsorderoutput clause 1414..
+Processing dfsorderoutput clause 1416..
+Processing dfsorderoutput clause 1418..
+Processing dfsorderoutput clause 1420..
+Processing dfsorderoutput clause 1415..
+Processing dfsorderoutput clause 1413..
+Processing dfsorderoutput clause 1403..
+Processing dfsorderoutput clause 1422..
+Processing dfsorderoutput clause 1424..
+Processing dfsorderoutput clause 1426..
+Processing dfsorderoutput clause 1428..
+Processing dfsorderoutput clause 1430..
+Processing dfsorderoutput clause 1432..
+Processing dfsorderoutput clause 1434..
+Processing dfsorderoutput clause 1425..
+Processing dfsorderoutput clause 1436..
+Processing dfsorderoutput clause 1438..
+Processing dfsorderoutput clause 1440..
+Processing dfsorderoutput clause 1442..
+Processing dfsorderoutput clause 1444..
+Processing dfsorderoutput clause 1446..
+Processing dfsorderoutput clause 1448..
+Processing dfsorderoutput clause 1437..
+Processing dfsorderoutput clause 1423..
+Processing dfsorderoutput clause 1401..
+Processing dfsorderoutput clause 1450..
+Processing dfsorderoutput clause 1452..
+Processing dfsorderoutput clause 1454..
+Processing dfsorderoutput clause 1456..
+Processing dfsorderoutput clause 1458..
+Processing dfsorderoutput clause 1460..
+Processing dfsorderoutput clause 1457..
+Processing dfsorderoutput clause 1455..
+Processing dfsorderoutput clause 1462..
+Processing dfsorderoutput clause 1464..
+Processing dfsorderoutput clause 1463..
+Processing dfsorderoutput clause 1453..
+Processing dfsorderoutput clause 1466..
+Processing dfsorderoutput clause 1468..
+Processing dfsorderoutput clause 1470..
+Processing dfsorderoutput clause 1472..
+Processing dfsorderoutput clause 1474..
+Processing dfsorderoutput clause 1469..
+Processing dfsorderoutput clause 1476..
+Processing dfsorderoutput clause 1478..
+Processing dfsorderoutput clause 1467..
+Processing dfsorderoutput clause 1480..
+Processing dfsorderoutput clause 1482..
+Processing dfsorderoutput clause 1484..
+Processing dfsorderoutput clause 1486..
+Processing dfsorderoutput clause 1483..
+Processing dfsorderoutput clause 1488..
+Processing dfsorderoutput clause 1490..
+Processing dfsorderoutput clause 1492..
+Processing dfsorderoutput clause 1494..
+Processing dfsorderoutput clause 1491..
+Processing dfsorderoutput clause 1481..
+Processing dfsorderoutput clause 1496..
+Processing dfsorderoutput clause 1498..
+Processing dfsorderoutput clause 1500..
+Processing dfsorderoutput clause 1499..
+Processing dfsorderoutput clause 1502..
+Processing dfsorderoutput clause 1504..
+Processing dfsorderoutput clause 1503..
+Processing dfsorderoutput clause 1497..
+Processing dfsorderoutput clause 1451..
+Processing dfsorderoutput clause 1506..
+Processing dfsorderoutput clause 1508..
+Processing dfsorderoutput clause 1510..
+Processing dfsorderoutput clause 1512..
+Processing dfsorderoutput clause 1514..
+Processing dfsorderoutput clause 1509..
+Processing dfsorderoutput clause 1516..
+Processing dfsorderoutput clause 1518..
+Processing dfsorderoutput clause 1520..
+Processing dfsorderoutput clause 1522..
+Processing dfsorderoutput clause 1524..
+Processing dfsorderoutput clause 1526..
+Processing dfsorderoutput clause 1523..
+Processing dfsorderoutput clause 1528..
+Processing dfsorderoutput clause 1530..
+Processing dfsorderoutput clause 1517..
+Processing dfsorderoutput clause 1507..
+Processing dfsorderoutput clause 1532..
+Processing dfsorderoutput clause 1534..
+Processing dfsorderoutput clause 1536..
+Processing dfsorderoutput clause 1538..
+Processing dfsorderoutput clause 1535..
+Processing dfsorderoutput clause 1540..
+Processing dfsorderoutput clause 1542..
+Processing dfsorderoutput clause 1544..
+Processing dfsorderoutput clause 1546..
+Processing dfsorderoutput clause 1548..
+Processing dfsorderoutput clause 1550..
+Processing dfsorderoutput clause 1552..
+Processing dfsorderoutput clause 1543..
+Processing dfsorderoutput clause 1554..
+Processing dfsorderoutput clause 1541..
+Processing dfsorderoutput clause 1556..
+Processing dfsorderoutput clause 1558..
+Processing dfsorderoutput clause 1557..
+Processing dfsorderoutput clause 1560..
+Processing dfsorderoutput clause 1562..
+Processing dfsorderoutput clause 1564..
+Processing dfsorderoutput clause 1566..
+Processing dfsorderoutput clause 1561..
+Processing dfsorderoutput clause 1568..
+Processing dfsorderoutput clause 1533..
+Processing dfsorderoutput clause 1570..
+Processing dfsorderoutput clause 1572..
+Processing dfsorderoutput clause 1574..
+Processing dfsorderoutput clause 1571..
+Processing dfsorderoutput clause 1576..
+Processing dfsorderoutput clause 1578..
+Processing dfsorderoutput clause 1580..
+Processing dfsorderoutput clause 1582..
+Processing dfsorderoutput clause 1584..
+Processing dfsorderoutput clause 1586..
+Processing dfsorderoutput clause 1588..
+Processing dfsorderoutput clause 1583..
+Processing dfsorderoutput clause 1590..
+Processing dfsorderoutput clause 1592..
+Processing dfsorderoutput clause 1594..
+Processing dfsorderoutput clause 1591..
+Processing dfsorderoutput clause 1596..
+Processing dfsorderoutput clause 1577..
+Processing dfsorderoutput clause 1399..
+Processing dfsorderoutput clause 1598..
+Processing dfsorderoutput clause 1600..
+Processing dfsorderoutput clause 1602..
+Processing dfsorderoutput clause 1604..
+Processing dfsorderoutput clause 1606..
+Processing dfsorderoutput clause 1601..
+Processing dfsorderoutput clause 1608..
+Processing dfsorderoutput clause 1610..
+Processing dfsorderoutput clause 1612..
+Processing dfsorderoutput clause 1614..
+Processing dfsorderoutput clause 1616..
+Processing dfsorderoutput clause 1618..
+Processing dfsorderoutput clause 1620..
+Processing dfsorderoutput clause 1622..
+Processing dfsorderoutput clause 1613..
+Processing dfsorderoutput clause 1624..
+Processing dfsorderoutput clause 1626..
+Processing dfsorderoutput clause 1611..
+Processing dfsorderoutput clause 1628..
+Processing dfsorderoutput clause 1630..
+Processing dfsorderoutput clause 1632..
+Processing dfsorderoutput clause 1634..
+Processing dfsorderoutput clause 1636..
+Processing dfsorderoutput clause 1638..
+Processing dfsorderoutput clause 1640..
+Processing dfsorderoutput clause 1642..
+Processing dfsorderoutput clause 1633..
+Processing dfsorderoutput clause 1629..
+Processing dfsorderoutput clause 1644..
+Processing dfsorderoutput clause 1646..
+Processing dfsorderoutput clause 1648..
+Processing dfsorderoutput clause 1650..
+Processing dfsorderoutput clause 1647..
+Processing dfsorderoutput clause 1652..
+Processing dfsorderoutput clause 1654..
+Processing dfsorderoutput clause 1645..
+Processing dfsorderoutput clause 1656..
+Processing dfsorderoutput clause 1658..
+Processing dfsorderoutput clause 1660..
+Processing dfsorderoutput clause 1662..
+Processing dfsorderoutput clause 1664..
+Processing dfsorderoutput clause 1659..
+Processing dfsorderoutput clause 1657..
+Processing dfsorderoutput clause 1666..
+Processing dfsorderoutput clause 1668..
+Processing dfsorderoutput clause 1667..
+Processing dfsorderoutput clause 1670..
+Processing dfsorderoutput clause 1672..
+Processing dfsorderoutput clause 1674..
+Processing dfsorderoutput clause 1676..
+Processing dfsorderoutput clause 1678..
+Processing dfsorderoutput clause 1680..
+Processing dfsorderoutput clause 1675..
+Processing dfsorderoutput clause 1682..
+Processing dfsorderoutput clause 1684..
+Processing dfsorderoutput clause 1686..
+Processing dfsorderoutput clause 1688..
+Processing dfsorderoutput clause 1690..
+Processing dfsorderoutput clause 1683..
+Processing dfsorderoutput clause 1671..
+Processing dfsorderoutput clause 1609..
+Processing dfsorderoutput clause 1692..
+Processing dfsorderoutput clause 1694..
+Processing dfsorderoutput clause 1696..
+Processing dfsorderoutput clause 1698..
+Processing dfsorderoutput clause 1693..
+Processing dfsorderoutput clause 1700..
+Processing dfsorderoutput clause 1702..
+Processing dfsorderoutput clause 1701..
+Processing dfsorderoutput clause 1599..
+Processing dfsorderoutput clause 569..
+Processing dfsorderoutput clause 1705..
+Processing dfsorderoutput clause 1706..
+Processing dfsorderoutput clause 1707..
+Processing dfsorderoutput clause 1708..
+Processing dfsorderoutput clause 1709..
+Processing dfsorderoutput clause 1710..
+Processing dfsorderoutput clause 1711..
+Processing dfsorderoutput clause 1712..
+Processing dfsorderoutput clause 1713..
+Processing dfsorderoutput clause 1714..
+Processing dfsorderoutput clause 1715..
+Processing dfsorderoutput clause 1716..
+Processing dfsorderoutput clause 1717..
+Processing dfsorderoutput clause 1718..
+Processing dfsorderoutput clause 1719..
+Processing dfsorderoutput clause 1720..
+Processing dfsorderoutput clause 1721..
+Processing dfsorderoutput clause 1722..
+Processing dfsorderoutput clause 1723..
+Processing dfsorderoutput clause 1724..
+Processing dfsorderoutput clause 1725..
+Processing dfsorderoutput clause 1726..
+Processing dfsorderoutput clause 1727..
+Processing dfsorderoutput clause 1728..
+Processing dfsorderoutput clause 1729..
+Processing dfsorderoutput clause 1730..
+Processing dfsorderoutput clause 1731..
+Processing dfsorderoutput clause 1732..
+Processing dfsorderoutput clause 1733..
+Processing dfsorderoutput clause 1734..
+Processing dfsorderoutput clause 1735..
+Processing dfsorderoutput clause 1736..
+Processing dfsorderoutput clause 1737..
+Processing dfsorderoutput clause 1738..
+Processing dfsorderoutput clause 1739..
+Processing dfsorderoutput clause 1740..
+Processing dfsorderoutput clause 1741..
+Processing dfsorderoutput clause 1742..
+Processing dfsorderoutput clause 1743..
+Processing dfsorderoutput clause 1744..
+Processing dfsorderoutput clause 1745..
+Processing dfsorderoutput clause 1746..
+Processing dfsorderoutput clause 1747..
+Processing dfsorderoutput clause 1748..
+Processing dfsorderoutput clause 1749..
+Processing dfsorderoutput clause 1750..
+Processing dfsorderoutput clause 1751..
+Processing dfsorderoutput clause 1752..
+Processing dfsorderoutput clause 1753..
+Processing dfsorderoutput clause 1754..
+Processing dfsorderoutput clause 1755..
+generating ../test/thesis/SPLOT-3CNF-FM-500-50-1.00-SAT-5.xml fujita order ...
+/home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:5:in `block in isConnectedMoreThanOneGate': Interrupt
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:4:in `each_value'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:4:in `isConnectedMoreThanOneGate'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:22:in `block in makeOrderFujita88'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:19:in `each'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:19:in `makeOrderFujita88'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:32:in `block in makeOrderFujita88'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:19:in `each'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:19:in `makeOrderFujita88'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:32:in `block in makeOrderFujita88'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:19:in `each'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:19:in `makeOrderFujita88'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:32:in `block in makeOrderFujita88'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:19:in `each'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:19:in `makeOrderFujita88'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:32:in `block in makeOrderFujita88'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:19:in `each'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:19:in `makeOrderFujita88'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:32:in `block in makeOrderFujita88'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:19:in `each'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:19:in `makeOrderFujita88'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:32:in `block in makeOrderFujita88'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:19:in `each'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:19:in `makeOrderFujita88'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/fujita88.rb:80:in `fujita88'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/test_bdd_lib.rb:105:in `block in process_file'
+	from /usr/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/test_bdd_lib.rb:105:in `process_file'
+	from ./test_bdd_heuristic.rb:60:in `block (2 levels) in <main>'
+	from ./test_bdd_heuristic.rb:57:in `each'
+	from ./test_bdd_heuristic.rb:57:in `block in <main>'
+	from ./test_bdd_heuristic.rb:53:in `each'
+	from ./test_bdd_heuristic.rb:53:in `<main>'
+Process file ../test/thesis/SPLOT-3CNF-FM-500-50-1.00-SAT-5.xml
+/home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/utils.rb:21:in `variable_name': Interrupt
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:6:in `block in transformSplotClause'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:5:in `each'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:5:in `transformSplotClause'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:84:in `processFeatureFromFeatureModel'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:112:in `block in processFeatureFromFeatureModel'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:109:in `each'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:109:in `processFeatureFromFeatureModel'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:112:in `block in processFeatureFromFeatureModel'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:109:in `each'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:109:in `processFeatureFromFeatureModel'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:112:in `block in processFeatureFromFeatureModel'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:109:in `each'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:109:in `processFeatureFromFeatureModel'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:112:in `block in processFeatureFromFeatureModel'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:109:in `each'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:109:in `processFeatureFromFeatureModel'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:269:in `loadFromSPLOTFile'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function.rb:155:in `loadFromFile'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function.rb:133:in `initialize'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/test_bdd_lib.rb:88:in `new'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/test_bdd_lib.rb:88:in `process_file'
+	from ./test_bdd_heuristic.rb:60:in `block (2 levels) in <main>'
+	from ./test_bdd_heuristic.rb:57:in `each'
+	from ./test_bdd_heuristic.rb:57:in `block in <main>'
+	from ./test_bdd_heuristic.rb:53:in `each'
+	from ./test_bdd_heuristic.rb:53:in `<main>'
+file	order	reorder	algo_time	bdd_time	reorder_time	minterms	span	inputs	clauses	functions	mean (variables_in_clause)	standard deviation (variables_in_clause)	median (variables_in_clause)	mean (variables_in_functions)	standard deviation (variables_in_functions)	median (variables_in_functions)	mean (variable_in_clauses)	standard deviation (variable_in_clauses)	median (variable_in_clauses)	mean (variable_mean_level)	standard deviation (variable_mean_level)	median (variable_mean_level)	maxnode	total
+Process file ../test/ecos_linux/ecos_kernel.xml
+file	order	reorder	algo_time	bdd_time	reorder_time	minterms	span	inputs	clauses	functions	mean (variables_in_clause)	standard deviation (variables_in_clause)	median (variables_in_clause)	mean (variables_in_functions)	standard deviation (variables_in_functions)	median (variables_in_functions)	mean (variable_in_clauses)	standard deviation (variable_in_clauses)	median (variable_in_clauses)	mean (variable_mean_level)	standard deviation (variable_mean_level)	median (variable_mean_level)	maxnode	total
+Processing dfsorderoutput clause 171..
+Processing dfsorderoutput clause 57..
+Processing dfsorderoutput clause 59..
+Processing dfsorderoutput clause 61..
+Processing dfsorderoutput clause 63..
+Processing dfsorderoutput clause 65..
+Processing dfsorderoutput clause 67..
+Processing dfsorderoutput clause 69..
+Processing dfsorderoutput clause 71..
+Processing dfsorderoutput clause 73..
+Processing dfsorderoutput clause 75..
+Processing dfsorderoutput clause 77..
+Processing dfsorderoutput clause 79..
+Processing dfsorderoutput clause 81..
+Processing dfsorderoutput clause 83..
+Processing dfsorderoutput clause 85..
+Processing dfsorderoutput clause 87..
+Processing dfsorderoutput clause 89..
+Processing dfsorderoutput clause 91..
+Processing dfsorderoutput clause 93..
+Processing dfsorderoutput clause 95..
+Processing dfsorderoutput clause 97..
+Processing dfsorderoutput clause 99..
+Processing dfsorderoutput clause 101..
+Processing dfsorderoutput clause 103..
+Processing dfsorderoutput clause 105..
+Processing dfsorderoutput clause 107..
+Processing dfsorderoutput clause 109..
+Processing dfsorderoutput clause 111..
+Processing dfsorderoutput clause 113..
+Processing dfsorderoutput clause 115..
+Processing dfsorderoutput clause 117..
+Processing dfsorderoutput clause 119..
+Processing dfsorderoutput clause 121..
+Processing dfsorderoutput clause 123..
+Processing dfsorderoutput clause 125..
+Processing dfsorderoutput clause 127..
+Processing dfsorderoutput clause 129..
+Processing dfsorderoutput clause 131..
+Processing dfsorderoutput clause 133..
+Processing dfsorderoutput clause 135..
+Processing dfsorderoutput clause 137..
+Processing dfsorderoutput clause 139..
+Processing dfsorderoutput clause 141..
+Processing dfsorderoutput clause 143..
+Processing dfsorderoutput clause 145..
+Processing dfsorderoutput clause 147..
+Processing dfsorderoutput clause 149..
+Processing dfsorderoutput clause 151..
+Processing dfsorderoutput clause 153..
+Processing dfsorderoutput clause 155..
+Processing dfsorderoutput clause 157..
+Processing dfsorderoutput clause 159..
+Processing dfsorderoutput clause 161..
+Processing dfsorderoutput clause 163..
+Processing dfsorderoutput clause 165..
+Processing dfsorderoutput clause 167..
+Processing dfsorderoutput clause 60..
+Processing dfsorderoutput clause 169..
+Processing dfsorderoutput clause 58..
+Processing dfsorderoutput clause 172..
+Processing dfsorderoutput clause 173..
+Processing dfsorderoutput clause 174..
+Processing dfsorderoutput clause 175..
+Processing dfsorderoutput clause 176..
+Processing dfsorderoutput clause 177..
+Processing dfsorderoutput clause 178..
+Processing dfsorderoutput clause 179..
+Processing dfsorderoutput clause 180..
+Processing dfsorderoutput clause 181..
+Processing dfsorderoutput clause 182..
+Processing dfsorderoutput clause 183..
+Processing dfsorderoutput clause 184..
+Processing dfsorderoutput clause 185..
+Processing dfsorderoutput clause 186..
+Processing dfsorderoutput clause 187..
+expanding function  ../test/ecos_linux/ecos_kernel.xml...
+Expanding clause 59 variable 2..
+Expanding clause 59 variable 1..
+Expanding clause 59 variable 4..
+Expanding clause 59 variable 6..
+Expanding clause 59 variable 8..
+Expanding clause 59 variable 10..
+Expanding clause 59 variable 12..
+Expanding clause 59 variable 14..
+Expanding clause 59 variable 16..
+Expanding clause 59 variable 18..
+Expanding clause 59 variable 20..
+Expanding clause 59 variable 22..
+Expanding clause 59 variable 24..
+Expanding clause 59 variable 26..
+Expanding clause 59 variable 28..
+Expanding clause 59 variable 30..
+Expanding clause 59 variable 32..
+Expanding clause 59 variable 34..
+Expanding clause 59 variable 36..
+Expanding clause 59 variable 38..
+Expanding clause 59 variable 40..
+Expanding clause 59 variable 42..
+Expanding clause 59 variable 44..
+Expanding clause 59 variable 46..
+Expanding clause 59 variable 48..
+Expanding clause 59 variable 50..
+Expanding clause 59 variable 52..
+Expanding clause 59 variable 54..
+Expanding clause 59 variable 0..
+Expanding clause 57 variable 63..
+Expanding clause 57 variable 67..
+Expanding clause 57 variable 71..
+Expanding clause 57 variable 75..
+Expanding clause 57 variable 79..
+Expanding clause 57 variable 83..
+Expanding clause 57 variable 87..
+Expanding clause 57 variable 91..
+Expanding clause 57 variable 95..
+Expanding clause 57 variable 99..
+Expanding clause 57 variable 103..
+Expanding clause 57 variable 107..
+Expanding clause 57 variable 111..
+Expanding clause 57 variable 115..
+Expanding clause 57 variable 119..
+Expanding clause 57 variable 123..
+Expanding clause 57 variable 127..
+Expanding clause 57 variable 131..
+Expanding clause 57 variable 135..
+Expanding clause 57 variable 139..
+Expanding clause 57 variable 143..
+Expanding clause 57 variable 147..
+Expanding clause 57 variable 151..
+Expanding clause 57 variable 155..
+Expanding clause 57 variable 159..
+Expanding clause 57 variable 163..
+Expanding clause 57 variable 167..
+Expanding clause 57 variable 2..
+Expanding clause 57 variable 1..
+Expanding clause 57 variable 4..
+Expanding clause 57 variable 6..
+Expanding clause 57 variable 8..
+Expanding clause 57 variable 10..
+Expanding clause 57 variable 12..
+Expanding clause 57 variable 14..
+Expanding clause 57 variable 16..
+Expanding clause 57 variable 18..
+Expanding clause 57 variable 20..
+Expanding clause 57 variable 22..
+Expanding clause 57 variable 24..
+Expanding clause 57 variable 26..
+Expanding clause 57 variable 28..
+Expanding clause 57 variable 30..
+Expanding clause 57 variable 32..
+Expanding clause 57 variable 34..
+Expanding clause 57 variable 36..
+Expanding clause 57 variable 38..
+Expanding clause 57 variable 40..
+Expanding clause 57 variable 42..
+Expanding clause 57 variable 44..
+Expanding clause 57 variable 46..
+Expanding clause 57 variable 48..
+Expanding clause 57 variable 50..
+Expanding clause 57 variable 52..
+Expanding clause 57 variable 54..
+Expanding clause 57 variable 0..
+Expanding clause 57 variable 5..
+Expanding clause 57 variable 9..
+Expanding clause 57 variable 13..
+Expanding clause 57 variable 17..
+Expanding clause 57 variable 21..
+Expanding clause 57 variable 25..
+Expanding clause 57 variable 29..
+Expanding clause 57 variable 33..
+Expanding clause 57 variable 37..
+Expanding clause 57 variable 41..
+Expanding clause 57 variable 45..
+Expanding clause 57 variable 49..
+Expanding clause 57 variable 53..
+Expanding clause 172 variable 10..
+Expanding clause 172 variable 7..
+Expanding clause 172 variable 17..
+Expanding clause 172 variable 16..
+Expanding clause 172 variable 20..
+Expanding clause 172 variable 19..
+Expanding clause 172 variable 25..
+Expanding clause 172 variable 23..
+Expanding clause 172 variable 30..
+Expanding clause 172 variable 32..
+Expanding clause 172 variable 49..
+Expanding clause 172 variable 15..
+Expanding clause 172 variable 51..
+Expanding clause 172 variable 56..
+Expanding clause 171 variable 169..
+Expanding clause 171 variable 63..
+Expanding clause 171 variable 71..
+Expanding clause 171 variable 79..
+Expanding clause 171 variable 87..
+Expanding clause 171 variable 95..
+Expanding clause 171 variable 103..
+Expanding clause 171 variable 111..
+Expanding clause 171 variable 119..
+Expanding clause 171 variable 127..
+Expanding clause 171 variable 135..
+Expanding clause 171 variable 143..
+Expanding clause 171 variable 151..
+Expanding clause 171 variable 159..
+Expanding clause 171 variable 167..
+Expanding clause 171 variable 2..
+Expanding clause 171 variable 1..
+Expanding clause 171 variable 4..
+Expanding clause 171 variable 6..
+Expanding clause 171 variable 8..
+Expanding clause 171 variable 10..
+Expanding clause 171 variable 12..
+Expanding clause 171 variable 14..
+Expanding clause 171 variable 16..
+Expanding clause 171 variable 18..
+Expanding clause 171 variable 20..
+Expanding clause 171 variable 22..
+Expanding clause 171 variable 24..
+Expanding clause 171 variable 26..
+Expanding clause 171 variable 28..
+Expanding clause 171 variable 30..
+Expanding clause 171 variable 32..
+Expanding clause 171 variable 34..
+Expanding clause 171 variable 36..
+Expanding clause 171 variable 38..
+Expanding clause 171 variable 40..
+Expanding clause 171 variable 42..
+Expanding clause 171 variable 44..
+Expanding clause 171 variable 46..
+Expanding clause 171 variable 48..
+Expanding clause 171 variable 50..
+Expanding clause 171 variable 52..
+Expanding clause 171 variable 54..
+Expanding clause 171 variable 0..
+Expanding clause 171 variable 5..
+Expanding clause 171 variable 9..
+Expanding clause 171 variable 13..
+Expanding clause 171 variable 17..
+Expanding clause 171 variable 21..
+Expanding clause 171 variable 25..
+Expanding clause 171 variable 29..
+Expanding clause 171 variable 33..
+Expanding clause 171 variable 37..
+Expanding clause 171 variable 41..
+Expanding clause 171 variable 45..
+Expanding clause 171 variable 49..
+Expanding clause 171 variable 53..
+Expanding clause 171 variable 56..
+Expanding clause 171 variable 7..
+Expanding clause 171 variable 15..
+Expanding clause 171 variable 23..
+Expanding clause 171 variable 31..
+Expanding clause 171 variable 39..
+Expanding clause 171 variable 47..
+Expanding clause 171 variable 55..
+Expanding clause 59 variable 3..
+Expanding clause 59 variable 7..
+Expanding clause 59 variable 11..
+Expanding clause 59 variable 15..
+Expanding clause 59 variable 19..
+Expanding clause 59 variable 23..
+Expanding clause 59 variable 27..
+Expanding clause 59 variable 31..
+Expanding clause 59 variable 35..
+Expanding clause 59 variable 39..
+Expanding clause 59 variable 43..
+Expanding clause 59 variable 47..
+Expanding clause 59 variable 51..
+Expanding clause 59 variable 55..
+Expanding clause 57 variable 56..
+Expanding clause 57 variable 7..
+Expanding clause 57 variable 15..
+Expanding clause 57 variable 23..
+Expanding clause 57 variable 31..
+Expanding clause 57 variable 39..
+Expanding clause 57 variable 47..
+Expanding clause 57 variable 55..
+Expanding clause 172 variable 8..
+Expanding clause 172 variable 21..
+Expanding clause 172 variable 35..
+Expanding clause 172 variable 54..
+Expanding clause 171 variable 176..
+Expanding clause 171 variable 180..
+Expanding clause 171 variable 184..
+Expanding clause 171 variable 19..
+Expanding clause 171 variable 51..
+Expanding clause 171 variable 35..
+Expanding clause 171 variable 11..
+Expanding clause 171 variable 27..
+Expanding clause 171 variable 43..
+Expanding clause 59 variable 5..
+Expanding clause 59 variable 13..
+Expanding clause 59 variable 21..
+Expanding clause 59 variable 29..
+Expanding clause 59 variable 37..
+Expanding clause 59 variable 45..
+Expanding clause 59 variable 53..
+Expanding clause 57 variable 3..
+Expanding clause 57 variable 19..
+Expanding clause 57 variable 35..
+Expanding clause 57 variable 51..
+Expanding clause 172 variable 50..
+Expanding clause 171 variable 3..
+Expanding clause 59 variable 9..
+Expanding clause 59 variable 25..
+Expanding clause 59 variable 41..
+Expanding clause 57 variable 11..
+Expanding clause 57 variable 43..
+Expanding clause 172 variable 29..
+Expanding clause 59 variable 17..
+Expanding clause 59 variable 49..
+Expanding clause 57 variable 27..
+Expanding clause 59 variable 33..
+Processing dfsorderoutput clause 171..
+Processing dfsorderoutput clause 57..
+Processing dfsorderoutput clause 59..
+Processing dfsorderoutput clause 61..
+Processing dfsorderoutput clause 63..
+Processing dfsorderoutput clause 65..
+Processing dfsorderoutput clause 67..
+Processing dfsorderoutput clause 69..
+Processing dfsorderoutput clause 71..
+Processing dfsorderoutput clause 73..
+Processing dfsorderoutput clause 75..
+Processing dfsorderoutput clause 77..
+Processing dfsorderoutput clause 79..
+Processing dfsorderoutput clause 81..
+Processing dfsorderoutput clause 83..
+Processing dfsorderoutput clause 85..
+Processing dfsorderoutput clause 87..
+Processing dfsorderoutput clause 89..
+Processing dfsorderoutput clause 91..
+Processing dfsorderoutput clause 93..
+Processing dfsorderoutput clause 95..
+Processing dfsorderoutput clause 97..
+Processing dfsorderoutput clause 99..
+Processing dfsorderoutput clause 101..
+Processing dfsorderoutput clause 103..
+Processing dfsorderoutput clause 105..
+Processing dfsorderoutput clause 107..
+Processing dfsorderoutput clause 109..
+Processing dfsorderoutput clause 111..
+Processing dfsorderoutput clause 113..
+Processing dfsorderoutput clause 115..
+Processing dfsorderoutput clause 117..
+Processing dfsorderoutput clause 119..
+Processing dfsorderoutput clause 121..
+Processing dfsorderoutput clause 123..
+Processing dfsorderoutput clause 125..
+Processing dfsorderoutput clause 127..
+Processing dfsorderoutput clause 129..
+Processing dfsorderoutput clause 131..
+Processing dfsorderoutput clause 133..
+Processing dfsorderoutput clause 135..
+Processing dfsorderoutput clause 137..
+Processing dfsorderoutput clause 139..
+Processing dfsorderoutput clause 141..
+Processing dfsorderoutput clause 143..
+Processing dfsorderoutput clause 145..
+Processing dfsorderoutput clause 147..
+Processing dfsorderoutput clause 149..
+Processing dfsorderoutput clause 151..
+Processing dfsorderoutput clause 153..
+Processing dfsorderoutput clause 155..
+Processing dfsorderoutput clause 157..
+Processing dfsorderoutput clause 159..
+Processing dfsorderoutput clause 161..
+Processing dfsorderoutput clause 163..
+Processing dfsorderoutput clause 165..
+Processing dfsorderoutput clause 167..
+Processing dfsorderoutput clause 60..
+Processing dfsorderoutput clause 169..
+Processing dfsorderoutput clause 58..
+Processing dfsorderoutput clause 172..
+Processing dfsorderoutput clause 173..
+Processing dfsorderoutput clause 174..
+Processing dfsorderoutput clause 175..
+Processing dfsorderoutput clause 176..
+Processing dfsorderoutput clause 177..
+Processing dfsorderoutput clause 178..
+Processing dfsorderoutput clause 179..
+Processing dfsorderoutput clause 180..
+Processing dfsorderoutput clause 181..
+Processing dfsorderoutput clause 182..
+Processing dfsorderoutput clause 183..
+Processing dfsorderoutput clause 184..
+Processing dfsorderoutput clause 185..
+Processing dfsorderoutput clause 186..
+Processing dfsorderoutput clause 187..
+Process file ../test/ecos_linux/ecos_isoinfra.xml
+Processing dfsorderoutput clause 465..
+Processing dfsorderoutput clause 155..
+Processing dfsorderoutput clause 157..
+Processing dfsorderoutput clause 159..
+Processing dfsorderoutput clause 161..
+Processing dfsorderoutput clause 163..
+Processing dfsorderoutput clause 165..
+Processing dfsorderoutput clause 167..
+Processing dfsorderoutput clause 169..
+Processing dfsorderoutput clause 171..
+Processing dfsorderoutput clause 173..
+Processing dfsorderoutput clause 175..
+Processing dfsorderoutput clause 177..
+Processing dfsorderoutput clause 179..
+Processing dfsorderoutput clause 181..
+Processing dfsorderoutput clause 183..
+Processing dfsorderoutput clause 185..
+Processing dfsorderoutput clause 187..
+Processing dfsorderoutput clause 189..
+Processing dfsorderoutput clause 191..
+Processing dfsorderoutput clause 193..
+Processing dfsorderoutput clause 195..
+Processing dfsorderoutput clause 197..
+Processing dfsorderoutput clause 199..
+Processing dfsorderoutput clause 201..
+Processing dfsorderoutput clause 203..
+Processing dfsorderoutput clause 205..
+Processing dfsorderoutput clause 207..
+Processing dfsorderoutput clause 209..
+Processing dfsorderoutput clause 211..
+Processing dfsorderoutput clause 213..
+Processing dfsorderoutput clause 215..
+Processing dfsorderoutput clause 217..
+Processing dfsorderoutput clause 219..
+Processing dfsorderoutput clause 221..
+Processing dfsorderoutput clause 223..
+Processing dfsorderoutput clause 225..
+Processing dfsorderoutput clause 227..
+Processing dfsorderoutput clause 229..
+Processing dfsorderoutput clause 231..
+Processing dfsorderoutput clause 233..
+Processing dfsorderoutput clause 235..
+Processing dfsorderoutput clause 237..
+Processing dfsorderoutput clause 239..
+Processing dfsorderoutput clause 241..
+Processing dfsorderoutput clause 243..
+Processing dfsorderoutput clause 245..
+Processing dfsorderoutput clause 247..
+Processing dfsorderoutput clause 249..
+Processing dfsorderoutput clause 251..
+Processing dfsorderoutput clause 253..
+Processing dfsorderoutput clause 255..
+Processing dfsorderoutput clause 257..
+Processing dfsorderoutput clause 259..
+Processing dfsorderoutput clause 261..
+Processing dfsorderoutput clause 263..
+Processing dfsorderoutput clause 265..
+Processing dfsorderoutput clause 267..
+Processing dfsorderoutput clause 269..
+Processing dfsorderoutput clause 271..
+Processing dfsorderoutput clause 273..
+Processing dfsorderoutput clause 275..
+Processing dfsorderoutput clause 277..
+Processing dfsorderoutput clause 279..
+Processing dfsorderoutput clause 281..
+Processing dfsorderoutput clause 283..
+Processing dfsorderoutput clause 285..
+Processing dfsorderoutput clause 287..
+Processing dfsorderoutput clause 289..
+Processing dfsorderoutput clause 291..
+Processing dfsorderoutput clause 293..
+Processing dfsorderoutput clause 295..
+Processing dfsorderoutput clause 297..
+Processing dfsorderoutput clause 299..
+Processing dfsorderoutput clause 301..
+Processing dfsorderoutput clause 303..
+Processing dfsorderoutput clause 305..
+Processing dfsorderoutput clause 307..
+Processing dfsorderoutput clause 309..
+Processing dfsorderoutput clause 311..
+Processing dfsorderoutput clause 313..
+Processing dfsorderoutput clause 315..
+Processing dfsorderoutput clause 317..
+Processing dfsorderoutput clause 319..
+Processing dfsorderoutput clause 321..
+Processing dfsorderoutput clause 323..
+Processing dfsorderoutput clause 325..
+Processing dfsorderoutput clause 327..
+Processing dfsorderoutput clause 329..
+Processing dfsorderoutput clause 331..
+Processing dfsorderoutput clause 333..
+Processing dfsorderoutput clause 335..
+Processing dfsorderoutput clause 337..
+Processing dfsorderoutput clause 339..
+Processing dfsorderoutput clause 341..
+Processing dfsorderoutput clause 343..
+Processing dfsorderoutput clause 345..
+Processing dfsorderoutput clause 347..
+Processing dfsorderoutput clause 349..
+Processing dfsorderoutput clause 351..
+Processing dfsorderoutput clause 353..
+Processing dfsorderoutput clause 355..
+Processing dfsorderoutput clause 357..
+Processing dfsorderoutput clause 359..
+Processing dfsorderoutput clause 361..
+Processing dfsorderoutput clause 363..
+Processing dfsorderoutput clause 365..
+Processing dfsorderoutput clause 367..
+Processing dfsorderoutput clause 369..
+Processing dfsorderoutput clause 371..
+Processing dfsorderoutput clause 373..
+Processing dfsorderoutput clause 375..
+Processing dfsorderoutput clause 377..
+Processing dfsorderoutput clause 379..
+Processing dfsorderoutput clause 381..
+Processing dfsorderoutput clause 383..
+Processing dfsorderoutput clause 385..
+Processing dfsorderoutput clause 387..
+Processing dfsorderoutput clause 389..
+Processing dfsorderoutput clause 391..
+Processing dfsorderoutput clause 393..
+Processing dfsorderoutput clause 395..
+Processing dfsorderoutput clause 397..
+Processing dfsorderoutput clause 399..
+Processing dfsorderoutput clause 401..
+Processing dfsorderoutput clause 403..
+Processing dfsorderoutput clause 405..
+Processing dfsorderoutput clause 407..
+Processing dfsorderoutput clause 409..
+Processing dfsorderoutput clause 411..
+Processing dfsorderoutput clause 413..
+Processing dfsorderoutput clause 415..
+Processing dfsorderoutput clause 417..
+Processing dfsorderoutput clause 419..
+Processing dfsorderoutput clause 421..
+Processing dfsorderoutput clause 423..
+Processing dfsorderoutput clause 425..
+Processing dfsorderoutput clause 427..
+Processing dfsorderoutput clause 429..
+Processing dfsorderoutput clause 431..
+Processing dfsorderoutput clause 433..
+Processing dfsorderoutput clause 435..
+Processing dfsorderoutput clause 437..
+Processing dfsorderoutput clause 439..
+Processing dfsorderoutput clause 441..
+Processing dfsorderoutput clause 443..
+Processing dfsorderoutput clause 445..
+Processing dfsorderoutput clause 447..
+Processing dfsorderoutput clause 449..
+Processing dfsorderoutput clause 451..
+Processing dfsorderoutput clause 453..
+Processing dfsorderoutput clause 455..
+Processing dfsorderoutput clause 457..
+Processing dfsorderoutput clause 459..
+Processing dfsorderoutput clause 461..
+Processing dfsorderoutput clause 463..
+Processing dfsorderoutput clause 158..
+Processing dfsorderoutput clause 156..
+Processing dfsorderoutput clause 466..
+Processing dfsorderoutput clause 467..
+Processing dfsorderoutput clause 468..
+expanding function  ../test/ecos_linux/ecos_isoinfra.xml...
+Expanding clause 157 variable 2..
+Expanding clause 157 variable 1..
+Expanding clause 157 variable 4..
+Expanding clause 157 variable 6..
+Expanding clause 157 variable 8..
+Expanding clause 157 variable 10..
+Expanding clause 157 variable 12..
+Expanding clause 157 variable 14..
+Expanding clause 157 variable 16..
+Expanding clause 157 variable 18..
+Expanding clause 157 variable 20..
+Expanding clause 157 variable 22..
+Expanding clause 157 variable 24..
+Expanding clause 157 variable 26..
+Expanding clause 157 variable 28..
+Expanding clause 157 variable 30..
+Expanding clause 157 variable 32..
+Expanding clause 157 variable 34..
+Expanding clause 157 variable 36..
+Expanding clause 157 variable 38..
+Expanding clause 157 variable 40..
+Expanding clause 157 variable 42..
+Expanding clause 157 variable 44..
+Expanding clause 157 variable 46..
+Expanding clause 157 variable 48..
+Expanding clause 157 variable 50..
+Expanding clause 157 variable 52..
+Expanding clause 157 variable 54..
+Expanding clause 157 variable 56..
+Expanding clause 157 variable 58..
+Expanding clause 157 variable 60..
+Expanding clause 157 variable 62..
+Expanding clause 157 variable 64..
+Expanding clause 157 variable 66..
+Expanding clause 157 variable 68..
+Expanding clause 157 variable 70..
+Expanding clause 157 variable 72..
+Expanding clause 157 variable 74..
+Expanding clause 157 variable 76..
+Expanding clause 157 variable 78..
+Expanding clause 157 variable 80..
+Expanding clause 157 variable 82..
+Expanding clause 157 variable 84..
+Expanding clause 157 variable 86..
+Expanding clause 157 variable 88..
+Expanding clause 157 variable 90..
+Expanding clause 157 variable 92..
+Expanding clause 157 variable 94..
+Expanding clause 157 variable 96..
+Expanding clause 157 variable 98..
+Expanding clause 157 variable 100..
+Expanding clause 157 variable 102..
+Expanding clause 157 variable 104..
+Expanding clause 157 variable 106..
+Expanding clause 157 variable 108..
+Expanding clause 157 variable 110..
+Expanding clause 157 variable 112..
+Expanding clause 157 variable 114..
+Expanding clause 157 variable 116..
+Expanding clause 157 variable 118..
+Expanding clause 157 variable 120..
+Expanding clause 157 variable 122..
+Expanding clause 157 variable 124..
+Expanding clause 157 variable 126..
+Expanding clause 157 variable 128..
+Expanding clause 157 variable 130..
+Expanding clause 157 variable 132..
+Expanding clause 157 variable 134..
+Expanding clause 157 variable 136..
+Expanding clause 157 variable 138..
+Expanding clause 157 variable 140..
+Expanding clause 157 variable 142..
+Expanding clause 157 variable 144..
+Expanding clause 157 variable 146..
+Expanding clause 157 variable 148..
+Expanding clause 157 variable 150..
+Expanding clause 157 variable 152..
+Expanding clause 157 variable 154..
+Expanding clause 155 variable 161..
+Expanding clause 155 variable 165..
+Expanding clause 155 variable 169..
+Expanding clause 155 variable 173..
+Expanding clause 155 variable 177..
+Expanding clause 155 variable 181..
+Expanding clause 155 variable 185..
+Expanding clause 155 variable 189..
+Expanding clause 155 variable 193..
+Expanding clause 155 variable 197..
+Expanding clause 155 variable 201..
+Expanding clause 155 variable 205..
+Expanding clause 155 variable 209..
+Expanding clause 155 variable 213..
+Expanding clause 155 variable 217..
+Expanding clause 155 variable 221..
+Expanding clause 155 variable 225..
+Expanding clause 155 variable 229..
+Expanding clause 155 variable 233..
+Expanding clause 155 variable 237..
+Expanding clause 155 variable 241..
+Expanding clause 155 variable 245..
+Expanding clause 155 variable 249..
+Expanding clause 155 variable 253..
+Expanding clause 155 variable 257..
+Expanding clause 155 variable 261..
+Expanding clause 155 variable 265..
+Expanding clause 155 variable 269..
+Expanding clause 155 variable 273..
+Expanding clause 155 variable 277..
+Expanding clause 155 variable 281..
+Expanding clause 155 variable 285..
+Expanding clause 155 variable 289..
+Expanding clause 155 variable 293..
+Expanding clause 155 variable 297..
+Expanding clause 155 variable 301..
+Expanding clause 155 variable 305..
+Expanding clause 155 variable 309..
+Expanding clause 155 variable 313..
+Expanding clause 155 variable 317..
+Expanding clause 155 variable 321..
+Expanding clause 155 variable 325..
+Expanding clause 155 variable 329..
+Expanding clause 155 variable 333..
+Expanding clause 155 variable 337..
+Expanding clause 155 variable 341..
+Expanding clause 155 variable 345..
+Expanding clause 155 variable 349..
+Expanding clause 155 variable 353..
+Expanding clause 155 variable 357..
+Expanding clause 155 variable 361..
+Expanding clause 155 variable 365..
+Expanding clause 155 variable 369..
+Expanding clause 155 variable 373..
+Expanding clause 155 variable 377..
+Expanding clause 155 variable 381..
+Expanding clause 155 variable 385..
+Expanding clause 155 variable 389..
+Expanding clause 155 variable 393..
+Expanding clause 155 variable 397..
+Expanding clause 155 variable 401..
+Expanding clause 155 variable 405..
+Expanding clause 155 variable 409..
+Expanding clause 155 variable 413..
+Expanding clause 155 variable 417..
+Expanding clause 155 variable 421..
+Expanding clause 155 variable 425..
+Expanding clause 155 variable 429..
+Expanding clause 155 variable 433..
+Expanding clause 155 variable 437..
+Expanding clause 155 variable 441..
+Expanding clause 155 variable 445..
+Expanding clause 155 variable 449..
+Expanding clause 155 variable 453..
+Expanding clause 155 variable 457..
+Expanding clause 155 variable 461..
+Expanding clause 155 variable 158..
+Expanding clause 155 variable 2..
+Expanding clause 155 variable 1..
+Expanding clause 155 variable 4..
+Expanding clause 155 variable 6..
+Expanding clause 155 variable 8..
+Expanding clause 155 variable 10..
+Expanding clause 155 variable 12..
+Expanding clause 155 variable 14..
+Expanding clause 155 variable 16..
+Expanding clause 155 variable 18..
+Expanding clause 155 variable 20..
+Expanding clause 155 variable 22..
+Expanding clause 155 variable 24..
+Expanding clause 155 variable 26..
+Expanding clause 155 variable 28..
+Expanding clause 155 variable 30..
+Expanding clause 155 variable 32..
+Expanding clause 155 variable 34..
+Expanding clause 155 variable 36..
+Expanding clause 155 variable 38..
+Expanding clause 155 variable 40..
+Expanding clause 155 variable 42..
+Expanding clause 155 variable 44..
+Expanding clause 155 variable 46..
+Expanding clause 155 variable 48..
+Expanding clause 155 variable 50..
+Expanding clause 155 variable 52..
+Expanding clause 155 variable 54..
+Expanding clause 155 variable 56..
+Expanding clause 155 variable 58..
+Expanding clause 155 variable 60..
+Expanding clause 155 variable 62..
+Expanding clause 155 variable 64..
+Expanding clause 155 variable 66..
+Expanding clause 155 variable 68..
+Expanding clause 155 variable 70..
+Expanding clause 155 variable 72..
+Expanding clause 155 variable 74..
+Expanding clause 155 variable 76..
+Expanding clause 155 variable 78..
+Expanding clause 155 variable 80..
+Expanding clause 155 variable 82..
+Expanding clause 155 variable 84..
+Expanding clause 155 variable 86..
+Expanding clause 155 variable 88..
+Expanding clause 155 variable 90..
+Expanding clause 155 variable 92..
+Expanding clause 155 variable 94..
+Expanding clause 155 variable 96..
+Expanding clause 155 variable 98..
+Expanding clause 155 variable 100..
+Expanding clause 155 variable 102..
+Expanding clause 155 variable 104..
+Expanding clause 155 variable 106..
+Expanding clause 155 variable 108..
+Expanding clause 155 variable 110..
+Expanding clause 155 variable 112..
+Expanding clause 155 variable 114..
+Expanding clause 155 variable 116..
+Expanding clause 155 variable 118..
+Expanding clause 155 variable 120..
+Expanding clause 155 variable 122..
+Expanding clause 155 variable 124..
+Expanding clause 155 variable 126..
+Expanding clause 155 variable 128..
+Expanding clause 155 variable 130..
+Expanding clause 155 variable 132..
+Expanding clause 155 variable 134..
+Expanding clause 155 variable 136..
+Expanding clause 155 variable 138..
+Expanding clause 155 variable 140..
+Expanding clause 155 variable 142..
+Expanding clause 155 variable 144..
+Expanding clause 155 variable 146..
+Expanding clause 155 variable 148..
+Expanding clause 155 variable 150..
+Expanding clause 155 variable 152..
+Expanding clause 155 variable 154..
+Expanding clause 155 variable 3..
+Expanding clause 155 variable 7..
+Expanding clause 155 variable 11..
+Expanding clause 155 variable 15..
+Expanding clause 155 variable 19..
+Expanding clause 155 variable 23..
+Expanding clause 155 variable 27..
+Expanding clause 155 variable 31..
+Expanding clause 155 variable 35..
+Expanding clause 155 variable 39..
+Expanding clause 155 variable 43..
+Expanding clause 155 variable 47..
+Expanding clause 155 variable 51..
+Expanding clause 155 variable 55..
+Expanding clause 155 variable 59..
+Expanding clause 155 variable 63..
+Expanding clause 155 variable 67..
+Expanding clause 155 variable 71..
+Expanding clause 155 variable 75..
+Expanding clause 155 variable 79..
+Expanding clause 155 variable 83..
+Expanding clause 155 variable 87..
+Expanding clause 155 variable 91..
+Expanding clause 155 variable 95..
+Expanding clause 155 variable 99..
+Expanding clause 155 variable 103..
+Expanding clause 155 variable 107..
+Expanding clause 155 variable 111..
+Expanding clause 155 variable 115..
+Expanding clause 155 variable 119..
+Expanding clause 155 variable 123..
+Expanding clause 155 variable 127..
+Expanding clause 155 variable 131..
+Expanding clause 155 variable 135..
+Expanding clause 155 variable 139..
+Expanding clause 155 variable 143..
+Expanding clause 155 variable 147..
+Expanding clause 155 variable 151..
+Expanding clause 155 variable 0..
+Expanding clause 466 variable 125..
+Expanding clause 466 variable 123..
+Expanding clause 465 variable 156..
+Expanding clause 465 variable 165..
+Expanding clause 465 variable 173..
+Expanding clause 465 variable 181..
+Expanding clause 465 variable 189..
+Expanding clause 465 variable 197..
+Expanding clause 465 variable 205..
+Expanding clause 465 variable 213..
+Expanding clause 465 variable 221..
+Expanding clause 465 variable 229..
+Expanding clause 465 variable 237..
+Expanding clause 465 variable 245..
+Expanding clause 465 variable 253..
+Expanding clause 465 variable 261..
+Expanding clause 465 variable 269..
+Expanding clause 465 variable 277..
+Expanding clause 465 variable 285..
+Expanding clause 465 variable 293..
+Expanding clause 465 variable 301..
+Expanding clause 465 variable 309..
+Expanding clause 465 variable 317..
+Expanding clause 465 variable 325..
+Expanding clause 465 variable 333..
+Expanding clause 465 variable 341..
+Expanding clause 465 variable 349..
+Expanding clause 465 variable 357..
+Expanding clause 465 variable 365..
+Expanding clause 465 variable 373..
+Expanding clause 465 variable 381..
+Expanding clause 465 variable 389..
+Expanding clause 465 variable 397..
+Expanding clause 465 variable 405..
+Expanding clause 465 variable 413..
+Expanding clause 465 variable 421..
+Expanding clause 465 variable 429..
+Expanding clause 465 variable 437..
+Expanding clause 465 variable 445..
+Expanding clause 465 variable 453..
+Expanding clause 465 variable 461..
+Expanding clause 465 variable 2..
+Expanding clause 465 variable 1..
+Expanding clause 465 variable 4..
+Expanding clause 465 variable 6..
+Expanding clause 465 variable 8..
+Expanding clause 465 variable 10..
+Expanding clause 465 variable 12..
+Expanding clause 465 variable 14..
+Expanding clause 465 variable 16..
+Expanding clause 465 variable 18..
+Expanding clause 465 variable 20..
+Expanding clause 465 variable 22..
+Expanding clause 465 variable 24..
+Expanding clause 465 variable 26..
+Expanding clause 465 variable 28..
+Expanding clause 465 variable 30..
+Expanding clause 465 variable 32..
+Expanding clause 465 variable 34..
+Expanding clause 465 variable 36..
+Expanding clause 465 variable 38..
+Expanding clause 465 variable 40..
+Expanding clause 465 variable 42..
+Expanding clause 465 variable 44..
+Expanding clause 465 variable 46..
+Expanding clause 465 variable 48..
+Expanding clause 465 variable 50..
+Expanding clause 465 variable 52..
+Expanding clause 465 variable 54..
+Expanding clause 465 variable 56..
+Expanding clause 465 variable 58..
+Expanding clause 465 variable 60..
+Expanding clause 465 variable 62..
+Expanding clause 465 variable 64..
+Expanding clause 465 variable 66..
+Expanding clause 465 variable 68..
+Expanding clause 465 variable 70..
+Expanding clause 465 variable 72..
+Expanding clause 465 variable 74..
+Expanding clause 465 variable 76..
+Expanding clause 465 variable 78..
+Expanding clause 465 variable 80..
+Expanding clause 465 variable 82..
+Expanding clause 465 variable 84..
+Expanding clause 465 variable 86..
+Expanding clause 465 variable 88..
+Expanding clause 465 variable 90..
+Expanding clause 465 variable 92..
+Expanding clause 465 variable 94..
+Expanding clause 465 variable 96..
+Expanding clause 465 variable 98..
+Expanding clause 465 variable 100..
+Expanding clause 465 variable 102..
+Expanding clause 465 variable 104..
+Expanding clause 465 variable 106..
+Expanding clause 465 variable 108..
+Expanding clause 465 variable 110..
+Expanding clause 465 variable 112..
+Expanding clause 465 variable 114..
+Expanding clause 465 variable 116..
+Expanding clause 465 variable 118..
+Expanding clause 465 variable 120..
+Expanding clause 465 variable 122..
+Expanding clause 465 variable 124..
+Expanding clause 465 variable 126..
+Expanding clause 465 variable 128..
+Expanding clause 465 variable 130..
+Expanding clause 465 variable 132..
+Expanding clause 465 variable 134..
+Expanding clause 465 variable 136..
+Expanding clause 465 variable 138..
+Expanding clause 465 variable 140..
+Expanding clause 465 variable 142..
+Expanding clause 465 variable 144..
+Expanding clause 465 variable 146..
+Expanding clause 465 variable 148..
+Expanding clause 465 variable 150..
+Expanding clause 465 variable 152..
+Expanding clause 465 variable 154..
+Expanding clause 465 variable 3..
+Expanding clause 465 variable 7..
+Expanding clause 465 variable 11..
+Expanding clause 465 variable 15..
+Expanding clause 465 variable 19..
+Expanding clause 465 variable 23..
+Expanding clause 465 variable 27..
+Expanding clause 465 variable 31..
+Expanding clause 465 variable 35..
+Expanding clause 465 variable 39..
+Expanding clause 465 variable 43..
+Expanding clause 465 variable 47..
+Expanding clause 465 variable 51..
+Expanding clause 465 variable 55..
+Expanding clause 465 variable 59..
+Expanding clause 465 variable 63..
+Expanding clause 465 variable 67..
+Expanding clause 465 variable 71..
+Expanding clause 465 variable 75..
+Expanding clause 465 variable 79..
+Expanding clause 465 variable 83..
+Expanding clause 465 variable 87..
+Expanding clause 465 variable 91..
+Expanding clause 465 variable 95..
+Expanding clause 465 variable 99..
+Expanding clause 465 variable 103..
+Expanding clause 465 variable 107..
+Expanding clause 465 variable 111..
+Expanding clause 465 variable 115..
+Expanding clause 465 variable 119..
+Expanding clause 465 variable 123..
+Expanding clause 465 variable 127..
+Expanding clause 465 variable 131..
+Expanding clause 465 variable 135..
+Expanding clause 465 variable 139..
+Expanding clause 465 variable 143..
+Expanding clause 465 variable 147..
+Expanding clause 465 variable 151..
+Expanding clause 465 variable 0..
+Expanding clause 465 variable 9..
+Expanding clause 465 variable 17..
+Expanding clause 465 variable 25..
+Expanding clause 465 variable 33..
+Expanding clause 465 variable 41..
+Expanding clause 465 variable 49..
+Expanding clause 465 variable 57..
+Expanding clause 465 variable 65..
+Expanding clause 465 variable 73..
+Expanding clause 465 variable 81..
+Expanding clause 465 variable 89..
+Expanding clause 465 variable 97..
+Expanding clause 465 variable 105..
+Expanding clause 465 variable 113..
+Expanding clause 465 variable 121..
+Expanding clause 465 variable 129..
+Expanding clause 465 variable 137..
+Expanding clause 465 variable 145..
+Expanding clause 465 variable 153..
+Expanding clause 157 variable 3..
+Expanding clause 157 variable 7..
+Expanding clause 157 variable 11..
+Expanding clause 157 variable 15..
+Expanding clause 157 variable 19..
+Expanding clause 157 variable 23..
+Expanding clause 157 variable 27..
+Expanding clause 157 variable 31..
+Expanding clause 157 variable 35..
+Expanding clause 157 variable 39..
+Expanding clause 157 variable 43..
+Expanding clause 157 variable 47..
+Expanding clause 157 variable 51..
+Expanding clause 157 variable 55..
+Expanding clause 157 variable 59..
+Expanding clause 157 variable 63..
+Expanding clause 157 variable 67..
+Expanding clause 157 variable 71..
+Expanding clause 157 variable 75..
+Expanding clause 157 variable 79..
+Expanding clause 157 variable 83..
+Expanding clause 157 variable 87..
+Expanding clause 157 variable 91..
+Expanding clause 157 variable 95..
+Expanding clause 157 variable 99..
+Expanding clause 157 variable 103..
+Expanding clause 157 variable 107..
+Expanding clause 157 variable 111..
+Expanding clause 157 variable 115..
+Expanding clause 157 variable 119..
+Expanding clause 157 variable 123..
+Expanding clause 157 variable 127..
+Expanding clause 157 variable 131..
+Expanding clause 157 variable 135..
+Expanding clause 157 variable 139..
+Expanding clause 157 variable 143..
+Expanding clause 157 variable 147..
+Expanding clause 157 variable 151..
+Expanding clause 157 variable 0..
+Expanding clause 155 variable 9..
+Expanding clause 155 variable 17..
+Expanding clause 155 variable 25..
+Expanding clause 155 variable 33..
+Expanding clause 155 variable 41..
+Expanding clause 155 variable 49..
+Expanding clause 155 variable 57..
+Expanding clause 155 variable 65..
+Expanding clause 155 variable 73..
+Expanding clause 155 variable 81..
+Expanding clause 155 variable 89..
+Expanding clause 155 variable 97..
+Expanding clause 155 variable 105..
+Expanding clause 155 variable 113..
+Expanding clause 155 variable 121..
+Expanding clause 155 variable 129..
+Expanding clause 155 variable 137..
+Expanding clause 155 variable 145..
+Expanding clause 155 variable 153..
+Expanding clause 466 variable 126..
+Expanding clause 465 variable 125..
+Expanding clause 465 variable 13..
+Expanding clause 465 variable 29..
+Expanding clause 465 variable 45..
+Expanding clause 465 variable 61..
+Expanding clause 465 variable 77..
+Expanding clause 465 variable 93..
+Expanding clause 465 variable 109..
+Expanding clause 465 variable 141..
+Expanding clause 157 variable 5..
+Expanding clause 157 variable 13..
+Expanding clause 157 variable 21..
+Expanding clause 157 variable 29..
+Expanding clause 157 variable 37..
+Expanding clause 157 variable 45..
+Expanding clause 157 variable 53..
+Expanding clause 157 variable 61..
+Expanding clause 157 variable 69..
+Expanding clause 157 variable 77..
+Expanding clause 157 variable 85..
+Expanding clause 157 variable 93..
+Expanding clause 157 variable 101..
+Expanding clause 157 variable 109..
+Expanding clause 157 variable 117..
+Expanding clause 157 variable 125..
+Expanding clause 157 variable 133..
+Expanding clause 157 variable 141..
+Expanding clause 157 variable 149..
+Expanding clause 155 variable 5..
+Expanding clause 155 variable 21..
+Expanding clause 155 variable 37..
+Expanding clause 155 variable 53..
+Expanding clause 155 variable 69..
+Expanding clause 155 variable 85..
+Expanding clause 155 variable 101..
+Expanding clause 155 variable 117..
+Expanding clause 155 variable 133..
+Expanding clause 155 variable 149..
+Expanding clause 465 variable 5..
+Expanding clause 465 variable 37..
+Expanding clause 465 variable 69..
+Expanding clause 465 variable 101..
+Expanding clause 465 variable 133..
+Expanding clause 157 variable 9..
+Expanding clause 157 variable 25..
+Expanding clause 157 variable 41..
+Expanding clause 157 variable 57..
+Expanding clause 157 variable 73..
+Expanding clause 157 variable 89..
+Expanding clause 157 variable 105..
+Expanding clause 157 variable 121..
+Expanding clause 157 variable 137..
+Expanding clause 157 variable 153..
+Expanding clause 155 variable 13..
+Expanding clause 155 variable 45..
+Expanding clause 155 variable 77..
+Expanding clause 155 variable 109..
+Expanding clause 155 variable 141..
+Expanding clause 465 variable 21..
+Expanding clause 465 variable 85..
+Expanding clause 465 variable 149..
+Expanding clause 157 variable 17..
+Expanding clause 157 variable 49..
+Expanding clause 157 variable 81..
+Expanding clause 157 variable 113..
+Expanding clause 157 variable 145..
+Expanding clause 155 variable 29..
+Expanding clause 155 variable 93..
+Expanding clause 465 variable 53..
+Expanding clause 157 variable 33..
+Expanding clause 157 variable 97..
+Expanding clause 155 variable 61..
+Expanding clause 465 variable 117..
+Expanding clause 157 variable 65..
+Expanding clause 155 variable 125..
+Expanding clause 157 variable 129..
+Processing dfsorderoutput clause 465..
+Processing dfsorderoutput clause 155..
+Processing dfsorderoutput clause 157..
+Processing dfsorderoutput clause 159..
+Processing dfsorderoutput clause 161..
+Processing dfsorderoutput clause 163..
+Processing dfsorderoutput clause 165..
+Processing dfsorderoutput clause 167..
+Processing dfsorderoutput clause 169..
+Processing dfsorderoutput clause 171..
+Processing dfsorderoutput clause 173..
+Processing dfsorderoutput clause 175..
+Processing dfsorderoutput clause 177..
+Processing dfsorderoutput clause 179..
+Processing dfsorderoutput clause 181..
+Processing dfsorderoutput clause 183..
+Processing dfsorderoutput clause 185..
+Processing dfsorderoutput clause 187..
+Processing dfsorderoutput clause 189..
+Processing dfsorderoutput clause 191..
+Processing dfsorderoutput clause 193..
+Processing dfsorderoutput clause 195..
+Processing dfsorderoutput clause 197..
+Processing dfsorderoutput clause 199..
+Processing dfsorderoutput clause 201..
+Processing dfsorderoutput clause 203..
+Processing dfsorderoutput clause 205..
+Processing dfsorderoutput clause 207..
+Processing dfsorderoutput clause 209..
+Processing dfsorderoutput clause 211..
+Processing dfsorderoutput clause 213..
+Processing dfsorderoutput clause 215..
+Processing dfsorderoutput clause 217..
+Processing dfsorderoutput clause 219..
+Processing dfsorderoutput clause 221..
+Processing dfsorderoutput clause 223..
+Processing dfsorderoutput clause 225..
+Processing dfsorderoutput clause 227..
+Processing dfsorderoutput clause 229..
+Processing dfsorderoutput clause 231..
+Processing dfsorderoutput clause 233..
+Processing dfsorderoutput clause 235..
+Processing dfsorderoutput clause 237..
+Processing dfsorderoutput clause 239..
+Processing dfsorderoutput clause 241..
+Processing dfsorderoutput clause 243..
+Processing dfsorderoutput clause 245..
+Processing dfsorderoutput clause 247..
+Processing dfsorderoutput clause 249..
+Processing dfsorderoutput clause 251..
+Processing dfsorderoutput clause 253..
+Processing dfsorderoutput clause 255..
+Processing dfsorderoutput clause 257..
+Processing dfsorderoutput clause 259..
+Processing dfsorderoutput clause 261..
+Processing dfsorderoutput clause 263..
+Processing dfsorderoutput clause 265..
+Processing dfsorderoutput clause 267..
+Processing dfsorderoutput clause 269..
+Processing dfsorderoutput clause 271..
+Processing dfsorderoutput clause 273..
+Processing dfsorderoutput clause 275..
+Processing dfsorderoutput clause 277..
+Processing dfsorderoutput clause 279..
+Processing dfsorderoutput clause 281..
+Processing dfsorderoutput clause 283..
+Processing dfsorderoutput clause 285..
+Processing dfsorderoutput clause 287..
+Processing dfsorderoutput clause 289..
+Processing dfsorderoutput clause 291..
+Processing dfsorderoutput clause 293..
+Processing dfsorderoutput clause 295..
+Processing dfsorderoutput clause 297..
+Processing dfsorderoutput clause 299..
+Processing dfsorderoutput clause 301..
+Processing dfsorderoutput clause 303..
+Processing dfsorderoutput clause 305..
+Processing dfsorderoutput clause 307..
+Processing dfsorderoutput clause 309..
+Processing dfsorderoutput clause 311..
+Processing dfsorderoutput clause 313..
+Processing dfsorderoutput clause 315..
+Processing dfsorderoutput clause 317..
+Processing dfsorderoutput clause 319..
+Processing dfsorderoutput clause 321..
+Processing dfsorderoutput clause 323..
+Processing dfsorderoutput clause 325..
+Processing dfsorderoutput clause 327..
+Processing dfsorderoutput clause 329..
+Processing dfsorderoutput clause 331..
+Processing dfsorderoutput clause 333..
+Processing dfsorderoutput clause 335..
+Processing dfsorderoutput clause 337..
+Processing dfsorderoutput clause 339..
+Processing dfsorderoutput clause 341..
+Processing dfsorderoutput clause 343..
+Processing dfsorderoutput clause 345..
+Processing dfsorderoutput clause 347..
+Processing dfsorderoutput clause 349..
+Processing dfsorderoutput clause 351..
+Processing dfsorderoutput clause 353..
+Processing dfsorderoutput clause 355..
+Processing dfsorderoutput clause 357..
+Processing dfsorderoutput clause 359..
+Processing dfsorderoutput clause 361..
+Processing dfsorderoutput clause 363..
+Processing dfsorderoutput clause 365..
+Processing dfsorderoutput clause 367..
+Processing dfsorderoutput clause 369..
+Processing dfsorderoutput clause 371..
+Processing dfsorderoutput clause 373..
+Processing dfsorderoutput clause 375..
+Processing dfsorderoutput clause 377..
+Processing dfsorderoutput clause 379..
+Processing dfsorderoutput clause 381..
+Processing dfsorderoutput clause 383..
+Processing dfsorderoutput clause 385..
+Processing dfsorderoutput clause 387..
+Processing dfsorderoutput clause 389..
+Processing dfsorderoutput clause 391..
+Processing dfsorderoutput clause 393..
+Processing dfsorderoutput clause 395..
+Processing dfsorderoutput clause 397..
+Processing dfsorderoutput clause 399..
+Processing dfsorderoutput clause 401..
+Processing dfsorderoutput clause 403..
+Processing dfsorderoutput clause 405..
+Processing dfsorderoutput clause 407..
+Processing dfsorderoutput clause 409..
+Processing dfsorderoutput clause 411..
+Processing dfsorderoutput clause 413..
+Processing dfsorderoutput clause 415..
+Processing dfsorderoutput clause 417..
+Processing dfsorderoutput clause 419..
+Processing dfsorderoutput clause 421..
+Processing dfsorderoutput clause 423..
+Processing dfsorderoutput clause 425..
+Processing dfsorderoutput clause 427..
+Processing dfsorderoutput clause 429..
+Processing dfsorderoutput clause 431..
+Processing dfsorderoutput clause 433..
+Processing dfsorderoutput clause 435..
+Processing dfsorderoutput clause 437..
+Processing dfsorderoutput clause 439..
+Processing dfsorderoutput clause 441..
+Processing dfsorderoutput clause 443..
+Processing dfsorderoutput clause 445..
+Processing dfsorderoutput clause 447..
+Processing dfsorderoutput clause 449..
+Processing dfsorderoutput clause 451..
+Processing dfsorderoutput clause 453..
+Processing dfsorderoutput clause 455..
+Processing dfsorderoutput clause 457..
+Processing dfsorderoutput clause 459..
+Processing dfsorderoutput clause 461..
+Processing dfsorderoutput clause 463..
+Processing dfsorderoutput clause 158..
+Processing dfsorderoutput clause 156..
+Processing dfsorderoutput clause 466..
+Processing dfsorderoutput clause 467..
+Processing dfsorderoutput clause 468..
+Process file ../test/ecos_linux/ecos_compat.xml
+Processing dfsorderoutput clause 84..
+Processing dfsorderoutput clause 28..
+Processing dfsorderoutput clause 30..
+Processing dfsorderoutput clause 32..
+Processing dfsorderoutput clause 34..
+Processing dfsorderoutput clause 36..
+Processing dfsorderoutput clause 38..
+Processing dfsorderoutput clause 40..
+Processing dfsorderoutput clause 42..
+Processing dfsorderoutput clause 44..
+Processing dfsorderoutput clause 46..
+Processing dfsorderoutput clause 48..
+Processing dfsorderoutput clause 50..
+Processing dfsorderoutput clause 52..
+Processing dfsorderoutput clause 54..
+Processing dfsorderoutput clause 56..
+Processing dfsorderoutput clause 58..
+Processing dfsorderoutput clause 60..
+Processing dfsorderoutput clause 33..
+Processing dfsorderoutput clause 62..
+Processing dfsorderoutput clause 64..
+Processing dfsorderoutput clause 66..
+Processing dfsorderoutput clause 68..
+Processing dfsorderoutput clause 70..
+Processing dfsorderoutput clause 72..
+Processing dfsorderoutput clause 74..
+Processing dfsorderoutput clause 76..
+Processing dfsorderoutput clause 78..
+Processing dfsorderoutput clause 80..
+Processing dfsorderoutput clause 63..
+Processing dfsorderoutput clause 82..
+Processing dfsorderoutput clause 29..
+Processing dfsorderoutput clause 85..
+Processing dfsorderoutput clause 86..
+Processing dfsorderoutput clause 87..
+Processing dfsorderoutput clause 88..
+Processing dfsorderoutput clause 89..
+expanding function  ../test/ecos_linux/ecos_compat.xml...
+Expanding clause 32 variable 3..
+Expanding clause 32 variable 2..
+Expanding clause 32 variable 5..
+Expanding clause 32 variable 7..
+Expanding clause 32 variable 9..
+Expanding clause 32 variable 11..
+Expanding clause 32 variable 13..
+Expanding clause 32 variable 15..
+Expanding clause 32 variable 0..
+Expanding clause 62 variable 18..
+Expanding clause 62 variable 17..
+Expanding clause 62 variable 20..
+Expanding clause 62 variable 22..
+Expanding clause 62 variable 24..
+Expanding clause 62 variable 26..
+Expanding clause 28 variable 1..
+Expanding clause 28 variable 0..
+Expanding clause 28 variable 66..
+Expanding clause 28 variable 70..
+Expanding clause 28 variable 74..
+Expanding clause 28 variable 78..
+Expanding clause 28 variable 63..
+Expanding clause 28 variable 18..
+Expanding clause 28 variable 17..
+Expanding clause 28 variable 20..
+Expanding clause 28 variable 22..
+Expanding clause 28 variable 24..
+Expanding clause 28 variable 26..
+Expanding clause 28 variable 19..
+Expanding clause 28 variable 23..
+Expanding clause 85 variable 8..
+Expanding clause 85 variable 7..
+Expanding clause 85 variable 20..
+Expanding clause 85 variable 18..
+Expanding clause 84 variable 32..
+Expanding clause 84 variable 82..
+Expanding clause 84 variable 1..
+Expanding clause 84 variable 0..
+Expanding clause 84 variable 70..
+Expanding clause 84 variable 78..
+Expanding clause 84 variable 18..
+Expanding clause 84 variable 17..
+Expanding clause 84 variable 20..
+Expanding clause 84 variable 22..
+Expanding clause 84 variable 24..
+Expanding clause 84 variable 26..
+Expanding clause 84 variable 19..
+Expanding clause 84 variable 23..
+Expanding clause 84 variable 36..
+Expanding clause 84 variable 40..
+Expanding clause 84 variable 44..
+Expanding clause 84 variable 48..
+Expanding clause 84 variable 52..
+Expanding clause 84 variable 56..
+Expanding clause 84 variable 60..
+Expanding clause 84 variable 3..
+Expanding clause 84 variable 2..
+Expanding clause 84 variable 5..
+Expanding clause 84 variable 7..
+Expanding clause 84 variable 9..
+Expanding clause 84 variable 11..
+Expanding clause 84 variable 13..
+Expanding clause 84 variable 15..
+Expanding clause 84 variable 21..
+Expanding clause 84 variable 4..
+Expanding clause 84 variable 8..
+Expanding clause 84 variable 12..
+Expanding clause 84 variable 16..
+Expanding clause 32 variable 4..
+Expanding clause 32 variable 8..
+Expanding clause 32 variable 12..
+Expanding clause 32 variable 16..
+Expanding clause 62 variable 19..
+Expanding clause 62 variable 23..
+Expanding clause 62 variable 0..
+Expanding clause 28 variable 40..
+Expanding clause 28 variable 48..
+Expanding clause 28 variable 56..
+Expanding clause 28 variable 3..
+Expanding clause 28 variable 2..
+Expanding clause 28 variable 5..
+Expanding clause 28 variable 7..
+Expanding clause 28 variable 9..
+Expanding clause 28 variable 11..
+Expanding clause 28 variable 13..
+Expanding clause 28 variable 15..
+Expanding clause 28 variable 4..
+Expanding clause 28 variable 8..
+Expanding clause 28 variable 12..
+Expanding clause 28 variable 16..
+Expanding clause 28 variable 21..
+Expanding clause 28 variable 6..
+Expanding clause 28 variable 14..
+Expanding clause 85 variable 19..
+Expanding clause 84 variable 89..
+Expanding clause 84 variable 25..
+Expanding clause 84 variable 6..
+Expanding clause 84 variable 14..
+Expanding clause 84 variable 27..
+Expanding clause 32 variable 6..
+Expanding clause 32 variable 14..
+Expanding clause 62 variable 21..
+Expanding clause 28 variable 27..
+Expanding clause 28 variable 25..
+Expanding clause 28 variable 10..
+Expanding clause 85 variable 27..
+Expanding clause 84 variable 10..
+Expanding clause 32 variable 10..
+Expanding clause 62 variable 25..
+Processing dfsorderoutput clause 84..
+Processing dfsorderoutput clause 28..
+Processing dfsorderoutput clause 30..
+Processing dfsorderoutput clause 32..
+Processing dfsorderoutput clause 34..
+Processing dfsorderoutput clause 36..
+Processing dfsorderoutput clause 38..
+Processing dfsorderoutput clause 40..
+Processing dfsorderoutput clause 42..
+Processing dfsorderoutput clause 44..
+Processing dfsorderoutput clause 46..
+Processing dfsorderoutput clause 48..
+Processing dfsorderoutput clause 50..
+Processing dfsorderoutput clause 52..
+Processing dfsorderoutput clause 54..
+Processing dfsorderoutput clause 56..
+Processing dfsorderoutput clause 58..
+Processing dfsorderoutput clause 60..
+Processing dfsorderoutput clause 33..
+Processing dfsorderoutput clause 62..
+Processing dfsorderoutput clause 64..
+Processing dfsorderoutput clause 66..
+Processing dfsorderoutput clause 68..
+Processing dfsorderoutput clause 70..
+Processing dfsorderoutput clause 72..
+Processing dfsorderoutput clause 74..
+Processing dfsorderoutput clause 76..
+Processing dfsorderoutput clause 78..
+Processing dfsorderoutput clause 80..
+Processing dfsorderoutput clause 63..
+Processing dfsorderoutput clause 82..
+Processing dfsorderoutput clause 29..
+Processing dfsorderoutput clause 85..
+Processing dfsorderoutput clause 86..
+Processing dfsorderoutput clause 87..
+Processing dfsorderoutput clause 88..
+Processing dfsorderoutput clause 89..
+Process file ../test/ecos_linux/linux_fs.xml
+/home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/utils.rb:21:in `variable_name': Interrupt
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:6:in `block in transformSplotClause'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:5:in `each'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:5:in `transformSplotClause'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:84:in `processFeatureFromFeatureModel'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:112:in `block in processFeatureFromFeatureModel'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:109:in `each'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:109:in `processFeatureFromFeatureModel'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:112:in `block in processFeatureFromFeatureModel'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:109:in `each'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:109:in `processFeatureFromFeatureModel'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function_splot.rb:269:in `loadFromSPLOTFile'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function.rb:155:in `loadFromFile'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/function.rb:133:in `initialize'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/test_bdd_lib.rb:88:in `new'
+	from /home/rbean/Dropbox/Uned/Doctorado/bdd_heur_analysis/src/test_bdd_lib.rb:88:in `process_file'
+	from ./test_bdd_heuristic.rb:62:in `block (2 levels) in <main>'
+	from ./test_bdd_heuristic.rb:59:in `each'
+	from ./test_bdd_heuristic.rb:59:in `block in <main>'
+	from ./test_bdd_heuristic.rb:55:in `each'
+	from ./test_bdd_heuristic.rb:55:in `<main>'

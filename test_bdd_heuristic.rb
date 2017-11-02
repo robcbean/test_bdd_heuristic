@@ -9,6 +9,7 @@ require "#{File.dirname(__FILE__)}//malik88.rb"
 require "#{File.dirname(__FILE__)}//force.rb"
 require "#{File.dirname(__FILE__)}//parse_def.rb"
 require "#{File.dirname(__FILE__)}//interleaving.rb"
+require "#{File.dirname(__FILE__)}//mince.rb"
 require "#{File.dirname(__FILE__)}//calc_span.rb"
 require "#{File.dirname(__FILE__)}//test_bdd_lib.rb"
 require "#{File.dirname(__FILE__)}//show_info_lib.rb"
@@ -29,6 +30,12 @@ best_span = options[:best_span]
 calc_desc = options[:calc_desc]
 write_dot = options[:write_dot]
 mcl = options[:mcl]
+random_factor = options[:random_factor].to_f
+
+#ROB : 04/08/2017  Set random set to 100 to reproduce
+srand(100)
+
+
 
 if file_input.nil?
   $stderr.print("You must put the input file\n")
@@ -51,12 +58,12 @@ print "#{getHeader(minisat,calc_desc)}"
 
 (0..number_of_attempts).to_a.each do |attempt|
   if File.file?(file_input)
-    process_file(file_input, test_file, heuristics_file, wait_time, random, grown_file,minisat,best_span,calc_desc,write_dot,mcl)
+    process_file(file_input, test_file, heuristics_file, wait_time, random, grown_file,minisat,best_span,calc_desc,write_dot,mcl, random_factor)
   else
     Dir.glob(File.join(file_input, "/*.*")).each do |file|
       $stderr.print("Process file #{file}\n")
       if File.file?(file)
-        process_file(file, test_file, heuristics_file, wait_time, random, grown_file,minisat,best_span,calc_desc,write_dot,mcl)
+        process_file(file, test_file, heuristics_file, wait_time, random, grown_file,minisat,best_span,calc_desc,write_dot,mcl,random_factor)
       end
     end
   end

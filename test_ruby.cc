@@ -21,11 +21,12 @@ typedef unsigned int uint32_t;
 
 
 
-void timeOut(DdManager* _manager, void* _output){
+void timeOut(){
     std::vector<BDD> output;
     Cudd mgr(0,0);
-    print_output(1013,"Electronic Shopping","symmetry\tCUDD_REORDER_SIFT\t-1.0\t-1.0\t5349\t290.0	351.0	2.0	0.7800373317614634	0.3265532273965427	0.6896551724137931	55.86206896551724	62.42046068405384	55.86206896551724	0.7800373317614705	0.5737505315647994	0.5698005698005698	9.193103448275862	2.1782077383021017	9.0",mgr,output,false,NULL,true);
+    print_output(1013,"Electronic Shopping","narodyska\tNONE\t-1.0\t-1.0\t9364\t290.0	351.0	2.0	55.86206896551724	62.42046068405384	55.86206896551724",mgr,output,false,NULL,true);
 }
+
 
 
 int main( int argc, char **argv )
@@ -50,596 +51,603 @@ int main( int argc, char **argv )
   std::vector<unsigned long> count_id;
 
   //Set CUDD TimeOut
-  Cudd_SetTimeLimit(mgr.getManager(),600000);
-  Cudd_RegisterTimeoutHandler(mgr.getManager(),timeOut,&output);
-
-
+  //Cudd_SetTimeLimit(mgr.getManager(),600000);
+  //Cudd_RegisterTimeoutHandler(mgr.getManager(),timeOut,&output);
+  pid_t child_pid = fork();
+  pid_t parent_pid = getpid();
+  int status;
+  if( child_pid != 0 )
+  {
+        sleep(600);
+        timeOut();
+        kill(child_pid,SIGTERM);
+        //wait(&status);
+        exit(0);
+  }
   //Variables
   
-      x[4]  = mgr.bddVar(35); //4
+      x[4]  = mgr.bddVar(213); //4
   
-      x[2]  = mgr.bddVar(41); //2
+      x[2]  = mgr.bddVar(212); //2
   
-      x[5]  = mgr.bddVar(27); //5
+      x[5]  = mgr.bddVar(214); //5
   
-      x[8]  = mgr.bddVar(59); //8
+      x[8]  = mgr.bddVar(193); //8
   
-      x[6]  = mgr.bddVar(28); //6
+      x[6]  = mgr.bddVar(192); //6
   
-      x[9]  = mgr.bddVar(60); //9
+      x[9]  = mgr.bddVar(194); //9
   
-      x[12]  = mgr.bddVar(0); //12
+      x[12]  = mgr.bddVar(130); //12
   
-      x[10]  = mgr.bddVar(2); //10
+      x[10]  = mgr.bddVar(129); //10
   
-      x[13]  = mgr.bddVar(1); //13
+      x[13]  = mgr.bddVar(131); //13
   
-      x[51]  = mgr.bddVar(105); //51
+      x[51]  = mgr.bddVar(216); //51
   
-      x[49]  = mgr.bddVar(71); //49
+      x[49]  = mgr.bddVar(215); //49
   
-      x[53]  = mgr.bddVar(106); //53
+      x[53]  = mgr.bddVar(218); //53
   
-      x[52]  = mgr.bddVar(104); //52
+      x[52]  = mgr.bddVar(217); //52
   
-      x[55]  = mgr.bddVar(61); //55
+      x[55]  = mgr.bddVar(187); //55
   
-      x[48]  = mgr.bddVar(70); //48
+      x[48]  = mgr.bddVar(185); //48
   
-      x[57]  = mgr.bddVar(63); //57
+      x[57]  = mgr.bddVar(189); //57
   
-      x[74]  = mgr.bddVar(42); //74
+      x[74]  = mgr.bddVar(227); //74
   
-      x[73]  = mgr.bddVar(50); //73
+      x[73]  = mgr.bddVar(226); //73
   
-      x[76]  = mgr.bddVar(88); //76
+      x[76]  = mgr.bddVar(190); //76
   
-      x[78]  = mgr.bddVar(64); //78
+      x[78]  = mgr.bddVar(191); //78
   
-      x[84]  = mgr.bddVar(72); //84
+      x[84]  = mgr.bddVar(275); //84
   
-      x[47]  = mgr.bddVar(73); //47
+      x[47]  = mgr.bddVar(274); //47
   
-      x[90]  = mgr.bddVar(76); //90
+      x[90]  = mgr.bddVar(255); //90
   
-      x[89]  = mgr.bddVar(75); //89
+      x[89]  = mgr.bddVar(254); //89
   
-      x[95]  = mgr.bddVar(82); //95
+      x[95]  = mgr.bddVar(19); //95
   
-      x[93]  = mgr.bddVar(81); //93
+      x[93]  = mgr.bddVar(18); //93
   
-      x[97]  = mgr.bddVar(85); //97
+      x[97]  = mgr.bddVar(21); //97
   
-      x[99]  = mgr.bddVar(86); //99
+      x[99]  = mgr.bddVar(23); //99
   
-      x[96]  = mgr.bddVar(83); //96
+      x[96]  = mgr.bddVar(20); //96
   
-      x[98]  = mgr.bddVar(84); //98
+      x[98]  = mgr.bddVar(22); //98
   
-      x[92]  = mgr.bddVar(80); //92
+      x[92]  = mgr.bddVar(257); //92
   
-      x[1]  = mgr.bddVar(74); //1
+      x[1]  = mgr.bddVar(289); //1
   
-      x[56]  = mgr.bddVar(62); //56
+      x[56]  = mgr.bddVar(188); //56
   
-      x[75]  = mgr.bddVar(95); //75
+      x[75]  = mgr.bddVar(219); //75
   
-      x[91]  = mgr.bddVar(69); //91
+      x[91]  = mgr.bddVar(256); //91
   
-      x[114]  = mgr.bddVar(99); //114
+      x[114]  = mgr.bddVar(80); //114
   
-      x[113]  = mgr.bddVar(100); //113
+      x[113]  = mgr.bddVar(79); //113
   
-      x[116]  = mgr.bddVar(102); //116
+      x[116]  = mgr.bddVar(82); //116
   
-      x[112]  = mgr.bddVar(116); //112
+      x[112]  = mgr.bddVar(287); //112
   
-      x[180]  = mgr.bddVar(164); //180
+      x[180]  = mgr.bddVar(35); //180
   
-      x[178]  = mgr.bddVar(117); //178
+      x[178]  = mgr.bddVar(34); //178
   
-      x[182]  = mgr.bddVar(167); //182
+      x[182]  = mgr.bddVar(37); //182
   
-      x[181]  = mgr.bddVar(165); //181
+      x[181]  = mgr.bddVar(36); //181
   
-      x[183]  = mgr.bddVar(166); //183
+      x[183]  = mgr.bddVar(38); //183
   
-      x[117]  = mgr.bddVar(103); //117
+      x[117]  = mgr.bddVar(83); //117
   
-      x[207]  = mgr.bddVar(204); //207
+      x[207]  = mgr.bddVar(164); //207
   
-      x[205]  = mgr.bddVar(119); //205
+      x[205]  = mgr.bddVar(163); //205
   
-      x[209]  = mgr.bddVar(203); //209
+      x[209]  = mgr.bddVar(166); //209
   
-      x[208]  = mgr.bddVar(205); //208
+      x[208]  = mgr.bddVar(165); //208
   
-      x[204]  = mgr.bddVar(118); //204
+      x[204]  = mgr.bddVar(283); //204
   
-      x[82]  = mgr.bddVar(47); //82
+      x[82]  = mgr.bddVar(169); //82
   
-      x[81]  = mgr.bddVar(49); //81
+      x[81]  = mgr.bddVar(167); //81
   
-      x[80]  = mgr.bddVar(51); //80
+      x[80]  = mgr.bddVar(168); //80
   
-      x[83]  = mgr.bddVar(48); //83
+      x[83]  = mgr.bddVar(170); //83
   
-      x[79]  = mgr.bddVar(52); //79
+      x[79]  = mgr.bddVar(288); //79
   
-      x[101]  = mgr.bddVar(78); //101
+      x[101]  = mgr.bddVar(157); //101
   
-      x[100]  = mgr.bddVar(77); //100
+      x[100]  = mgr.bddVar(156); //100
   
-      x[60]  = mgr.bddVar(26); //60
+      x[60]  = mgr.bddVar(208); //60
   
-      x[58]  = mgr.bddVar(36); //58
+      x[58]  = mgr.bddVar(205); //58
   
-      x[61]  = mgr.bddVar(25); //61
+      x[61]  = mgr.bddVar(204); //61
   
-      x[65]  = mgr.bddVar(29); //65
+      x[65]  = mgr.bddVar(63); //65
   
-      x[63]  = mgr.bddVar(24); //63
+      x[63]  = mgr.bddVar(62); //63
   
-      x[67]  = mgr.bddVar(33); //67
+      x[67]  = mgr.bddVar(65); //67
   
-      x[69]  = mgr.bddVar(34); //69
+      x[69]  = mgr.bddVar(67); //69
   
-      x[66]  = mgr.bddVar(30); //66
+      x[66]  = mgr.bddVar(64); //66
   
-      x[68]  = mgr.bddVar(31); //68
+      x[68]  = mgr.bddVar(66); //68
   
-      x[70]  = mgr.bddVar(32); //70
+      x[70]  = mgr.bddVar(68); //70
   
-      x[72]  = mgr.bddVar(23); //72
+      x[72]  = mgr.bddVar(207); //72
   
-      x[71]  = mgr.bddVar(22); //71
+      x[71]  = mgr.bddVar(206); //71
   
-      x[123]  = mgr.bddVar(43); //123
+      x[123]  = mgr.bddVar(245); //123
   
-      x[122]  = mgr.bddVar(46); //122
+      x[122]  = mgr.bddVar(244); //122
   
-      x[121]  = mgr.bddVar(56); //121
+      x[121]  = mgr.bddVar(221); //121
   
-      x[119]  = mgr.bddVar(87); //119
+      x[119]  = mgr.bddVar(220); //119
   
-      x[124]  = mgr.bddVar(57); //124
+      x[124]  = mgr.bddVar(222); //124
   
-      x[136]  = mgr.bddVar(107); //136
+      x[136]  = mgr.bddVar(177); //136
   
-      x[134]  = mgr.bddVar(110); //134
+      x[134]  = mgr.bddVar(176); //134
   
-      x[137]  = mgr.bddVar(109); //137
+      x[137]  = mgr.bddVar(178); //137
   
-      x[138]  = mgr.bddVar(108); //138
+      x[138]  = mgr.bddVar(179); //138
   
-      x[144]  = mgr.bddVar(125); //144
+      x[144]  = mgr.bddVar(51); //144
   
-      x[142]  = mgr.bddVar(123); //142
+      x[142]  = mgr.bddVar(50); //142
   
-      x[146]  = mgr.bddVar(127); //146
+      x[146]  = mgr.bddVar(53); //146
   
-      x[145]  = mgr.bddVar(126); //145
+      x[145]  = mgr.bddVar(52); //145
   
-      x[140]  = mgr.bddVar(112); //140
+      x[140]  = mgr.bddVar(148); //140
   
-      x[139]  = mgr.bddVar(111); //139
+      x[139]  = mgr.bddVar(147); //139
   
-      x[141]  = mgr.bddVar(113); //141
+      x[141]  = mgr.bddVar(149); //141
   
-      x[133]  = mgr.bddVar(121); //133
+      x[133]  = mgr.bddVar(285); //133
   
-      x[131]  = mgr.bddVar(115); //131
+      x[131]  = mgr.bddVar(284); //131
   
-      x[151]  = mgr.bddVar(138); //151
+      x[151]  = mgr.bddVar(143); //151
   
-      x[153]  = mgr.bddVar(139); //153
+      x[153]  = mgr.bddVar(144); //153
   
-      x[155]  = mgr.bddVar(141); //155
+      x[155]  = mgr.bddVar(146); //155
   
-      x[154]  = mgr.bddVar(140); //154
+      x[154]  = mgr.bddVar(145); //154
   
-      x[118]  = mgr.bddVar(114); //118
+      x[118]  = mgr.bddVar(290); //118
   
-      x[115]  = mgr.bddVar(101); //115
+      x[115]  = mgr.bddVar(81); //115
   
-      x[102]  = mgr.bddVar(79); //102
+      x[102]  = mgr.bddVar(158); //102
   
-      x[126]  = mgr.bddVar(124); //126
+      x[126]  = mgr.bddVar(95); //126
   
-      x[125]  = mgr.bddVar(134); //125
+      x[125]  = mgr.bddVar(94); //125
   
-      x[128]  = mgr.bddVar(129); //128
+      x[128]  = mgr.bddVar(97); //128
   
-      x[130]  = mgr.bddVar(133); //130
+      x[130]  = mgr.bddVar(99); //130
   
-      x[149]  = mgr.bddVar(136); //149
+      x[149]  = mgr.bddVar(124); //149
   
-      x[147]  = mgr.bddVar(122); //147
+      x[147]  = mgr.bddVar(123); //147
   
-      x[150]  = mgr.bddVar(137); //150
+      x[150]  = mgr.bddVar(125); //150
   
-      x[127]  = mgr.bddVar(128); //127
+      x[127]  = mgr.bddVar(96); //127
   
-      x[0]  = mgr.bddVar(162); //0
+      x[0]  = mgr.bddVar(278); //0
   
-      x[104]  = mgr.bddVar(90); //104
+      x[104]  = mgr.bddVar(259); //104
   
-      x[103]  = mgr.bddVar(98); //103
+      x[103]  = mgr.bddVar(258); //103
   
-      x[106]  = mgr.bddVar(97); //106
+      x[106]  = mgr.bddVar(261); //106
   
-      x[87]  = mgr.bddVar(66); //87
+      x[87]  = mgr.bddVar(127); //87
   
-      x[85]  = mgr.bddVar(68); //85
+      x[85]  = mgr.bddVar(126); //85
   
-      x[88]  = mgr.bddVar(67); //88
+      x[88]  = mgr.bddVar(128); //88
   
-      x[77]  = mgr.bddVar(120); //77
+      x[77]  = mgr.bddVar(243); //77
   
-      x[186]  = mgr.bddVar(131); //186
+      x[186]  = mgr.bddVar(202); //186
   
-      x[185]  = mgr.bddVar(130); //185
+      x[185]  = mgr.bddVar(201); //185
   
-      x[187]  = mgr.bddVar(135); //187
+      x[187]  = mgr.bddVar(203); //187
   
-      x[159]  = mgr.bddVar(145); //159
+      x[159]  = mgr.bddVar(9); //159
   
-      x[157]  = mgr.bddVar(143); //157
+      x[157]  = mgr.bddVar(0); //157
   
-      x[161]  = mgr.bddVar(150); //161
+      x[161]  = mgr.bddVar(3); //161
   
-      x[163]  = mgr.bddVar(152); //163
+      x[163]  = mgr.bddVar(5); //163
   
-      x[165]  = mgr.bddVar(151); //165
+      x[165]  = mgr.bddVar(7); //165
   
-      x[167]  = mgr.bddVar(153); //167
+      x[167]  = mgr.bddVar(1); //167
   
-      x[160]  = mgr.bddVar(146); //160
+      x[160]  = mgr.bddVar(2); //160
   
-      x[164]  = mgr.bddVar(148); //164
+      x[164]  = mgr.bddVar(6); //164
   
-      x[162]  = mgr.bddVar(147); //162
+      x[162]  = mgr.bddVar(4); //162
   
-      x[166]  = mgr.bddVar(149); //166
+      x[166]  = mgr.bddVar(8); //166
   
-      x[171]  = mgr.bddVar(155); //171
+      x[171]  = mgr.bddVar(11); //171
   
-      x[169]  = mgr.bddVar(154); //169
+      x[169]  = mgr.bddVar(10); //169
   
-      x[173]  = mgr.bddVar(159); //173
+      x[173]  = mgr.bddVar(13); //173
   
-      x[175]  = mgr.bddVar(161); //175
+      x[175]  = mgr.bddVar(15); //175
   
-      x[177]  = mgr.bddVar(160); //177
+      x[177]  = mgr.bddVar(17); //177
   
-      x[172]  = mgr.bddVar(156); //172
+      x[172]  = mgr.bddVar(12); //172
   
-      x[176]  = mgr.bddVar(158); //176
+      x[176]  = mgr.bddVar(16); //176
   
-      x[156]  = mgr.bddVar(142); //156
+      x[156]  = mgr.bddVar(268); //156
   
-      x[174]  = mgr.bddVar(157); //174
+      x[174]  = mgr.bddVar(14); //174
   
-      x[129]  = mgr.bddVar(132); //129
+      x[129]  = mgr.bddVar(98); //129
   
-      x[105]  = mgr.bddVar(89); //105
+      x[105]  = mgr.bddVar(260); //105
   
-      x[168]  = mgr.bddVar(144); //168
+      x[168]  = mgr.bddVar(269); //168
   
-      x[215]  = mgr.bddVar(171); //215
+      x[215]  = mgr.bddVar(277); //215
   
-      x[214]  = mgr.bddVar(170); //214
+      x[214]  = mgr.bddVar(276); //214
   
-      x[212]  = mgr.bddVar(190); //212
+      x[212]  = mgr.bddVar(251); //212
   
-      x[238]  = mgr.bddVar(175); //238
+      x[238]  = mgr.bddVar(252); //238
   
-      x[237]  = mgr.bddVar(172); //237
+      x[237]  = mgr.bddVar(250); //237
   
-      x[220]  = mgr.bddVar(209); //220
+      x[220]  = mgr.bddVar(263); //220
   
-      x[219]  = mgr.bddVar(208); //219
+      x[219]  = mgr.bddVar(262); //219
   
-      x[218]  = mgr.bddVar(206); //218
+      x[218]  = mgr.bddVar(142); //218
   
-      x[223]  = mgr.bddVar(211); //223
+      x[223]  = mgr.bddVar(40); //223
   
-      x[221]  = mgr.bddVar(210); //221
+      x[221]  = mgr.bddVar(39); //221
   
-      x[225]  = mgr.bddVar(214); //225
+      x[225]  = mgr.bddVar(42); //225
   
-      x[224]  = mgr.bddVar(212); //224
+      x[224]  = mgr.bddVar(41); //224
   
-      x[226]  = mgr.bddVar(213); //226
+      x[226]  = mgr.bddVar(43); //226
   
-      x[216]  = mgr.bddVar(195); //216
+      x[216]  = mgr.bddVar(136); //216
   
-      x[227]  = mgr.bddVar(207); //227
+      x[227]  = mgr.bddVar(135); //227
   
-      x[229]  = mgr.bddVar(215); //229
+      x[229]  = mgr.bddVar(137); //229
   
-      x[231]  = mgr.bddVar(218); //231
+      x[231]  = mgr.bddVar(139); //231
   
-      x[233]  = mgr.bddVar(219); //233
+      x[233]  = mgr.bddVar(141); //233
   
-      x[230]  = mgr.bddVar(216); //230
+      x[230]  = mgr.bddVar(138); //230
   
-      x[232]  = mgr.bddVar(217); //232
+      x[232]  = mgr.bddVar(140); //232
   
-      x[239]  = mgr.bddVar(176); //239
+      x[239]  = mgr.bddVar(253); //239
   
-      x[235]  = mgr.bddVar(169); //235
+      x[235]  = mgr.bddVar(224); //235
   
-      x[234]  = mgr.bddVar(168); //234
+      x[234]  = mgr.bddVar(223); //234
   
-      x[236]  = mgr.bddVar(174); //236
+      x[236]  = mgr.bddVar(225); //236
   
-      x[211]  = mgr.bddVar(191); //211
+      x[211]  = mgr.bddVar(281); //211
   
-      x[301]  = mgr.bddVar(255); //301
+      x[301]  = mgr.bddVar(151); //301
   
-      x[300]  = mgr.bddVar(249); //300
+      x[300]  = mgr.bddVar(150); //300
   
-      x[210]  = mgr.bddVar(163); //210
+      x[210]  = mgr.bddVar(280); //210
   
-      x[307]  = mgr.bddVar(272); //307
+      x[307]  = mgr.bddVar(249); //307
   
-      x[306]  = mgr.bddVar(271); //306
+      x[306]  = mgr.bddVar(247); //306
   
-      x[305]  = mgr.bddVar(252); //305
+      x[305]  = mgr.bddVar(248); //305
   
-      x[309]  = mgr.bddVar(277); //309
+      x[309]  = mgr.bddVar(236); //309
   
-      x[308]  = mgr.bddVar(276); //308
+      x[308]  = mgr.bddVar(235); //308
   
-      x[316]  = mgr.bddVar(278); //316
+      x[316]  = mgr.bddVar(25); //316
   
-      x[314]  = mgr.bddVar(275); //314
+      x[314]  = mgr.bddVar(24); //314
   
-      x[318]  = mgr.bddVar(281); //318
+      x[318]  = mgr.bddVar(27); //318
   
-      x[317]  = mgr.bddVar(279); //317
+      x[317]  = mgr.bddVar(26); //317
   
-      x[319]  = mgr.bddVar(280); //319
+      x[319]  = mgr.bddVar(28); //319
   
-      x[302]  = mgr.bddVar(250); //302
+      x[302]  = mgr.bddVar(152); //302
   
-      x[191]  = mgr.bddVar(192); //191
+      x[191]  = mgr.bddVar(199); //191
   
-      x[190]  = mgr.bddVar(187); //190
+      x[190]  = mgr.bddVar(196); //190
   
-      x[196]  = mgr.bddVar(197); //196
+      x[196]  = mgr.bddVar(59); //196
   
-      x[194]  = mgr.bddVar(196); //194
+      x[194]  = mgr.bddVar(58); //194
   
-      x[198]  = mgr.bddVar(199); //198
+      x[198]  = mgr.bddVar(61); //198
   
-      x[197]  = mgr.bddVar(198); //197
+      x[197]  = mgr.bddVar(60); //197
   
-      x[193]  = mgr.bddVar(188); //193
+      x[193]  = mgr.bddVar(198); //193
   
-      x[188]  = mgr.bddVar(173); //188
+      x[188]  = mgr.bddVar(195); //188
   
-      x[192]  = mgr.bddVar(186); //192
+      x[192]  = mgr.bddVar(197); //192
   
-      x[200]  = mgr.bddVar(189); //200
+      x[200]  = mgr.bddVar(209); //200
   
-      x[199]  = mgr.bddVar(193); //199
+      x[199]  = mgr.bddVar(200); //199
   
-      x[54]  = mgr.bddVar(58); //54
+      x[54]  = mgr.bddVar(186); //54
   
-      x[109]  = mgr.bddVar(92); //109
+      x[109]  = mgr.bddVar(113); //109
   
-      x[107]  = mgr.bddVar(91); //107
+      x[107]  = mgr.bddVar(112); //107
   
-      x[111]  = mgr.bddVar(94); //111
+      x[111]  = mgr.bddVar(115); //111
   
-      x[110]  = mgr.bddVar(93); //110
+      x[110]  = mgr.bddVar(114); //110
   
-      x[243]  = mgr.bddVar(177); //243
+      x[243]  = mgr.bddVar(93); //243
   
-      x[241]  = mgr.bddVar(220); //241
+      x[241]  = mgr.bddVar(84); //241
   
-      x[245]  = mgr.bddVar(183); //245
+      x[245]  = mgr.bddVar(87); //245
   
-      x[247]  = mgr.bddVar(185); //247
+      x[247]  = mgr.bddVar(89); //247
   
-      x[249]  = mgr.bddVar(179); //249
+      x[249]  = mgr.bddVar(91); //249
   
-      x[251]  = mgr.bddVar(184); //251
+      x[251]  = mgr.bddVar(85); //251
   
-      x[244]  = mgr.bddVar(180); //244
+      x[244]  = mgr.bddVar(86); //244
   
-      x[248]  = mgr.bddVar(178); //248
+      x[248]  = mgr.bddVar(90); //248
   
-      x[246]  = mgr.bddVar(181); //246
+      x[246]  = mgr.bddVar(88); //246
   
-      x[250]  = mgr.bddVar(182); //250
+      x[250]  = mgr.bddVar(92); //250
   
-      x[294]  = mgr.bddVar(268); //294
+      x[294]  = mgr.bddVar(45); //294
   
-      x[292]  = mgr.bddVar(265); //292
+      x[292]  = mgr.bddVar(44); //292
   
-      x[297]  = mgr.bddVar(273); //297
+      x[297]  = mgr.bddVar(48); //297
   
-      x[296]  = mgr.bddVar(270); //296
+      x[296]  = mgr.bddVar(47); //296
   
-      x[298]  = mgr.bddVar(274); //298
+      x[298]  = mgr.bddVar(49); //298
   
-      x[295]  = mgr.bddVar(269); //295
+      x[295]  = mgr.bddVar(46); //295
   
-      x[240]  = mgr.bddVar(221); //240
+      x[240]  = mgr.bddVar(270); //240
   
-      x[311]  = mgr.bddVar(263); //311
+      x[311]  = mgr.bddVar(105); //311
   
-      x[310]  = mgr.bddVar(261); //310
+      x[310]  = mgr.bddVar(104); //310
   
-      x[313]  = mgr.bddVar(264); //313
+      x[313]  = mgr.bddVar(107); //313
   
-      x[257]  = mgr.bddVar(226); //257
+      x[257]  = mgr.bddVar(133); //257
   
-      x[255]  = mgr.bddVar(228); //255
+      x[255]  = mgr.bddVar(132); //255
   
-      x[258]  = mgr.bddVar(227); //258
+      x[258]  = mgr.bddVar(134); //258
   
-      x[264]  = mgr.bddVar(230); //264
+      x[264]  = mgr.bddVar(229); //264
   
-      x[254]  = mgr.bddVar(229); //254
+      x[254]  = mgr.bddVar(228); //254
   
-      x[252]  = mgr.bddVar(233); //252
+      x[252]  = mgr.bddVar(265); //252
   
-      x[287]  = mgr.bddVar(256); //287
+      x[287]  = mgr.bddVar(238); //287
   
-      x[285]  = mgr.bddVar(251); //285
+      x[285]  = mgr.bddVar(237); //285
   
-      x[291]  = mgr.bddVar(260); //291
+      x[291]  = mgr.bddVar(273); //291
   
-      x[290]  = mgr.bddVar(259); //290
+      x[290]  = mgr.bddVar(272); //290
   
-      x[289]  = mgr.bddVar(258); //289
+      x[289]  = mgr.bddVar(240); //289
   
-      x[288]  = mgr.bddVar(257); //288
+      x[288]  = mgr.bddVar(239); //288
   
-      x[261]  = mgr.bddVar(235); //261
+      x[261]  = mgr.bddVar(101); //261
   
-      x[259]  = mgr.bddVar(234); //259
+      x[259]  = mgr.bddVar(100); //259
   
-      x[262]  = mgr.bddVar(236); //262
+      x[262]  = mgr.bddVar(102); //262
   
-      x[263]  = mgr.bddVar(237); //263
+      x[263]  = mgr.bddVar(103); //263
   
-      x[268]  = mgr.bddVar(239); //268
+      x[268]  = mgr.bddVar(117); //268
   
-      x[267]  = mgr.bddVar(238); //267
+      x[267]  = mgr.bddVar(116); //267
   
-      x[270]  = mgr.bddVar(242); //270
+      x[270]  = mgr.bddVar(119); //270
   
-      x[277]  = mgr.bddVar(243); //277
+      x[277]  = mgr.bddVar(154); //277
   
-      x[276]  = mgr.bddVar(240); //276
+      x[276]  = mgr.bddVar(153); //276
   
-      x[266]  = mgr.bddVar(222); //266
+      x[266]  = mgr.bddVar(264); //266
   
-      x[283]  = mgr.bddVar(224); //283
+      x[283]  = mgr.bddVar(266); //283
   
-      x[278]  = mgr.bddVar(244); //278
+      x[278]  = mgr.bddVar(155); //278
   
-      x[265]  = mgr.bddVar(232); //265
+      x[265]  = mgr.bddVar(230); //265
   
-      x[273]  = mgr.bddVar(246); //273
+      x[273]  = mgr.bddVar(55); //273
   
-      x[271]  = mgr.bddVar(245); //271
+      x[271]  = mgr.bddVar(54); //271
   
-      x[275]  = mgr.bddVar(248); //275
+      x[275]  = mgr.bddVar(57); //275
   
-      x[274]  = mgr.bddVar(247); //274
+      x[274]  = mgr.bddVar(56); //274
   
-      x[284]  = mgr.bddVar(225); //284
+      x[284]  = mgr.bddVar(267); //284
   
-      x[312]  = mgr.bddVar(262); //312
+      x[312]  = mgr.bddVar(106); //312
   
-      x[281]  = mgr.bddVar(253); //281
+      x[281]  = mgr.bddVar(121); //281
   
-      x[279]  = mgr.bddVar(223); //279
+      x[279]  = mgr.bddVar(120); //279
   
-      x[282]  = mgr.bddVar(254); //282
+      x[282]  = mgr.bddVar(122); //282
   
-      x[44]  = mgr.bddVar(37); //44
+      x[44]  = mgr.bddVar(246); //44
   
-      x[15]  = mgr.bddVar(44); //15
+      x[15]  = mgr.bddVar(159); //15
   
-      x[303]  = mgr.bddVar(194); //303
+      x[303]  = mgr.bddVar(241); //303
   
-      x[14]  = mgr.bddVar(45); //14
+      x[14]  = mgr.bddVar(286); //14
   
-      x[46]  = mgr.bddVar(96); //46
+      x[46]  = mgr.bddVar(282); //46
   
-      x[304]  = mgr.bddVar(200); //304
+      x[304]  = mgr.bddVar(242); //304
   
-      x[202]  = mgr.bddVar(201); //202
+      x[202]  = mgr.bddVar(210); //202
   
-      x[203]  = mgr.bddVar(202); //203
+      x[203]  = mgr.bddVar(211); //203
   
-      x[299]  = mgr.bddVar(231); //299
+      x[299]  = mgr.bddVar(271); //299
   
-      x[269]  = mgr.bddVar(241); //269
+      x[269]  = mgr.bddVar(118); //269
   
-      x[18]  = mgr.bddVar(40); //18
+      x[18]  = mgr.bddVar(161); //18
   
-      x[17]  = mgr.bddVar(38); //17
+      x[17]  = mgr.bddVar(160); //17
   
-      x[19]  = mgr.bddVar(39); //19
+      x[19]  = mgr.bddVar(162); //19
   
-      x[21]  = mgr.bddVar(17); //21
+      x[21]  = mgr.bddVar(172); //21
   
-      x[20]  = mgr.bddVar(18); //20
+      x[20]  = mgr.bddVar(171); //20
   
-      x[25]  = mgr.bddVar(9); //25
+      x[25]  = mgr.bddVar(234); //25
   
-      x[24]  = mgr.bddVar(11); //24
+      x[24]  = mgr.bddVar(233); //24
   
-      x[33]  = mgr.bddVar(12); //33
+      x[33]  = mgr.bddVar(30); //33
   
-      x[31]  = mgr.bddVar(16); //31
+      x[31]  = mgr.bddVar(29); //31
   
-      x[35]  = mgr.bddVar(15); //35
+      x[35]  = mgr.bddVar(32); //35
   
-      x[34]  = mgr.bddVar(13); //34
+      x[34]  = mgr.bddVar(31); //34
   
-      x[36]  = mgr.bddVar(14); //36
+      x[36]  = mgr.bddVar(33); //36
   
-      x[40]  = mgr.bddVar(53); //40
+      x[40]  = mgr.bddVar(109); //40
   
-      x[38]  = mgr.bddVar(65); //38
+      x[38]  = mgr.bddVar(108); //38
   
-      x[42]  = mgr.bddVar(55); //42
+      x[42]  = mgr.bddVar(111); //42
   
-      x[41]  = mgr.bddVar(54); //41
+      x[41]  = mgr.bddVar(110); //41
   
-      x[23]  = mgr.bddVar(7); //23
+      x[23]  = mgr.bddVar(232); //23
   
-      x[22]  = mgr.bddVar(10); //22
+      x[22]  = mgr.bddVar(231); //22
   
-      x[37]  = mgr.bddVar(19); //37
+      x[37]  = mgr.bddVar(173); //37
   
-      x[45]  = mgr.bddVar(21); //45
+      x[45]  = mgr.bddVar(175); //45
   
-      x[27]  = mgr.bddVar(3); //27
+      x[27]  = mgr.bddVar(75); //27
   
-      x[26]  = mgr.bddVar(4); //26
+      x[26]  = mgr.bddVar(74); //26
   
-      x[29]  = mgr.bddVar(6); //29
+      x[29]  = mgr.bddVar(77); //29
   
-      x[28]  = mgr.bddVar(5); //28
+      x[28]  = mgr.bddVar(76); //28
   
-      x[30]  = mgr.bddVar(8); //30
+      x[30]  = mgr.bddVar(78); //30
   
-      x[43]  = mgr.bddVar(20); //43
+      x[43]  = mgr.bddVar(174); //43
   
-      x[322]  = mgr.bddVar(284); //322
+      x[322]  = mgr.bddVar(70); //322
   
-      x[321]  = mgr.bddVar(282); //321
+      x[321]  = mgr.bddVar(69); //321
   
-      x[324]  = mgr.bddVar(283); //324
+      x[324]  = mgr.bddVar(72); //324
   
-      x[320]  = mgr.bddVar(266); //320
+      x[320]  = mgr.bddVar(181); //320
   
-      x[325]  = mgr.bddVar(286); //325
+      x[325]  = mgr.bddVar(73); //325
   
-      x[327]  = mgr.bddVar(287); //327
+      x[327]  = mgr.bddVar(182); //327
   
-      x[326]  = mgr.bddVar(267); //326
+      x[326]  = mgr.bddVar(180); //326
   
-      x[329]  = mgr.bddVar(289); //329
+      x[329]  = mgr.bddVar(184); //329
   
-      x[328]  = mgr.bddVar(288); //328
+      x[328]  = mgr.bddVar(183); //328
   
-      x[323]  = mgr.bddVar(285); //323
+      x[323]  = mgr.bddVar(71); //323
   
 
 
-  
-  Cudd_MakeTreeNode(mgr.getManager(),0,1012,MTR_DEFAULT);
   
 
   //Gates
@@ -3453,240 +3461,20 @@ int main( int argc, char **argv )
 
   
 
-  //symmetry  sorting
-  std::cerr<<"Setting order symmetry ..."<<std::endl;
+  //narodyska  sorting
+  std::cerr<<"Setting order narodyska ..."<<std::endl;
   
-  
-  t1 = get_user_time();
-  std::cerr<<"Reducing heap order symmetry reorder CUDD_REORDER_SIFT ..."<<std::endl;
-  mgr.ReduceHeap(CUDD_REORDER_SIFT);
-  t2 = get_user_time();
-  t3 = get_diftime(t1,t2);
   
   minTerms =  x[990].CountMinterm(290);
-          
-  sprintf(buffer,"%g\t%g\t%g",t4,t3,minTerms);
-          
+    
+  sprintf(buffer,"%g\t%g\t%g",t4,0.0,minTerms);
+    
+  
+  str_output = "narodyska	NONE	0.3100000000";
+  str_output = str_output + "\t" + buffer + "\t9364\t290.0	351.0	2.0	55.86206896551724	62.42046068405384	55.86206896551724";
+  print_output(1013,"Electronic Shopping",str_output,mgr,output,true,&(x[990]),true);
+  writeSize("growth.txt", "Electronic Shopping", "narodyska",count_nodes,count_id);
   
-
-  
-  std::string symmetric = totalSymmetric(mgr,290);
-  std::cerr<<"Calculated groups:"<<68<<std::endl;
-  
-  
-  
-  std::cerr<<"\t"<<"Group1:[5, 6]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group2:[8, 9]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group3:[12, 13]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group4:[14, 15]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group5:[17, 18, 19]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group6:[20, 21]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group7:[26, 27]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group8:[33, 34, 35, 36]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group9:[40, 41, 42]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group10:[1, 47]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group11:[48, 49]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group12:[51, 52, 53]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group13:[60, 61]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group14:[63, 71, 72]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group15:[65, 66, 67, 68, 69, 70]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group16:[79, 80]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group17:[87, 88]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group18:[89, 90]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group19:[95, 96, 97, 98, 99]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group20:[109, 110, 111]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group21:[113, 114]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group22:[121, 124]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group23:[125, 130]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group24:[118, 131]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group25:[137, 138]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group26:[139, 140]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group27:[144, 145, 146]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group28:[133, 147]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group29:[149, 150]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group30:[153, 154, 155]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group31:[156, 157]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group32:[159, 160, 161, 162, 163, 164, 165, 166, 167]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group33:[171, 172, 173, 174, 175, 176, 177]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group34:[112, 178]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group35:[180, 181, 182, 183]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group36:[185, 186]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group37:[190, 192, 193, 200]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group38:[196, 197, 198]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group39:[202, 203]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group40:[204, 205]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group41:[207, 208, 209]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group42:[0, 210]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group43:[211, 212]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group44:[214, 215]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group45:[218, 227]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group46:[219, 220]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group47:[223, 224, 225, 226]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group48:[229, 230, 231, 232, 233]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group49:[234, 235]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group50:[240, 241]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group51:[243, 244, 245, 246, 247, 248, 249, 250, 251]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group52:[254, 255]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group53:[257, 258]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group54:[262, 263]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group55:[267, 268]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group56:[273, 274, 275]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group57:[266, 279]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group58:[281, 282]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group59:[288, 289]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group60:[290, 291]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group61:[294, 295, 296]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group62:[300, 302]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group63:[306, 307]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group64:[308, 309]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group65:[310, 312]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group66:[316, 317, 318, 319]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group67:[321, 324]"<<std::endl;
-  
-  
-  std::cerr<<"\t"<<"Group68:[320, 326]"<<std::endl;
-  
-  
-
-  str_output = "symmetry	CUDD_REORDER_SIFT	0.6400000000";
-  str_output = str_output + "\t" + buffer + "\t5349\t290.0	351.0	2.0	0.7800373317614634	0.3265532273965427	0.6896551724137931	55.86206896551724	62.42046068405384	55.86206896551724	0.7800373317614705	0.5737505315647994	0.5698005698005698	9.193103448275862	2.1782077383021017	9.0";
-  
-  str_output = str_output + "\t" + symmetric;
-  
-  print_output(1013,"Electronic Shopping",str_output, mgr,output,true,&(x[990]),true);
-  writeSize("growth.txt","Electronic Shopping","symmetry",count_nodes,count_id);
   
 
   
@@ -3694,6 +3482,9 @@ int main( int argc, char **argv )
   
 
   
-
+  kill(getppid(),SIGKILL);
+  //int status_parent;
+  //wait(&status_parent);
+  exit(0);
 }
 

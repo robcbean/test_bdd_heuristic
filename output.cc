@@ -1,5 +1,7 @@
 #include "output.h"
+#include <algorithm>
 #include <regex>
+#include <list>
 
 
 int get_max_nodes(std::vector<BDD>& _output, unsigned long& _total_nodes){
@@ -133,8 +135,45 @@ std::string trim( std::string str ) {
 }
 
 
+double  auxiliarTotalSymmetric(Cudd& _mgr, BDD& _bdd, unsigned int* _symmetrics_pairs,  unsigned int _current_variable, unsigned int _total_nodes )
+{
+    double ret=0;
+    if(_current_variable + 1 < _total_nodes)
+    {
 
-std::string totalSymmetric(Cudd& _mgr, unsigned int _total_nodes)
+        for(unsigned int i= _current_variable + 1 ; i < _total_nodes; i++)
+        {
+            ret = ret + 1;
+            if(Cudd_VarsAreSymmetric(_mgr.getManager(),_bdd.getNode(),i,_current_variable))
+            {
+                (*_symmetrics_pairs) = (*_symmetrics_pairs) + 1;
+            }
+        }
+        ret = ret + auxiliarTotalSymmetric(_mgr,_bdd,_symmetrics_pairs,_current_variable+1,_total_nodes);
+    }
+    return ret;
+}
+
+
+
+std::string totalSymmetric(Cudd& _mgr,BDD& _bdd, unsigned int _total_nodes)
+{
+    std::string ret = "";
+    char buf[100];
+    unsigned int symmetrics_pairs;
+
+    double total = auxiliarTotalSymmetric(_mgr, _bdd, &symmetrics_pairs, 0, _total_nodes);
+
+    sprintf(buf,"%g",symmetrics_pairs / total * 100);
+
+    ret = buf;
+
+
+    return ret;
+}
+
+
+std::string totalSymmetric_Old(Cudd& _mgr, unsigned int _total_nodes)
 {
     std::string ret = "";
 

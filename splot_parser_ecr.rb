@@ -194,6 +194,26 @@ def create_computed_tree(code)
     processed_tree += (["\t"]*current_tabs).join('')
     line =~ /\((.+)\)/
     id = $1
+    #ROB : 22/06/2017 Name Id
+    if id.nil?
+      if not line =~ /:g/
+        del_line = line.gsub(":r","")
+        del_line = del_line.gsub(":m","")
+        del_line = del_line.gsub(":o","")
+        del_line = del_line.gsub(/\s/,"")
+        id = del_line
+      else
+        ngid = ngid + 1
+        id = "g#{ngid}"
+      end
+    end
+    #ROB : 22/06/2017 Name Id
+
+    id = id.gsub(":","")
+    id = id.gsub(/\s/,"")
+    id = id.gsub(/\W/,"")
+
+    #ROB : 22/06/2017 Name Id
     if line =~ /:r/ or line =~ /r:/ # ROB : 10/05/15 Add also r: for Betty
       processed_tree += "feature(:root, :#{id},"
     elsif line =~ /:m/
@@ -201,12 +221,6 @@ def create_computed_tree(code)
     elsif line =~ /:o/
       processed_tree += "feature(:optional, :#{id},"
     elsif line =~ /:g/
-      #ROB 10/05/15 If id is blank generate id Betty
-      if id.nil?
-        ngid = ngid + 1
-        id = "g#{ngid}"
-      end
-      #ROB 10/05/15 If id is now Betty
       if line =~ /\[1,1\]/ #xor
         processed_tree += "feature(:xor, :#{id},"
       else #or
@@ -218,13 +232,14 @@ def create_computed_tree(code)
     end
     previous_tabs = current_tabs
   end
+
   processed_tree += ([')']*(previous_tabs+1)).join('')
   processed_tree.gsub!(/,[)]/, ')')
 
-  #print "#{processed_tree}"
-
   ret = eval(processed_tree)
+
   return ret
+
 end
 
 def parse_splot(input_filename, _change_ids=true, _change_clause=false)

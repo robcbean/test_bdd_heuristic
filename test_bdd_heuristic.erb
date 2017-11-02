@@ -29,11 +29,12 @@ typedef unsigned int uint32_t;
     end
 %>
 
-void timeOut(DdManager* _manager, void* _output){
+void timeOut(){
     std::vector<BDD> output;
     Cudd mgr(0,0);
     print_output(<%=circuit.var_list.size()%>,"<%=circuit.name%>","<%=heur.print_name%>\t<%=reorder%>\t-1.0\t-1.0\t<%=span[heur.name]%>\t<%=FunctionInfo.new(circuit).to_s%>",mgr,output,false,NULL,<%=calcTotal()%>);
 }
+
 
 
 int main( int argc, char **argv )
@@ -63,10 +64,19 @@ int main( int argc, char **argv )
   std::vector<unsigned long> count_id;
 
   //Set CUDD TimeOut
-  Cudd_SetTimeLimit(mgr.getManager(),<%=_wait_time*1000%>);
-  Cudd_RegisterTimeoutHandler(mgr.getManager(),timeOut,&output);
-
-
+  //Cudd_SetTimeLimit(mgr.getManager(),<%=_wait_time*1000%>);
+  //Cudd_RegisterTimeoutHandler(mgr.getManager(),timeOut,&output);
+  pid_t child_pid = fork();
+  pid_t parent_pid = getpid();
+  int status;
+  if( child_pid != 0 )
+  {
+        sleep(<%=_wait_time%>);
+        timeOut();
+        kill(child_pid,SIGTERM);
+        //wait(&status);
+        exit(0);
+  }
   //Variables
   <%circuit.getDFSOrderInputs.each do |variable| %>
       x[<%=getVarNum(circuit.var_list,variable)%>]  = mgr.bddVar(<%=getVarNum(heur.order,variable)%>); //<%=variable%>
@@ -78,8 +88,6 @@ int main( int argc, char **argv )
   <%circuit.extra_info.symmetric_groups.each do |group|%>
   Cudd_MakeTreeNode(mgr.getManager(),<%=first_variable_group(heur.order,group)%>,<%=group.variables.length%>,MTR_FIXED);
   <%end%>
-  <%else%>
-  Cudd_MakeTreeNode(mgr.getManager(),0,<%=circuit.var_list.length-1%>,MTR_DEFAULT);
   <%end%>
 
   //Gates
@@ -165,9 +173,12 @@ int main( int argc, char **argv )
          <%end%>
   <%end%>
 
+  std::string symmetric =  "";
+
+
   <%if printSymmetric? and circuit.type == "SPLOT" and circuit.minisat %>
-  std::string symmetric = totalSymmetric(mgr,<%=circuit.dfs_inputs.size%>);
   std::cerr<<"Calculated groups:"<<<%=circuit.extra_info.symmetric_groups.length%><<std::endl;
+  symmetric=totalSymmetric(mgr,x[<%=getVarNum(circuit.var_list,circuit.getNullFunction)%>],<%=circuit.dfs_inputs.size%>);
   <%i=0%>
   <%circuit.extra_info.symmetric_groups.each do |group|%>
   <%i=i+1%>
@@ -177,7 +188,7 @@ int main( int argc, char **argv )
 
   str_output = "<%="#{heur.print_name}\t#{reorder}\t#{cpu_time[heur.name]}"%>";
   str_output = str_output + "\t" + buffer + "\t<%=span[heur.name]%>\t<%=FunctionInfo.new(circuit).to_s%>";
-  <%if printSymmetric? and circuit.type == "SPLOT" and circuit.minisat %>
+  <%if printSymmetric?%>
   str_output = str_output + "\t" + symmetric;
   <%end%>
   print_output(<%=circuit.var_list.size()%>,"<%=circuit.name%>",str_output, mgr,output,true,&(x[<%=getVarNum(circuit.var_list,circuit.getNullFunction)%>]),<%=calcTotal()%>);
@@ -202,6 +213,9 @@ int main( int argc, char **argv )
   mgr.DumpDot(dot_vector_total,NULL,NULL,fd);
   fclose(fd);
   <%end%>
-
+  kill(getppid(),SIGKILL);
+  //int status_parent;
+  //wait(&status_parent);
+  exit(0);
 }
 

@@ -25,4 +25,4 @@ double get_user_time();
 double get_diftime(double _ts, double _te);
 void writeSize(std::string _file_name, std::string _function_file, std::string _order, std::vector<unsigned long>& _count_nodes, std::vector<unsigned long> _count_id);
 double countMinterms(Cudd& _mgr,BDD& _node);
-std::string totalSymmetric(Cudd& _mgr, unsigned int _total_nodes);
+std::string totalSymmetric(Cudd& _mgr,BDD& _bdd, unsigned int _total_nodes);

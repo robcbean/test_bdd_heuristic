@@ -122,7 +122,12 @@ class FunctionInfo
   end
 
   def to_s
-    ret = "#{@inputs}\t#{@clauses}\t#{@functions}\t#{showStats(@mean_clauses)}\t#{showStats(@mean_functions)}\t#{showStats(@mean_input)}\t#{showStats(@mean_levels)}"
+    if showStatistics
+      stat_info = "\t#{showStats(@mean_clauses)}\t#{showStats(@mean_functions)}\t#\t#{showStats(@mean_input)}\t#{showStats(@mean_levels)}"
+    else
+      stat_info  = "\t#{showStats(@mean_functions)}"
+    end
+    ret = "#{@inputs}\t#{@clauses}\t#{@functions}#{stat_info}"
     return ret
   end
 
@@ -147,7 +152,12 @@ def statInfo(_info)
 end
 
 def headerInfo()
-  return "inputs\tclauses\tfunctions#{statInfo("mean_clauses")}#{statInfo("mean_functions")}#{statInfo("mean_input")}#{statInfo("mean_levels")}"
+  if showStatistics()
+    stat_info = "#{statInfo("variables_in_clause")}#{statInfo("variables_in_functions")}#{statInfo("variable_in_clauses")}#{statInfo("variable_mean_level")}"
+  else
+    stat_info = "#{statInfo("variables_in_functions")}"
+  end
+  return "inputs\tclauses\tfunctions#{stat_info}"
 end
 
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-orders = Hash["" => "circuit.inputs", "fujita88" => "order_fujita", "malik88_fanin" => "order_malik_fanin", "malik88_level" => "order_malik_level", "force" => "order_force"]
+orders = Hash["" => "circuit.inputs", "fujita" => "order_fujita", "malik_fanin" => "order_malik_fanin", "malik_level" => "order_malik_level", "FORCE" => "order_force", "MINCE" => "order_mince"]
 
 reorders = ["CUDD_REORDER_WINDOW2", "CUDD_REORDER_WINDOW3", "CUDD_REORDER_WINDOW4", "CUDD_REORDER_SIFT", "CUDD_REORDER_SYMM_SIFT", "CUDD_REORDER_ANNEALING", "CUDD_REORDER_GENETIC"]
 

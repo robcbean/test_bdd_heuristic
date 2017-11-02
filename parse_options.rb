@@ -5,7 +5,7 @@ require 'optparse'
 def parse_options(args)
 
 
-  ret = {:file => nil, :heuristics => "heuristics.txt", :wait_time => 600, :random => 0, :attemps => 0, :minisat => false, :best_span => false, :calc_desc => false, :write_dot => false, :mcl => ""}
+  ret = {:file => nil, :heuristics => "heuristics.txt", :wait_time => 600, :random => 0, :attemps => 0, :minisat => false, :best_span => false, :calc_desc => false, :write_dot => false, :mcl => "", :random_factor => 0.0}
   parser = OptionParser.new do |opts|
 
     opts.banner  = "Usage: test_bdd_heuristics.rb [options]"
@@ -18,7 +18,7 @@ def parse_options(args)
       ret[:heuristics] = heuristics
     end
 
-    opts.on("-w","--wait_time wait_time","Wait time") do |wait_time|
+    opts.on("-t","--wait_time wait_time","Wait time") do |wait_time|
       ret[:wait_time] = wait_time.to_i
     end
 
@@ -50,6 +50,10 @@ def parse_options(args)
       ret[:mcl]  = mcl
     end
 
+
+    opts.on("-o","--random_factor random_factor ","Random factor") do |random_factor|
+      ret[:random_factor]  = random_factor
+    end
 
 
     opts.on("-h","--help","Display Help") do

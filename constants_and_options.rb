@@ -55,6 +55,17 @@ def calcPowerSpan?()
   return ret
 end
 
+
+def getCNFMINCEFile()
+  ret = "cnfmince.dimacs"
+  return ret
+end
+
+def getLeftOrderFile()
+  ret = "left2right.ord"
+  return ret
+end
+
 def grownFile()
   if OS.linux? or OS.mac?
     ret = "growth.txt"
@@ -82,6 +93,44 @@ def calcTotal()
 end
 
 
+
+def malik_level()
+  "malik_level"
+end
+
+def malik_fanin()
+  "malik_fanin"
+end
+
+def fujita()
+  "fujita"
+end
+
+def fujii()
+  "fujii"
+end
+
+def FORCE()
+  "FORCE"
+end
+
+def MINCE()
+  "MINCE"
+end
+
+def mendonca()
+  "mendonca"
+end
+
+def narodyska()
+  "narodyska"
+end
+
+def preorderRandom()
+  "preorder_random"
+end
+
+
 def useNokogiri?()
   ret = true
   if isUNED?
@@ -102,16 +151,26 @@ end
 
 
 def printSymmetric?()
-  ret = true
+  ret = false
   return ret
 end
 
+def showStatistics()
+  ret = false
+  return ret
+end
+
+
+
 def sendMail?
+
   if isUNED?
     ret = true
   else
     ret = false
   end
+
+  ret = false
   return ret
 end
 

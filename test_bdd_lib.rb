@@ -13,6 +13,7 @@ require "#{File.dirname(__FILE__)}//interleaving.rb"
 require "#{File.dirname(__FILE__)}//calc_span.rb"
 require "#{File.dirname(__FILE__)}//narodytska.rb"
 require "#{File.dirname(__FILE__)}//mendonca.rb"
+require "#{File.dirname(__FILE__)}//preorder_random.rb"
 require "#{File.dirname(__FILE__)}//symmetry.rb"
 require "#{File.dirname(__FILE__)}//constants_and_options.rb"
 
@@ -36,7 +37,7 @@ end
 def getHeader(_minisat,_calc_desc)
   ret = "file\torder\treorder\talgo_time\tbdd_time\treorder_time"
   if _calc_desc
-    ret  = ret + "\tand_time\treach_one_time\treach_one_time_total\tsum_nodes"
+    ret  = ret + "\tand_time\treach_one_decomposed\treach_one_total\tsum_nodes"
   end
   if printMinters
     ret = ret + "\tminterms"
@@ -54,8 +55,8 @@ def getHeader(_minisat,_calc_desc)
     end
   end
   ret =ret + "\t#{headerInfo}"
-  if printSymmetric? and _minisat
-    ret = ret + "\tsymmetric_variables"
+  if printSymmetric?
+    ret = ret + "\tsymmetric_percent"
   end
   ret = ret + "\tmaxnode\ttotal"
 
@@ -82,7 +83,7 @@ def generate_random_heuristics(_function, _cpu_time, _heuristics, _number_of_ord
 end
 
 
-def process_file(_input_file, _output_file, _heuristics_file, _wait_time, _random_orders, _grown_file,_minisat,_best_span,_calc_desc,_write_dot,_mcl)
+def process_file(_input_file, _output_file, _heuristics_file, _wait_time, _random_orders, _grown_file,_minisat,_best_span,_calc_desc,_write_dot,_mcl,_random_factor)
 
 
   function = FUNCTION.new(_input_file,_minisat)
@@ -100,34 +101,48 @@ def process_file(_input_file, _output_file, _heuristics_file, _wait_time, _rando
   write_dot = _write_dot
 
   cpu_time["netlist"] = 0.0
-  if parse_definition_orders.include?("fujita88")
-    $stderr.print "generating #{_input_file} fujita88 order ...\n"
-    cpu_time["fujita88"] = Benchmark.measure { $order_fujita = fujita88(function) }.utime
+  if parse_definition_orders.include?(fujita())
+    $stderr.print "generating #{_input_file} fujita order ...\n"
+    cpu_time[fujita()] = Benchmark.measure { $order_fujita = fujita88(function) }.utime
     order_fujita=$order_fujita
   end
-  if parse_definition_orders.include?("malik88_fanin")
-    $stderr.print "generating #{_input_file} malik88 fanin order ...\n"
-    cpu_time["malik88_fanin"] = Benchmark.measure { $order_malik_fanin = malik88fanin(function) }.utime
+  if parse_definition_orders.include?(malik_fanin())
+    $stderr.print "generating #{_input_file} malik fanin order ...\n"
+    cpu_time[malik_fanin()] = Benchmark.measure { $order_malik_fanin = malik88fanin(function) }.utime
     order_malik_fanin = $order_malik_fanin
   end
-  if parse_definition_orders.include?("malik88_level")
-    $stderr.print "generating #{_input_file} malik88 level order ...\n"
-    cpu_time["malik88_level"]= Benchmark.measure { $order_malik_level = malik88level(function) }.utime
+  if parse_definition_orders.include?(malik_level())
+    $stderr.print "generating #{_input_file} malik level order ...\n"
+    cpu_time[malik_level()]= Benchmark.measure { $order_malik_level = malik88level(function) }.utime
     order_malik_level = $order_malik_level
   end
-  if parse_definition_orders.include?("fuji93")
+  if parse_definition_orders.include?(fujii())
     $stderr.print "generating #{_input_file} fuji93 level order ...\n"
-    cpu_time["fuji93"] = Benchmark.measure { $order_fuji_inter = getFuji1993(function) }.utime
+    cpu_time[fujii()] = Benchmark.measure { $order_fuji_inter = getFuji1993(function) }.utime
     order_fuji_inter = $order_fuji_inter
+  end
+
+  #ROB : 05/05/2017 MICE
+  if parse_definition_orders.include?(MINCE())
+    $stderr.print "generating #{_input_file} mince level order ...\n"
+    cpu_time[MINCE()] = Benchmark.measure { $order_mince = mince(function) }.utime
+    order_mince = $order_mince
+  end
+
+  #ROB : 14/08/17 Preorder random
+  if parse_definition_orders.include?(preorderRandom())
+    $stderr.print "generation #{_input_file} preorderrandom level order ...\n"
+    cpu_time[preorderRandom()] = Benchmark.measure  { $preorder_random = generatePreorderRandom(function, _random_factor) }.utime
+    preorder_random = $preorder_random
   end
 
 
   if function.type == "SPLOT"
-    if parse_definition_orders.include?("narodyska")
+    if parse_definition_orders.include?(narodyska())
 
      $stderr.print "generating #{_input_file} narodyska order ...\n"
-     cpu_time["narodyska"] = Benchmark.measure { $order_narodyska = getNarodystka(function) }.utime
-     $stderr.print "generating #{_input_file} mendonca order ...\n"
+     cpu_time[narodyska()] = Benchmark.measure { $order_narodyska = getNarodystka(function) }.utime
+     $stderr.print "generating #{_input_file} narodyska order ...\n"
      order_narodyska = $order_narodyska
      if _mcl != ""
         values = _mcl.split("-")
@@ -142,11 +157,15 @@ def process_file(_input_file, _output_file, _heuristics_file, _wait_time, _rando
       end
     end
 
-    if parse_definition_orders.include?("mendonca")
-      res_mendoca= getMendonca(_input_file, function)
-      cpu_time["mendonca"] = res_mendoca.heuristic_time
-      $order_mendonca = res_mendoca.order
-      order_mendonca = $order_mendonca
+    if parse_definition_orders.include?(mendonca())
+      res_mendoca = getMendonca(_input_file, function,_wait_time)
+      if not res_mendoca.nil?
+        cpu_time[mendonca()] = res_mendoca.heuristic_time
+        $order_mendonca = res_mendoca.order
+        order_mendonca = $order_mendonca
+      else
+        $order_mendonca = nil
+      end
     end
 
   end
@@ -154,7 +173,7 @@ def process_file(_input_file, _output_file, _heuristics_file, _wait_time, _rando
 
   $stderr.print("expanding function  #{function.name}...\n")
   function.expandFunction()
-  if parse_definition_orders.include?("force")
+  if parse_definition_orders.include?(FORCE())
     $stderr.print "generating #{_input_file} force order...\n"
     cpu_time["force"] = Benchmark.measure { $order_force = getFORCEOrder(function) }.utime
     order_force = $order_force

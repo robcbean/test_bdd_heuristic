@@ -28,6 +28,11 @@ def generatePermutationAccordingGroups(_variables, _permutation_variables, _symm
       variable_groups = Array.new(group.variables)
       ret << variable
       variable_groups.delete_at(variable_groups.index(variable))
+      if variable_groups.size == 1
+        if variable_groups[0].nil?
+          variable_groups.clear()
+        end
+      end
       while variable_groups.size > 0
         $stderr.print("Processing group #{group_number} of #{_symmetric_groups.size}..\n")
         permutation_variables.each do |permutation_variable|

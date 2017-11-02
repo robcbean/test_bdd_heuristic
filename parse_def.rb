@@ -1,3 +1,5 @@
+require "#{File.dirname(__FILE__)}//constants_and_options.rb"
+
 class Heur
   attr_accessor :name, :order, :reorder, :expanded, :print_name, :group
 
@@ -30,24 +32,28 @@ end
 
 def transform_heuristic_to_order(_heuristic)
   ret = ""
-  if( _heuristic == '"netlist"')
-    ret = "circuit.getDFSOrderInputs"
-  elsif (_heuristic == '"fujita88"')
+  if (_heuristic.include?("netlist") )
+    ret = "circuit.getDFSOrderInputs(true)"
+  elsif (_heuristic.include?(fujita()))
     ret  = "order_fujita"
-  elsif (_heuristic == '"malik88_fanin"')
+  elsif (_heuristic.include?(malik_fanin()))
     ret = "order_malik_fanin"
-  elsif (_heuristic == '"malik88_level"')
+  elsif (_heuristic.include?(malik_level()))
     ret = "order_malik_level"
-  elsif (_heuristic == '"force"')
+  elsif (_heuristic.include?(FORCE()))
     ret = "order_force"
-  elsif (_heuristic == '"fuji93"')
+  elsif (_heuristic.include?(fujii()))
     ret = "order_fuji_inter"
-  elsif (_heuristic == '"narodyska"')
+  elsif (_heuristic.include?(narodyska()))
     ret = "order_narodyska"
-  elsif (_heuristic == '"mendonca"')
+  elsif (_heuristic.include?(mendonca()))
     ret = "order_mendonca"
   elsif (_heuristic == '"symmetry"')
     ret = "order_symmetry"
+  elsif (_heuristic.include?(MINCE()))
+    ret = "order_mince"
+  elsif (_heuristic.include?(preorderRandom()))
+    ret = "preorder_random"
   end
   return ret
 end
